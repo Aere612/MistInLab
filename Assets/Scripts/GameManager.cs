@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour //16
 {
-    int timeLeft=1800;
+    public int timeLeft=1800;
     void Start()
     {
         StartCoroutine(Countdown());
@@ -18,8 +18,10 @@ public class GameManager : MonoBehaviour //16
     }
     IEnumerator Countdown()
     {
-        yield return new WaitForSeconds(1);
-        timeLeft--;
+        while (timeLeft>=1)
+        {
+            yield return new WaitForSeconds(1);
+            timeLeft--;
+        }
     }
 }
- 
