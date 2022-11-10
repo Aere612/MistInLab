@@ -22,7 +22,13 @@ public class Screen_Visualizer : MonoBehaviour
         {
             integrity.text = "Collapse Imminent";
         }
-        
+        if (value < 33)
+        {
+            integrity.color = Color.red;
+        }else if (value < 66)
+        {
+            integrity.color = Color.yellow;
+        }
         
     }
 }
