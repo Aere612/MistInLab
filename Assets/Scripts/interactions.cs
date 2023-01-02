@@ -18,13 +18,21 @@ public class interactions : MonoBehaviour
         {
             Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3, layerMask);
             try { 
-                if (hit.transform.tag == "Screen")
+                if (hit.transform.CompareTag("Screen"))
                 {
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.None;
                     ScreenCam.SetActive(true);
                     PlayerCam.SetActive(false);
                     Player.GetComponent<pm>().enabled = false;
+                }
+                else if (hit.transform.CompareTag("J_Door"))
+                {
+                    hit.transform.GetComponent<J_Door>().triggered = true;
+                }
+                else if (hit.transform.CompareTag("DeadBolt"))
+                {
+                    hit.transform.GetComponent<DeadBolt>().triggered = true;
                 }
             }
             catch {}
