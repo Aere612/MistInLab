@@ -10,9 +10,10 @@ public class Screen_Visualizer : MonoBehaviour
     public int timeLeft;
     float value;
     public GameObject gm;
+    public CountDown cd;
     void Update()
     {
-        timeLeft = gm.GetComponent<GameManager>().timeLeft;
+        timeLeft = cd.timeLeft;
         if (timeLeft > 300)
         {
             value = (float)0.000025 * (float)timeLeft * (float)timeLeft + (float)0.01 * (float)timeLeft;

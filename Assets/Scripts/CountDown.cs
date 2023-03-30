@@ -2,19 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour //16
+public class CountDown : MonoBehaviour //16
 {
     public int timeLeft=1800;
     void Start()
     {
         StartCoroutine(Countdown());
     }
-    void Update()
+    void GameOver()
     {
-        if (timeLeft <= 0)
-        {
-            //gameover sequence
-        }
+        //game over
     }
     IEnumerator Countdown()
     {
@@ -23,5 +20,6 @@ public class GameManager : MonoBehaviour //16
             yield return new WaitForSeconds(1);
             timeLeft--;
         }
+        GameOver();
     }
 }
