@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cog : MonoBehaviour
+public class Cog : MonoBehaviour, IInteractable
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private PlayerHandSo playerHandSo;
+    public void Interaction()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        playerHandSo.PutInHand(gameObject);
     }
 }
