@@ -4,24 +4,13 @@ using UnityEngine;
 public class PlayerHandSo : ScriptableObject
 {
     [SerializeField] private GameObject currentObject;
-    [SerializeField] private Transform playerHandLocation;
 
-    public GameObject CurrentObject => currentObject;
-
-    public Transform PlayerHandLocation
+    public GameObject CurrentObject
     {
-        get => playerHandLocation;
-        set => playerHandLocation = value;
-    }
-
-    public void PutInHand(GameObject putInHand)
-    {
-        currentObject = putInHand;
-        currentObject.transform.position = PlayerHandLocation.position;
-        currentObject.transform.SetParent(PlayerHandLocation);
-    }
-    public void RemoveObject()
-    {
-        currentObject = null;
+        get => currentObject;
+        set
+        {
+            currentObject = value;   
+        }
     }
 }
