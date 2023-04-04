@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FogEmitterLeftSide : MonoBehaviour, Interacted
+public class FogEmitterLeftSide : MonoBehaviour, IInteractable
 {
     [SerializeField] private int cogAmount=0;
 

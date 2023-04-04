@@ -1,5 +1,5 @@
 
-public interface Interacted
+public interface IInteractable
 {
     public void Interaction();
 }

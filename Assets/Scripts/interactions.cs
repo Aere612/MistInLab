@@ -17,7 +17,7 @@ public class Interactions : MonoBehaviour, IPointerDownHandler
     public virtual void OnPointerDown(PointerEventData pointerData)
     {
         Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out var hit, 3, layerMask);
-        if (!hit.collider.TryGetComponent<Interacted>(out var interactedObject)) return;
+        if (!hit.collider.TryGetComponent<IInteractable>(out var interactedObject)) return;
         interactedObject.Interaction();
     }
 }
