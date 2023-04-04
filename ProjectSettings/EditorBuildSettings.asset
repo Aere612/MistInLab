@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Altay_TestScene.unity
+    guid: ffe088b8c5013e94086c6641a7e17e17
+  - enabled: 1
+    path: Assets/Scenes/Hud.unity
+    guid: 41bf456f2f1fe0444b138bf2ce1de7a9
   m_configObjects: {}
