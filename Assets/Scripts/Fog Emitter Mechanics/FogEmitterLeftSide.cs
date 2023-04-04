@@ -5,6 +5,7 @@ public class FogEmitterLeftSide : MonoBehaviour, Interacted
     [SerializeField] private int cogAmount=0;
 
     [SerializeField] private PlayerHandSo playerHandSo;
+    [SerializeField] private GameEvent onCogChangedEvent;
 
     public void Interaction()
     {
@@ -12,5 +13,6 @@ public class FogEmitterLeftSide : MonoBehaviour, Interacted
         cog.gameObject.SetActive((false));
         playerHandSo.RemoveObject();
         cogAmount++;
+        onCogChangedEvent.Raise();
     }
 }
