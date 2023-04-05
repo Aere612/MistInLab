@@ -12,17 +12,29 @@ public class HandManager : MonoBehaviour
     {
         if(!Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out var hit, 10)) return;
     
-        if (hit.collider.TryGetComponent<Vial>(out _))
+        if (hit.collider.TryGetComponent<ICollactable>(out _))
         {
-            Debug.Log("Collactable");
-            hit.collider.gameObject.transform.position = playerHandTransform.position;
-            hit.collider.gameObject.transform.parent = playerCameraTransform;
-            _playerHandSo.CurrentObject = hit.collider.gameObject;
+            PutObjectToHand(hit.collider.gameObject);
         }
 
         if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
         {
             interactable.Interaction();
         }
+    }
+
+    private void PutObjectToHand(GameObject objectToPut)
+    {
+        _playerHandSo.CurrentObject = objectToPut;
+        _playerHandSo.CurrentObject.transform.parent = playerCameraTransform;
+        _playerHandSo.CurrentObject.transform.position = playerHandTransform.position;
+        _playerHandSo.CurrentObject.transform.rotation = playerCameraTransform.rotation;
+        _playerHandSo.CurrentObject.GetComponent<Rigidbody>().isKinematic = true;
+    }
+
+    private void DropTheObject() //Altay: Q'ya basılınca düşür.
+    {
+        _playerHandSo.CurrentObject.transform.parent = null;
+        _playerHandSo.CurrentObject.GetComponent<Rigidbody>().isKinematic = false;
     }
 }
