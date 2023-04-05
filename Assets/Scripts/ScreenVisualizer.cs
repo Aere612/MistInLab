@@ -8,10 +8,10 @@ public class ScreenVisualizer : MonoBehaviour
 
     public void UpdateScreen()
     {
-        var currentCountDown = countDown;
-        if (currentCountDown.timeLeft > 300)
+        var currentCountDown = countDown.TimeLeft;
+        if (currentCountDown > 300)
         {
-            var value = (float)0.000025 * currentCountDown.timeLeft * currentCountDown.timeLeft + (float)0.01 * currentCountDown.timeLeft;
+            var value = 0.000025f * currentCountDown * currentCountDown + 0.01f * currentCountDown;
             integrity.text = "%"+Math.Floor(value);
             integrity.color = value switch
             {
