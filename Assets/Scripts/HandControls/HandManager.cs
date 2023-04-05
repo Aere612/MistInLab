@@ -10,6 +10,7 @@ public class HandManager : MonoBehaviour
 
     public void CastRay()
     {
+        Debug.Log("Raycasted");
         if(!Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out var hit, 10)) return;
     
         if (hit.collider.TryGetComponent<ICollactable>(out _))
@@ -32,9 +33,13 @@ public class HandManager : MonoBehaviour
         _playerHandSo.CurrentObject.GetComponent<Rigidbody>().isKinematic = true;
     }
 
-    private void DropTheObject() //Altay: Q'ya basılınca düşür.
+    public void DropTheObject()
     {
+        Debug.Log("Dropped");
+        var rigidbody = _playerHandSo.CurrentObject?.GetComponent<Rigidbody>();
         _playerHandSo.CurrentObject.transform.parent = null;
-        _playerHandSo.CurrentObject.GetComponent<Rigidbody>().isKinematic = false;
+        rigidbody.isKinematic = false;
+        rigidbody.AddForce(_playerHandSo.CurrentObject.transform.forward * 200);
+        _playerHandSo.CurrentObject = null;
     }
 }

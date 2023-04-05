@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 302009422}
   - component: {fileID: 302009421}
   - component: {fileID: 302009420}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: VialSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,6 +245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 576586995}
   - component: {fileID: 576586996}
+  - component: {fileID: 576586997}
   m_Layer: 0
   m_Name: InputController
   m_TagString: Untagged
@@ -280,6 +281,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onMouseClick: {fileID: 11400000, guid: 3dacd7e142ed36141a2e62275f81a58a, type: 2}
+  onQPressed: {fileID: 11400000, guid: 5506907050019b04ebeb62f2db21f58e, type: 2}
+  actions: {fileID: -944628639613478452, guid: 01a500474c20c634190555b400700d0d, type: 3}
+--- !u!114 &576586997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576586994}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 01a500474c20c634190555b400700d0d, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 915924987}
+        m_TargetAssemblyTypeName: HandManager, Assembly-CSharp
+        m_MethodName: DropTheObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 395dab4b-9308-4919-8b98-84b9eec97308
+    m_ActionName: Player/DropObject[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 915924987}
+        m_TargetAssemblyTypeName: HandManager, Assembly-CSharp
+        m_MethodName: CastRay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 15ce4ddb-8b8e-44e9-a985-b5ed9c297b2b
+    m_ActionName: Player/Click[/Mouse/leftButton]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 1267265031}
 --- !u!1 &815801865
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,7 +449,6 @@ GameObject:
   m_Component:
   - component: {fileID: 915924985}
   - component: {fileID: 915924987}
-  - component: {fileID: 915924986}
   m_Layer: 0
   m_Name: HandManager
   m_TagString: Untagged
@@ -407,34 +471,6 @@ Transform:
   m_Father: {fileID: 1177356166}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &915924986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 915924984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70492fb85264c634b9c713b7b653e3be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 3dacd7e142ed36141a2e62275f81a58a, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 915924987}
-        m_TargetAssemblyTypeName: HandManager, Assembly-CSharp
-        m_MethodName: CastRay
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &915924987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,6 +525,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4652537508288172589, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
   m_PrefabInstance: {fileID: 2040114689}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &1267265031 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4652537508288172586, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
+  m_PrefabInstance: {fileID: 2040114689}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1472978777
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +544,7 @@ GameObject:
   - component: {fileID: 1472978779}
   - component: {fileID: 1472978778}
   - component: {fileID: 1472978783}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Vial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472978777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.074, y: 0.396, z: 7.2865}
+  m_LocalPosition: {x: -0.907, y: 0.205, z: 7.2865}
   m_LocalScale: {x: 0.09, y: 0.15, z: 0.09}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -629,7 +670,7 @@ GameObject:
   - component: {fileID: 1561009652}
   - component: {fileID: 1561009651}
   - component: {fileID: 1561009650}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,8 +856,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4652537508288172588, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
+    m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4652537508288172589, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
       insertIndex: -1
