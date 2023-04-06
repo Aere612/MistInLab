@@ -15,7 +15,7 @@ public class MonsterSpawner : MonoBehaviour
         currentWaitFactor -= 1;
         if (Random.Range(0, 100) < currentWaitFactor) return;
         currentWaitFactor = 380;
-        switch (Random.Range(2, 3))
+        switch (Random.Range(1, 3))
         {
             case 1:
                 flicker.Attack();
