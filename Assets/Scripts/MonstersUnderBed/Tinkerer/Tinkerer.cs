@@ -34,6 +34,5 @@ public class Tinkerer : MonoBehaviour
         doorStatus.text = "Locked";
         doorStatus.color = Color.green;
         Debug.Log("Dodge Tinkerer");
-        monsterSpawner.AllowSpawn();
     }
 }
