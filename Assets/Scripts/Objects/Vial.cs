@@ -4,5 +4,4 @@ using UnityEngine;
 using System;
 public class Vial : MonoBehaviour,ICollactable
 {
-    
 }

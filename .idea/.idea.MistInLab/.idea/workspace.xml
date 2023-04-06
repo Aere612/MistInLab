@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6023c6bb-2beb-4452-9c4a-0b06519b3f12" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MistInLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MistInLab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputController/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputController/InputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Altay_TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Altay_TestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fog Emitter Mechanics/Cog.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fog Emitter Mechanics/Cog.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Vial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Vial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VialPlacement.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VialPlacement/VialSlot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VialPlacement/VialSlot.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +23,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/81f8c37db13645ada5bd1591d36b77872d000/74/9c576b90/GUIContent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputController/InputController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/ICollactable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/Cog.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/ObjectPlacement/CogSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Editor/Timeline/CinemachineShotEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Editor/Utility/EmbeddedAssetHelpers.cs" root0="SKIP_HIGHLIGHTING" />
@@ -102,7 +112,7 @@
       <workItem from="1680689469417" duration="12836000" />
       <workItem from="1680724165953" duration="4000" />
       <workItem from="1680724418566" duration="632000" />
-      <workItem from="1680762909001" duration="3501000" />
+      <workItem from="1680762909001" duration="8003000" />
     </task>
     <servers />
   </component>
