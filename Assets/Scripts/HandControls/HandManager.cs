@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,12 +9,15 @@ public class HandManager : MonoBehaviour
     [SerializeField] private Transform playerHandTransform;
     [SerializeField] private Transform playerCameraTransform;
 
+    private void Start()
+    {
+        _playerHandSo.CurrentObject = null;
+    }
+
     public void CastRay()
     {
-        Debug.Log("Raycasted");
         if(!Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out var hit, 10)) return;
-    
-        if (hit.collider.TryGetComponent<ICollactable>(out _))
+        if (hit.collider.TryGetComponent<ICollactable>(out _) && _playerHandSo.CurrentObject == null)
         {
             PutObjectToHand(hit.collider.gameObject);
         }

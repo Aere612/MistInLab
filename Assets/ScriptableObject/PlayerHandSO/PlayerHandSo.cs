@@ -8,9 +8,6 @@ public class PlayerHandSo : ScriptableObject
     public GameObject CurrentObject
     {
         get => currentObject;
-        set
-        {
-            currentObject = value;   
-        }
+        set => currentObject = value;
     }
 }
