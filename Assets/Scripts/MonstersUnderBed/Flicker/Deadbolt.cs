@@ -1,15 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class Deadbolt : MonoBehaviour, IInteractable
 {
     [SerializeField] private bool isLocked = false;
+    [SerializeField] private J_Door j_Door;
+    [SerializeField] private Transform pivot;
 
     public bool IsLocked => isLocked;
 
     public void Interaction()
     {
+        if (!j_Door.DoorClosed) return;
         if (IsLocked) Unlock();
         else Lock();
     }
@@ -17,13 +19,12 @@ public class Deadbolt : MonoBehaviour, IInteractable
     private void Lock()
     {
         isLocked = true;
-        //TODO Lock anim
-        Debug.Log("Locked");
+        pivot.DORotate(new Vector3(90, 0, 0f), 0.5f);
     }
+
     private void Unlock()
     {
         isLocked = false;
-        //TODO Unlock anim
-        Debug.Log("Unlocked");
+        pivot.DORotate(new Vector3(0, 0, 0f), 0.5f);
     }
 }

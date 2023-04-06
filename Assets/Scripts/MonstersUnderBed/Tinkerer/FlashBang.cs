@@ -16,8 +16,8 @@ public class FlashBang : MonoBehaviour, IInteractable
     {
         if (currentCd != 0) return;
         var  flashBangSequence = DOTween.Sequence();
-        flashBangSequence.Append(flashBangLight.DOIntensity(5f, 0.1f));
-        flashBangSequence.Append(flashBangLight.DOIntensity(5f, 0.5f));
+        flashBangSequence.Append(flashBangLight.DOIntensity(20f, 0.05f));
+        flashBangSequence.Append(flashBangLight.DOIntensity(20f, 0.5f));
         flashBangSequence.Append(flashBangLight.DOIntensity(0f, 2f));
         currentCd = maxCd;
         onTimeClickEventListener.enabled = true;

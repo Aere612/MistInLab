@@ -1,27 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-public class J_Door : MonoBehaviour
+using DG.Tweening;
+using DG.Tweening;
+
+public class J_Door : MonoBehaviour, IInteractable
 {
-    public bool triggered=false,allowed=true,locked=false,open=false;
-    void Update()
+    [SerializeField] private bool doorClosed = true;
+    [SerializeField] private Deadbolt deadbolt;
+    [SerializeField] private Transform pivot;
+
+    public bool DoorClosed => doorClosed;
+
+    public void Interaction()
     {
-        if(triggered&&allowed&&!locked){
-            triggered = false;
-            if (open)
-            {
-                GetComponent<Animator>().SetBool("Open",false);
-                open = false;
-            }
-            else
-            {
-                GetComponent<Animator>().SetBool("Open", true);
-                open = true;
-            }
-        }
-        if (locked)
+        if (deadbolt.IsLocked) return;
+        if (DoorClosed)
         {
-            //play sound locked
+            doorClosed = false;
+            pivot.DORotate(new Vector3(0,90,0f),0.5f);
+            return;
         }
+        doorClosed = true;
+        pivot.DORotate(new Vector3(0,0,0f),0.5f);
     }
 }
