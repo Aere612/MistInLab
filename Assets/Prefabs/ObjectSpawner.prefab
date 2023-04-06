@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3084963663685974677}
   - component: {fileID: 3084963663685974678}
   m_Layer: 0
-  m_Name: VialSpawner
+  m_Name: ObjectSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

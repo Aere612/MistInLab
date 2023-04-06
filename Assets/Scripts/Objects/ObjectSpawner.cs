@@ -15,6 +15,4 @@ public class ObjectSpawner : MonoBehaviour, IInteractable
             _playerHandSo.PutObjectToHand(instantiatedObject);
         }
     }
-
-    public BaseObjectSlot ObjectSlot { get; set; }
 }

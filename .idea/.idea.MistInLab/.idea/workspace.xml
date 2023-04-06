@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6023c6bb-2beb-4452-9c4a-0b06519b3f12" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MistInLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MistInLab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/PlayerHandSO/PlayerHandSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObject/PlayerHandSO/PlayerHandSo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HandControls/HandManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HandControls/HandManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Objects/BaseObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Objects/BaseObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Objects/Cog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Objects/Cog.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Objects/Vial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Objects/Vial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Cog.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Cog.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/CogSlot.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/CogSlot.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VialSlot.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/VialSlot.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VialSpawner.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VialSpawner.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/ObjectSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/ObjectSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +112,7 @@
       <workItem from="1680724165953" duration="4000" />
       <workItem from="1680724418566" duration="632000" />
       <workItem from="1680762909001" duration="14561000" />
-      <workItem from="1680781796767" duration="2148000" />
+      <workItem from="1680781796767" duration="3634000" />
     </task>
     <servers />
   </component>
