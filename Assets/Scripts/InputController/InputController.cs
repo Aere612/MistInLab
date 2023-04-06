@@ -1,32 +1,36 @@
 using System;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
+[Serializable]
 public class InputController : MonoBehaviour
 {
-    [SerializeField] private GameEvent onMouseClick;
-    [SerializeField] private GameEvent onQPressed;
-    
-    [SerializeField] private InputActionAsset actions;
-
     private PlayerControls _playerControls;
+
+    [SerializeField] private GameEvent _onMouseClicked;
+    [SerializeField] private GameEvent _onQPressed;
     private void Start()
     {
         _playerControls = new PlayerControls();
+        
         _playerControls.Player.Press.started += InvokeMouseClickEvent;
-        _playerControls.Player.Press.canceled += InvokeQPressedEvent;
+        _playerControls.Player.DropObject.started += InvokeQPressedEvent;
+        
+        
         _playerControls.Enable();
     }
-
+    
+    
     public void InvokeMouseClickEvent(InputAction.CallbackContext context)
     {
-        Debug.Log("Worked");
+        _onMouseClicked.Raise();
     }
 
     public void InvokeQPressedEvent(InputAction.CallbackContext context)
     {
-        Debug.Log("Runned");
+        _onQPressed.Raise();
     }
-    
 }
