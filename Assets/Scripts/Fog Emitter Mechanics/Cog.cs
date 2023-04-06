@@ -2,11 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cog : MonoBehaviour, IInteractable
+public class Cog : MonoBehaviour, ICollactable
 {
-    [SerializeField] private PlayerHandSo playerHandSo;
-    public void Interaction()
-    {
-        playerHandSo.PutInHand(gameObject);
-    }
 }

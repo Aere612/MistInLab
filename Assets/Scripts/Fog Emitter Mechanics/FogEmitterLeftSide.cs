@@ -10,7 +10,7 @@ public class FogEmitterLeftSide : MonoBehaviour, IInteractable
     {
         if (!playerHandSo.CurrentObject.TryGetComponent<Cog>(out var cog)) return;
         cog.gameObject.SetActive(false);
-        playerHandSo.RemoveObject();
+        playerHandSo.CurrentObject = null;
         cogAmount++;
         onCogChangedEvent.Raise();
     }
