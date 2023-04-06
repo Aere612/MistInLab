@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class BaseObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private BaseObjectSlot objectSlot;
+    public BaseObjectSlot ObjectSlot
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        get => objectSlot;
+        set
+        {
+            if (value == null)
+            {
+                objectSlot.isFull = false;
+                objectSlot = value;
+            }
+            else
+            {
+                objectSlot = value;
+                objectSlot.isFull = true;
+            }
+        }
     }
 }
