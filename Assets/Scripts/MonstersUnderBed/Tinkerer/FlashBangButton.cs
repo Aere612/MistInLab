@@ -1,6 +1,5 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [CustomEditor(typeof(FlashBang))]
 public class FlashBangButton : Editor

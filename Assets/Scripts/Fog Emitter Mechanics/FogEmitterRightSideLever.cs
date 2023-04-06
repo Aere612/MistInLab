@@ -1,7 +1,5 @@
-using System.Diagnostics;
 using UnityEngine;
 using DG.Tweening;
-using UnityEngine.ProBuilder.Shapes;
 
 public class FogEmitterRightSideLever : MonoBehaviour, IInteractable
 {
