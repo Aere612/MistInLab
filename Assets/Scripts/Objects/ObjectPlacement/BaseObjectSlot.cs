@@ -8,6 +8,7 @@ public class BaseObjectSlot : MonoBehaviour,IInteractable
 {
     [SerializeField] internal PlayerHandSo _playerHandSo;
     [SerializeField] internal Transform _slotTransform;
+    [SerializeField] internal bool isFull;
     public virtual void Interaction()
     {
     }

@@ -4,4 +4,9 @@ using UnityEngine;
 
 public interface ICollactable
 {
+    public BaseObjectSlot ObjectSlot
+    {
+        get;
+        set;
+    }
 }
