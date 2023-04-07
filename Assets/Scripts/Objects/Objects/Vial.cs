@@ -6,5 +6,5 @@ using System;
 
 public class Vial : BaseObject,ICollactable
 {
-    [SerializeField] internal bool hasBaseIngradiant;
+    [SerializeField] internal Ingradiant baseIngradiant;
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum Ingradiant
 {
+    Empty,
     Blue,
     Yellow,
     Red
@@ -11,6 +12,7 @@ public enum Ingradiant
 
 public enum SideIngradiant
 {
+    Empty,
     Green,
     Orange,
     Purple

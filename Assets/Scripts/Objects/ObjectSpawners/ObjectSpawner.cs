@@ -7,7 +7,7 @@ public class ObjectSpawner : MonoBehaviour, IInteractable
     [SerializeField] protected  GameObject objectToSpawn;
     [SerializeField] protected PlayerHandSo _playerHandSo;
 
-    public virtual void Interaction()
+    public void Interaction()
     {
         if (_playerHandSo.CurrentObject == null)
         {
