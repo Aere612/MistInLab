@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour, IInteractable
 {
-    [SerializeField] private GameObject objectToSpawn;
-    [SerializeField] private PlayerHandSo _playerHandSo;
+    [SerializeField] protected  GameObject objectToSpawn;
+    [SerializeField] protected PlayerHandSo _playerHandSo;
 
     public void Interaction()
     {

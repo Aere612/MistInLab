@@ -1,6 +1,4 @@
 using UnityEditor;
-using UnityEngine;
-using UnityEngine.SceneManagement;
 
 //[CustomEditor(typeof(/*ObjectType*/))]
 public class AddButtonAtInspector : Editor
