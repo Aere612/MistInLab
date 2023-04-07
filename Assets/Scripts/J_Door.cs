@@ -1,6 +1,5 @@
 using UnityEngine;
 using DG.Tweening;
-using DG.Tweening;
 
 public class J_Door : MonoBehaviour, IInteractable
 {
