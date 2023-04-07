@@ -16,14 +16,15 @@ public class HandManager : MonoBehaviour
     public void CastRay()
     {
         if (!Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out var hit, 10)) return;
+        
         if (hit.collider.TryGetComponent<ICollactable>(out var _clickedObject) && _playerHandSo.CurrentObject == null)
         {
             _playerHandSo.PutObjectToHand(hit.collider.gameObject);
+        }
 
-            if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
-            {
-                interactable.Interaction();
-            }
+        if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
+        {
+            interactable.Interaction();
         }
 
     }
