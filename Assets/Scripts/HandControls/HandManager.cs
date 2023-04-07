@@ -22,8 +22,6 @@ public class HandManager : MonoBehaviour
         if (hit.collider.TryGetComponent<ICollactable>(out var _clickedObject) && _playerHandSo.CurrentObject == null)
         {
             _playerHandSo.PutObjectToHand(hit.collider.gameObject);
-            if (_clickedObject.ObjectSlot != null)
-                _clickedObject.ObjectSlot = null;
         }
 
         if (hit.collider.TryGetComponent<IInteractable>(out var interactable))

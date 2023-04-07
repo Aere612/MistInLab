@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class VialSlot : BaseObjectSlot
 {
-    [SerializeField] private GameObject machine;
+    [SerializeField] internal Vial currentVial;
+
     public override void Interaction()
     {
         if (_playerHandSo.CurrentObject == null) return;
-        if (_playerHandSo.CurrentObject.TryGetComponent<Vial>(out var _vial) && !isFull)
+        if (_playerHandSo.CurrentObject.TryGetComponent<Vial>(out var _vial) && currentVial == null)
         {
-            PlaceTheObject(_vial.gameObject);
-            _vial.ObjectSlot = this;
+            currentVial = _vial;
+            PlaceTheObject(currentVial.gameObject);
+            currentVial._vialSlot = this;
         }
     }
 }
