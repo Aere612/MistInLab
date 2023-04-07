@@ -13,6 +13,7 @@ public class Sink : MonoBehaviour, IInteractable
             if (_vial.baseIngradiant != Ingradiant.Empty)
             {
                 _vial.baseIngradiant = Ingradiant.Empty;
+                _vial.sideIngradiant = Ingradiant.Empty;
                 return;
             }
             Destroy(_playerHandSo.CurrentObject.gameObject);

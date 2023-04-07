@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6023c6bb-2beb-4452-9c4a-0b06519b3f12" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MistInLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MistInLab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ingradiant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ingradiant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/ObjectPlacement/VialSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/ObjectPlacement/VialSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ingradients/BaseIngredient1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ingradients/BaseIngredient1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ingradients/BaseIngredient2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ingradients/BaseIngredient2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ingradients/BaseIngredient3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ingradients/BaseIngredient3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Mixer/Mixer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObject/Mixer/Mixer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/ObjectSpawners/IngradiantSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/ObjectSpawners/IngradiantSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Sink.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Sink.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +114,7 @@
       <workItem from="1680724418566" duration="632000" />
       <workItem from="1680762909001" duration="14561000" />
       <workItem from="1680781796767" duration="3634000" />
-      <workItem from="1680852933780" duration="4304000" />
+      <workItem from="1680852933780" duration="5510000" />
     </task>
     <servers />
   </component>
