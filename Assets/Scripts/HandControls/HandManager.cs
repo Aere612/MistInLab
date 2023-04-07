@@ -28,7 +28,6 @@ public class HandManager : MonoBehaviour
 
         if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
         {
-            Debug.Log("Girdi");
             interactable.Interaction();
         }
     }

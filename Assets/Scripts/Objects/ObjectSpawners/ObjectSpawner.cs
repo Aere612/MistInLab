@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour, IInteractable
 {
-    [SerializeField] private GameObject objectToSpawn;
-    [SerializeField] private PlayerHandSo _playerHandSo;
+    [SerializeField] protected  GameObject objectToSpawn;
+    [SerializeField] protected PlayerHandSo _playerHandSo;
 
-    public void Interaction()
+    public virtual void Interaction()
     {
         if (_playerHandSo.CurrentObject == null)
         {
