@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 198800704}
   - component: {fileID: 198800703}
   - component: {fileID: 198800702}
+  - component: {fileID: 198800705}
   m_Layer: 0
   m_Name: Button60
   m_TagString: Untagged
@@ -220,6 +221,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198800700}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &198800705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198800700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be317e011786634290ff8b476001249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mixerController: {fileID: 1091734610}
+  _countdown: 60
 --- !u!1001 &306133273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -665,8 +680,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be317e011786634290ff8b476001249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 11400000, guid: 3d143af6522f7bc4eb8aa3ed09198faf, type: 2}
-  slot: {fileID: 0}
+  _mixerController: {fileID: 1091734610}
+  _countdown: 30
 --- !u!1001 &943977653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -807,6 +822,8 @@ GameObject:
   - component: {fileID: 1091734608}
   - component: {fileID: 1091734607}
   - component: {fileID: 1091734606}
+  - component: {fileID: 1091734610}
+  - component: {fileID: 1091734611}
   m_Layer: 0
   m_Name: Mixer
   m_TagString: Untagged
@@ -896,6 +913,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1091734610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091734605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8daf52be4e22eb1469e937008743d4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 11400000, guid: 3d143af6522f7bc4eb8aa3ed09198faf, type: 2}
+  slot: {fileID: 1965495245}
+  currentCountdown: 0
+  isCountdownStarted: 0
+--- !u!114 &1091734611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091734605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70492fb85264c634b9c713b7b653e3be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 9fc49e9e610761b43a285bd9e70bace8, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1091734610}
+        m_TargetAssemblyTypeName: MixerController, Assembly-CSharp
+        m_MethodName: CheckCountdown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1102893171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,6 +1565,7 @@ GameObject:
   - component: {fileID: 1610469949}
   - component: {fileID: 1610469948}
   - component: {fileID: 1610469947}
+  - component: {fileID: 1610469950}
   m_Layer: 0
   m_Name: Button45
   m_TagString: Untagged
@@ -1589,6 +1651,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610469945}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1610469950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610469945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be317e011786634290ff8b476001249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mixerController: {fileID: 1091734610}
+  _countdown: 45
 --- !u!1001 &1695325066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1681,6 +1757,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2819488568541549209, guid: 129d19c557f91024c91bd0d1bdc84fa7, type: 3}
   m_PrefabInstance: {fileID: 1296103475}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1965495245 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2819488568541549189, guid: 129d19c557f91024c91bd0d1bdc84fa7, type: 3}
+  m_PrefabInstance: {fileID: 1296103475}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f28be24da684b42b9a965f17ae81a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2018407454
 PrefabInstance:
   m_ObjectHideFlags: 0
