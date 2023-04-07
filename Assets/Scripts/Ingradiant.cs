@@ -7,13 +7,11 @@ public enum Ingradiant
     Empty,
     Blue,
     Yellow,
-    Red
-}
-
-public enum SideIngradiant
-{
-    Empty,
+    Red,
     Green,
     Orange,
-    Purple
+    Purple,
+    LightBlue,
+    BoldYellow
 }
+

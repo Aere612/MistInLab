@@ -7,4 +7,5 @@ using System;
 public class Vial : BaseObject,ICollactable
 {
     [SerializeField] internal Ingradiant baseIngradiant;
+    [SerializeField] internal Ingradiant sideIngradiant;
 }

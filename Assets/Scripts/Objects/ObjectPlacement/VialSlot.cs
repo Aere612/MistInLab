@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class VialSlot : BaseObjectSlot
 {
+    [SerializeField] private GameObject machine;
     public override void Interaction()
     {
         if (_playerHandSo.CurrentObject == null) return;
