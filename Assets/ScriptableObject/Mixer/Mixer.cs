@@ -1,12 +1,9 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Mixer",menuName = "Machines/Mixer")]
-public class Mixer : ScriptableObject
+public class Mixer : BaseMachine
 {
-    [SerializeField] internal int countdown;
-
-
-    public Ingradiant MixIngradiants(Ingradiant baseIngradiant,Ingradiant sideIngradiant)
+    public override Ingradiant RunTheMachine(Ingradiant baseIngradiant,Ingradiant sideIngradiant)
     {
         var result = Ingradiant.Empty;
         if ((baseIngradiant == Ingradiant.Blue && sideIngradiant == Ingradiant.Orange) || (baseIngradiant == Ingradiant.Orange && sideIngradiant == Ingradiant.Blue))
