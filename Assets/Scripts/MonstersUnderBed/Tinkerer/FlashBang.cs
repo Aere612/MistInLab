@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
-using Sequence = DG.Tweening.Sequence;
 
 public class FlashBang : MonoBehaviour, IInteractable
 {
