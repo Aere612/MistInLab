@@ -16,6 +16,7 @@ public class MixerController : MonoBehaviour
         var currentVial = (Vial) _slot._currentObject;
         if (currentVial == null)
         {
+            _mixer.isCountdownStarted = false;
             return;
         }
 

@@ -24,6 +24,7 @@ public class CentrifugeController : MonoBehaviour
         
         if (vialOne == null || vialTwo == null || vialOutput == null)
         {
+            _centrifuge.isCountdownStarted = false;
             return;
         }
 
