@@ -9,7 +9,7 @@ public class Vial : BaseObject,ICollactable,IInteractable,IDeletable
 
     private void Awake()
     {
-        IsAvaible = true;
+        IsAvaibleToCollect = true;
     }
 
     public void Interaction()
@@ -19,5 +19,5 @@ public class Vial : BaseObject,ICollactable,IInteractable,IDeletable
         _objectSlot = null;
     }
 
-    public bool IsAvaible { get; set; }
+    public bool IsAvaibleToCollect { get; set; }
 }

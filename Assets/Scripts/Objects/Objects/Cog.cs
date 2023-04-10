@@ -5,7 +5,7 @@ public class Cog : BaseObject, ICollactable,IInteractable
 {
     private void Awake()
     {
-        IsAvaible = true;
+        IsAvaibleToCollect = true;
     }
 
     public void Interaction()
@@ -13,5 +13,5 @@ public class Cog : BaseObject, ICollactable,IInteractable
         _objectSlot._currentObject = null;
     }
 
-    public bool IsAvaible { get; set; }
+    public bool IsAvaibleToCollect { get; set; }
 }

@@ -4,10 +4,11 @@ public enum Ingradiant
     Blue,
     Yellow,
     Red,
-    Green,
     Orange,
     Purple,
     LightBlue,
-    BoldYellow
+    BoldYellow,
+    Acid,
+    Green
 }
 
