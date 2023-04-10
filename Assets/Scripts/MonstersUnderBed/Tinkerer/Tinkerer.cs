@@ -5,9 +5,10 @@ public class Tinkerer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI doorStatus;
     [SerializeField] private int doorTime;
+    [SerializeField] private int fakeUnlockChance=150;
     [SerializeField] private GameEventListener gameEventListener;
     [SerializeField] private GameEvent onGameLoseEvent;
-    [SerializeField] private MonsterSpawner monsterSpawner;
+    [SerializeField] private CountDown countDown;
 
     public void Attack()
     {
@@ -15,8 +16,17 @@ public class Tinkerer : MonoBehaviour
         doorStatus.color = Color.red;
         doorTime = 7;
         gameEventListener.enabled = true;
+        //play unlocking audio
     }
 
+    public void FakeChance()
+    {
+        if (!(countDown.TimeLeft > 100)) return;
+        fakeUnlockChance -= 1;
+        if (Random.Range(0, 100) < fakeUnlockChance) return;
+        fakeUnlockChance = 200;
+        //play unlocking audio
+    }
     public void DoorTimeReducer()
     {
         if (doorTime > 0)
@@ -24,7 +34,6 @@ public class Tinkerer : MonoBehaviour
             doorTime--;
             return;
         }
-        Debug.Log("Lose Tinkerer");
         onGameLoseEvent.Raise();
     }
 
@@ -33,6 +42,5 @@ public class Tinkerer : MonoBehaviour
         gameEventListener.enabled = false;
         doorStatus.text = "Locked";
         doorStatus.color = Color.green;
-        Debug.Log("Dodge Tinkerer");
     }
 }

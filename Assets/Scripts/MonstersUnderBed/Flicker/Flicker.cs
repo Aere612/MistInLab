@@ -6,14 +6,12 @@ public class Flicker : MonoBehaviour
     [SerializeField] private Light light1;
     [SerializeField] private Light light2;
     [SerializeField] private Light light3;
-    [SerializeField] private MonsterSpawner monsterSpawner;
     [SerializeField] private Deadbolt deadbolt;
     [SerializeField] private GameEvent onGameLoseEvent;
 
 
     public void Attack()
     {
-        Debug.Log("Attack");
         FlickerLights( light1);
         FlickerLights( light2);
         FlickerLights( light3, true);
@@ -21,16 +19,13 @@ public class Flicker : MonoBehaviour
 
     private void SafetyCheck()
     {
-        Debug.Log("SafetyCheck");
         if (deadbolt.IsLocked)
         {
             light1.DOIntensity(0.5f, 2f);
             light2.DOIntensity(0.5f, 2f);
             light3.DOIntensity(0.5f, 2f);
-            Debug.Log("Dodge Flicker");
             return;
         }
-        Debug.Log("Lose Flicker");
         onGameLoseEvent.Raise();
     }
 
