@@ -6,4 +6,6 @@ public class Cog : BaseObject, ICollactable,IInteractable
     {
         _objectSlot._currentObject = null;
     }
+
+    bool ICollactable.IsAvaible { get; set; }
 }
