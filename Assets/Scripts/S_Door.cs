@@ -6,13 +6,26 @@ public class S_Door : MonoBehaviour, IInteractable
     [SerializeField] private bool doorClosed = true;
     [SerializeField] private bool isLocked = true;
     [SerializeField] private Transform pivot;
-
-    public bool DoorClosed => doorClosed;
+    [SerializeField] private Rigidbody lockRb1;
+    [SerializeField] private Rigidbody lockRb2;
+    [SerializeField] private PlayerHandSo playerHandSo;
 
     public void Interaction()
     {
-        if (isLocked) return;
-        if (DoorClosed)
+        if (isLocked)
+        {
+            if (playerHandSo.CurrentObject == null) return;
+            if (playerHandSo.CurrentObject.TryGetComponent(out Vial vial) && 
+                vial.baseIngradiant == Ingradiant.Green)
+            {
+                isLocked = false;
+                lockRb1.isKinematic = false;
+                lockRb2.isKinematic = false;
+            }
+            return;
+        }
+
+        if (doorClosed)
         {
             doorClosed = false;
             pivot.DORotate(new Vector3(0, -90, 0f), 0.5f);
