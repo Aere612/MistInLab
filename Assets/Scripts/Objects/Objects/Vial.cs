@@ -12,4 +12,6 @@ public class Vial : BaseObject, ICollactable, IInteractable
             _objectSlot._currentObject = null;
         _objectSlot = null;
     }
+
+    bool ICollactable.IsAvaible { get; set; }
 }
