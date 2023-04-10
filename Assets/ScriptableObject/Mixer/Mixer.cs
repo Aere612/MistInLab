@@ -5,7 +5,8 @@ public class Mixer : BaseMachine
 {
     public override Ingradiant RunTheMachine(Ingradiant baseIngradiant,Ingradiant sideIngradiant)
     {
-        var result = Ingradiant.Empty;
+        Ingradiant result;
+        
         if ((baseIngradiant == Ingradiant.Blue && sideIngradiant == Ingradiant.Orange) || (baseIngradiant == Ingradiant.Orange && sideIngradiant == Ingradiant.Blue))
             result = Ingradiant.LightBlue;
         else if ((baseIngradiant == Ingradiant.Red && sideIngradiant == Ingradiant.Green)||(baseIngradiant == Ingradiant.Green && sideIngradiant == Ingradiant.Red))

@@ -18,14 +18,18 @@ public class CentrifugeController : MonoBehaviour
 
     public void CheckCountdown()
     {
-        if (_inputOne.currentVial == null || _inputTwo.currentVial == null || _output.currentVial == null)
+        var vialOne = (Vial)_inputOne._currentObject; 
+        var vialTwo = (Vial)_inputTwo._currentObject;
+        var vialOutput = (Vial)_output._currentObject;
+        
+        if (vialOne == null || vialTwo == null || vialOutput == null)
         {
             return;
         }
 
-        if (!_centrifuge.isCountdownStarted || _inputOne.currentVial.baseIngradiant == Ingradiant.Empty ||
-            _inputTwo.currentVial.baseIngradiant == Ingradiant.Empty ||
-            _output.currentVial.baseIngradiant != Ingradiant.Empty)
+        if (!_centrifuge.isCountdownStarted ||vialOne.baseIngradiant == Ingradiant.Empty ||
+            vialTwo.baseIngradiant == Ingradiant.Empty ||
+            vialOutput.baseIngradiant != Ingradiant.Empty)
             return;
 
         if (_centrifuge.currentCountdown > 0)
@@ -39,8 +43,12 @@ public class CentrifugeController : MonoBehaviour
 
     private void RunTheCentrifuge()
     {
-        _output.currentVial.baseIngradiant =
-            _centrifuge.RunTheMachine(_inputOne.currentVial.baseIngradiant, _inputTwo.currentVial.baseIngradiant);
-        _output.currentVial.sideIngradiant = Ingradiant.Empty;
+        var vialOne = (Vial)_inputOne._currentObject; 
+        var vialTwo = (Vial)_inputTwo._currentObject;
+        var vialOutput = (Vial)_output._currentObject;
+        
+        vialOutput.baseIngradiant =
+            _centrifuge.RunTheMachine(vialOne.baseIngradiant, vialTwo.baseIngradiant);
+        vialOutput.sideIngradiant = Ingradiant.Empty;
     }
 }

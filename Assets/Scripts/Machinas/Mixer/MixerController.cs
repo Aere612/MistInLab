@@ -13,13 +13,14 @@ public class MixerController : MonoBehaviour
 
     public void CheckCountdown()
     {
-        if (_slot.currentVial == null)
+        var currentVial = (Vial) _slot._currentObject;
+        if (currentVial == null)
         {
             return;
         }
 
-        if (!_mixer.isCountdownStarted || _slot.currentVial.baseIngradiant == Ingradiant.Empty ||
-            _slot.currentVial.sideIngradiant == Ingradiant.Empty) return;
+        if (!_mixer.isCountdownStarted ||currentVial.baseIngradiant == Ingradiant.Empty ||
+            currentVial.sideIngradiant == Ingradiant.Empty) return;
 
         if (_mixer.currentCountdown > 0)
             _mixer.currentCountdown--;
@@ -32,8 +33,9 @@ public class MixerController : MonoBehaviour
 
     private void RunTheMixer()
     {
-        _slot.currentVial.baseIngradiant =
-            _mixer.RunTheMachine(_slot.currentVial.baseIngradiant, _slot.currentVial.sideIngradiant);
-        _slot.currentVial.sideIngradiant = Ingradiant.Empty;
+        var currentVial = (Vial) _slot._currentObject;
+        currentVial.baseIngradiant =
+            _mixer.RunTheMachine(currentVial.baseIngradiant, currentVial.sideIngradiant);
+        currentVial.sideIngradiant = Ingradiant.Empty;
     }
 }
