@@ -14,11 +14,11 @@ public class FlashBang : MonoBehaviour, IInteractable
     public void Interaction()
     {
         if (currentCd != 0) return;
-        var  flashBangSequenceLight = DOTween.Sequence();
         var  flashBangSequenceImage = DOTween.Sequence();
         flashBangSequenceImage.Append(lightAnimImage.DOColor(new Color(1f,1f,1f,1f),0.05f));
         flashBangSequenceImage.Append(lightAnimImage.DOColor(new Color(1f,1f,1f,1f),0.5f));
         flashBangSequenceImage.Append(lightAnimImage.DOColor(new Color(1f,1f,1f,0f),2f));
+        var  flashBangSequenceLight = DOTween.Sequence();
         flashBangSequenceLight.Append(flashBangLight.DOIntensity(20f, 0.05f));
         flashBangSequenceLight.Append(flashBangLight.DOIntensity(20f, 0.5f));
         flashBangSequenceLight.Append(flashBangLight.DOIntensity(0f, 2f));

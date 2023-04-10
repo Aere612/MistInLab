@@ -15,8 +15,8 @@ public class S_Door : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-        lockTrash1.ısAvaible = false;
-        lockTrash2.ısAvaible = false;
+        lockTrash1.IsAvaibleToCollect = false;
+        lockTrash2.IsAvaibleToCollect = false;
     }
 
     public void Interaction()
@@ -25,11 +25,11 @@ public class S_Door : MonoBehaviour, IInteractable
         {
             if (playerHandSo.CurrentObject == null) return;
             if (playerHandSo.CurrentObject.TryGetComponent(out Vial vial) && 
-                vial.baseIngradiant == Ingradiant.Green)
+                vial.baseIngradiant == Ingradiant.Acid)
             {
                 isLocked = false;
-                lockTrash1.ısAvaible = true;
-                lockTrash2.ısAvaible = true;
+                lockTrash1.IsAvaibleToCollect = true;
+                lockTrash2.IsAvaibleToCollect = true;
                 lockRb1.isKinematic = false;
                 lockRb2.isKinematic = false;
             }
