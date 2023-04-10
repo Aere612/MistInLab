@@ -26,24 +26,24 @@ public class FogEmitterRightSideSlider : MonoBehaviour, IInteractable
         switch (leverState) //175
         {
             case SliderState.Left:
-                slider.DOMove(transform.position + new Vector3(0, 0, -.700f), 1.00f);
+                slider.DOMove(slider.transform.position + new Vector3(0, 0, .700f), 1.00f);
                 isCorrect = false;
                 break;
             case SliderState.LeftMiddle:
                 isCorrect = true;
-                slider.DOMove(transform.position + new Vector3(0, 0, 0.175f), 0.25f);
+                slider.DOMove(slider.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
                 break;
             case SliderState.Middle:
                 isCorrect = false;
-                slider.DOMove(transform.position + new Vector3(0, 0, 0.175f), 0.25f);
+                slider.DOMove(slider.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
                 break;
             case SliderState.RightMiddle:
                 isCorrect = false;
-                slider.DOMove(transform.position + new Vector3(0, 0, 0.175f), 0.25f);
+                slider.DOMove(slider.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
                 break;
             case SliderState.Right:
                 isCorrect = false;
-                slider.DOMove(transform.position + new Vector3(0, 0, 0.175f), 0.25f);
+                slider.DOMove(slider.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
