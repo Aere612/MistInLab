@@ -13,7 +13,7 @@ public class MixerController : MonoBehaviour
 
     public void CheckCountdown()
     {
-        var currentVial = (Vial) _slot._currentObject;
+        var currentVial = _slot.CurrentObject;
         if (currentVial == null)
         {
             _mixer.isCountdownStarted = false;
@@ -34,7 +34,8 @@ public class MixerController : MonoBehaviour
 
     private void RunTheMixer()
     {
-        var currentVial = (Vial) _slot._currentObject;
+        var currentVial = _slot.CurrentObject;
+        
         currentVial.baseIngradiant =
             _mixer.RunTheMachine(currentVial.baseIngradiant, currentVial.sideIngradiant);
         currentVial.sideIngradiant = Ingradiant.Empty;

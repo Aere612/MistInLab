@@ -15,8 +15,8 @@ public class DamitmaController : MonoBehaviour
 
     public void CheckCountdown()
     {
-        var currentInput = (Vial) _input._currentObject;
-        var currentOutput = (Vial)_output._currentObject;
+        var currentInput = _input.CurrentObject;
+        var currentOutput = _output.CurrentObject;
         if (currentInput == null || currentOutput == null)
         {
             _damitma.isCountdownStarted = false;
@@ -37,8 +37,8 @@ public class DamitmaController : MonoBehaviour
 
     private void RunTheDamitma()
     {
-        var currentVial = (Vial) _input._currentObject;
-        var currentOutput = (Vial)_output._currentObject;
+        var currentVial = _input.CurrentObject;
+        var currentOutput = _output.CurrentObject;
         currentOutput.baseIngradiant =
             _damitma.RunTheMachine(currentVial.baseIngradiant, currentVial.sideIngradiant);
         currentOutput.sideIngradiant = Ingradiant.Empty;

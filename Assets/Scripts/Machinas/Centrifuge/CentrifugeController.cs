@@ -18,9 +18,9 @@ public class CentrifugeController : MonoBehaviour
 
     public void CheckCountdown()
     {
-        var vialOne = (Vial)_inputOne._currentObject; 
-        var vialTwo = (Vial)_inputTwo._currentObject;
-        var vialOutput = (Vial)_output._currentObject;
+        var vialOne = _inputOne.CurrentObject; 
+        var vialTwo = _inputTwo.CurrentObject;
+        var vialOutput = _output.CurrentObject;
         
         if (vialOne == null || vialTwo == null || vialOutput == null)
         {
@@ -44,9 +44,9 @@ public class CentrifugeController : MonoBehaviour
 
     private void RunTheCentrifuge()
     {
-        var vialOne = (Vial)_inputOne._currentObject; 
-        var vialTwo = (Vial)_inputTwo._currentObject;
-        var vialOutput = (Vial)_output._currentObject;
+        var vialOne = _inputOne.CurrentObject; 
+        var vialTwo = _inputTwo.CurrentObject;
+        var vialOutput = _output.CurrentObject;
         
         vialOutput.baseIngradiant =
             _centrifuge.RunTheMachine(vialOne.baseIngradiant, vialTwo.baseIngradiant);
