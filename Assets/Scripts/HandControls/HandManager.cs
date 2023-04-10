@@ -17,7 +17,7 @@ public class HandManager : MonoBehaviour
     {
         if (!Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out var hit, 10)) return;
         
-        if (hit.collider.TryGetComponent<ICollactable>(out var _clickedObject) && _playerHandSo.CurrentObject == null)
+        if (hit.collider.TryGetComponent<ICollactable>(out var _clickedObject) && _playerHandSo.CurrentObject == null && _clickedObject.IsAvaible)
         {
             _playerHandSo.PutObjectToHand(hit.collider.gameObject);
         }
