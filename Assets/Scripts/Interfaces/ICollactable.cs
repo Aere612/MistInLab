@@ -1,5 +1,7 @@
+using UnityEngine;
+
 public interface ICollactable
 {
-    internal bool IsAvaible { get; set; }
+    public bool IsAvaible { get; set; }
 }
 

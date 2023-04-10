@@ -98,6 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 505fe360ccb830647928021037e5adb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _objectSlot: {fileID: 0}
+  baseIngradiant: 0
+  sideIngradiant: 0
+  "_\u0131sAvaible": 1
 --- !u!54 &7960475950561644320
 Rigidbody:
   m_ObjectHideFlags: 0

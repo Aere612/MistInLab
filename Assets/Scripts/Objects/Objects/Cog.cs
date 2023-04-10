@@ -1,11 +1,17 @@
+using System;
 using UnityEngine;
 
 public class Cog : BaseObject, ICollactable,IInteractable
 {
+    private void Awake()
+    {
+        IsAvaible = true;
+    }
+
     public void Interaction()
     {
         _objectSlot._currentObject = null;
     }
 
-    bool ICollactable.IsAvaible { get; set; }
+    public bool IsAvaible { get; set; }
 }

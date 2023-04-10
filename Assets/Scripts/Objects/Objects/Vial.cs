@@ -1,10 +1,16 @@
+using System;
 using UnityEngine;
 
 
-public class Vial : BaseObject, ICollactable, IInteractable
+public class Vial : BaseObject,ICollactable,IInteractable,IDeletable
 {
     [SerializeField] internal Ingradiant baseIngradiant;
     [SerializeField] internal Ingradiant sideIngradiant;
+
+    private void Awake()
+    {
+        IsAvaible = true;
+    }
 
     public void Interaction()
     {
@@ -13,5 +19,5 @@ public class Vial : BaseObject, ICollactable, IInteractable
         _objectSlot = null;
     }
 
-    bool ICollactable.IsAvaible { get; set; }
+    public bool IsAvaible { get; set; }
 }
