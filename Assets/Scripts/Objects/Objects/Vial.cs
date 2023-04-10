@@ -14,7 +14,7 @@ public class Vial : BaseObject,ICollactable,IInteractable,IDeletable
 
     public void Interaction()
     {
-        if(_objectSlot)
+        if (_objectSlot)
             _objectSlot._currentObject = null;
         _objectSlot = null;
     }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using DG.Tweening;
 
@@ -6,13 +7,36 @@ public class S_Door : MonoBehaviour, IInteractable
     [SerializeField] private bool doorClosed = true;
     [SerializeField] private bool isLocked = true;
     [SerializeField] private Transform pivot;
+    [SerializeField] private Rigidbody lockRb1;
+    [SerializeField] private Rigidbody lockRb2;
+    [SerializeField] private Trash lockTrash1;
+    [SerializeField] private Trash lockTrash2;
+    [SerializeField] private PlayerHandSo playerHandSo;
 
-    public bool DoorClosed => doorClosed;
+    private void Awake()
+    {
+        lockTrash1.ısAvaible = false;
+        lockTrash2.ısAvaible = false;
+    }
 
     public void Interaction()
     {
-        if (isLocked) return;
-        if (DoorClosed)
+        if (isLocked)
+        {
+            if (playerHandSo.CurrentObject == null) return;
+            if (playerHandSo.CurrentObject.TryGetComponent(out Vial vial) && 
+                vial.baseIngradiant == Ingradiant.Green)
+            {
+                isLocked = false;
+                lockTrash1.ısAvaible = true;
+                lockTrash2.ısAvaible = true;
+                lockRb1.isKinematic = false;
+                lockRb2.isKinematic = false;
+            }
+            return;
+        }
+
+        if (doorClosed)
         {
             doorClosed = false;
             pivot.DORotate(new Vector3(0, -90, 0f), 0.5f);
