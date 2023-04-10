@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class Trash : MonoBehaviour,ICollactable
 {
-    //Wow you found an easter egg!!! congrats
+    public bool ısAvaible;
+
+    bool ICollactable.IsAvaible
+    {
+        get => ısAvaible;
+        set => ısAvaible = value;
+    }
 }
