@@ -497,9 +497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0108867e472af334f8046bfea566a548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cogAmount: 0
-  playerHandSo: {fileID: 11400000, guid: 57b5a22096346914a9217a7288382381, type: 2}
-  onCogChangedEvent: {fileID: 0}
 --- !u!1 &103771372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,7 +1811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 333789480}
   m_Layer: 0
-  m_Name: WallLocation
+  m_Name: NoteReturnWallLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2663,7 +2660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerFaceLocation: {fileID: 1653239985}
-  wallLocation: {fileID: 333789480}
+  returnLocation: {fileID: 333789480}
   player: {fileID: 963194228}
   flashLight: {fileID: 1510253815}
   flashLightCurrent: {fileID: 1007253021}
@@ -4817,7 +4814,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   integrity: {fileID: 1782158683}
-  lockState: {fileID: 1070860307}
   countDown: {fileID: 1782158686}
 --- !u!114 &962237154
 MonoBehaviour:

@@ -13,7 +13,7 @@ public class Not : MonoBehaviour, IInteractable
     }
     
     [SerializeField] private Transform playerFaceLocation;
-    [SerializeField] private Transform wallLocation;
+    [SerializeField] private Transform returnLocation;
     [SerializeField] private Transform player;
     [SerializeField] private Transform flashLight;
     [SerializeField] private Transform flashLightCurrent;
@@ -30,8 +30,8 @@ public class Not : MonoBehaviour, IInteractable
                 state = State.OnWall;
                 flashLight.DOMove(flashLightCurrent.position, 0.5f);
                 flashLight.DORotate(flashLightCurrent.rotation.eulerAngles, 0.5f);
-                transform.DOMove(wallLocation.position, 0.5f);
-                transform.DORotate(new Vector3(0,0,0), 0.5f);
+                transform.DOMove(returnLocation.position, 0.5f);
+                transform.DORotate(returnLocation.rotation.eulerAngles, 0.5f);
                 break;
             case State.OnWall:
                 playerMovement.enabled = false;

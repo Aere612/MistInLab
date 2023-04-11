@@ -3,15 +3,15 @@ using TMPro;
 using System;
 public class ScreenVisualizer : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI integrity, lockState;
+    [SerializeField] private TextMeshProUGUI integrity;
     [SerializeField] private CountDown countDown;
 
     public void UpdateScreen()
     {
         var currentCountDown = countDown.TimeLeft;
-        if (currentCountDown > 300)
+        if (currentCountDown > 100)
         {
-            var value = 0.000025f * currentCountDown * currentCountDown + 0.01f * currentCountDown;
+            var value = 0.0001234567899f * currentCountDown * currentCountDown;
             integrity.text = "%"+Math.Floor(value);
             integrity.color = value switch
             {
