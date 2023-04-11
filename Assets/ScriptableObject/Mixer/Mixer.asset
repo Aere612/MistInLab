@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532b795e1b0c7ff4093255ee60a2a6af, type: 3}
   m_Name: Mixer
   m_EditorClassIdentifier: 
-  countdown: 0
-  baseIngradiant: 0
-  sideIngradiant: 0
+  currentCountdown: 0
+  isCountdownStarted: 0
