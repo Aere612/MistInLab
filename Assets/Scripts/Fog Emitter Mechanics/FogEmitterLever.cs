@@ -1,7 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 
-public class FogEmitterRightSideLever : MonoBehaviour, IInteractable
+public class FogEmitterLever : MonoBehaviour, IInteractable
 {
     internal bool isCorrect;
     public enum LeverState

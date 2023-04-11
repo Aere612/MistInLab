@@ -1,7 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 
-public class FogEmitterRightSideSwitch : MonoBehaviour,IInteractable
+public class FogEmitterSwitch : MonoBehaviour,IInteractable
 {
     public enum SwitchState
     {
