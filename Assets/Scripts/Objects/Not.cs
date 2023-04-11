@@ -19,15 +19,15 @@ public class Not : MonoBehaviour, IInteractable
     [SerializeField] private Transform flashLightCurrent;
     [SerializeField] private Transform flashLightCloseUp;
     [SerializeField] private pm playerMovement;
-    private State state = State.OnWall;
+    private State _state = State.OnWall;
 
     public void Interaction()
     {
-        switch (state)
+        switch (_state)
         {
             case State.OnHand:
                 playerMovement.enabled = true;
-                state = State.OnWall;
+                _state = State.OnWall;
                 flashLight.DOMove(flashLightCurrent.position, 0.5f);
                 flashLight.DORotate(flashLightCurrent.rotation.eulerAngles, 0.5f);
                 transform.DOMove(returnLocation.position, 0.5f);
@@ -35,7 +35,7 @@ public class Not : MonoBehaviour, IInteractable
                 break;
             case State.OnWall:
                 playerMovement.enabled = false;
-                state = State.OnHand;
+                _state = State.OnHand;
                 flashLight.DOMove(flashLightCloseUp.position, 0.5f);
                 flashLight.DORotate(flashLightCloseUp.rotation.eulerAngles, 0.5f);
                 transform.DOMove(playerFaceLocation.position, 0.5f);
