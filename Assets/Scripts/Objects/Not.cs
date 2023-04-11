@@ -11,7 +11,7 @@ public class Not : MonoBehaviour, IInteractable
         OnHand,
         OnWall
     }
-    
+
     [SerializeField] private Transform playerFaceLocation;
     [SerializeField] private Transform returnLocation;
     [SerializeField] private Transform player;
@@ -23,23 +23,24 @@ public class Not : MonoBehaviour, IInteractable
 
     public void Interaction()
     {
+        var sequence = DOTween.Sequence();
         switch (_state)
         {
             case State.OnHand:
-                playerMovement.enabled = true;
                 _state = State.OnWall;
-                flashLight.DOMove(flashLightCurrent.position, 0.5f);
-                flashLight.DORotate(flashLightCurrent.rotation.eulerAngles, 0.5f);
-                transform.DOMove(returnLocation.position, 0.5f);
-                transform.DORotate(returnLocation.rotation.eulerAngles, 0.5f);
+                sequence.Append(flashLight.DOMove(flashLightCurrent.position, 0.5f));
+                sequence.Join(flashLight.DORotate(flashLightCurrent.rotation.eulerAngles, 0.5f));
+                sequence.Join(transform.DOMove(returnLocation.position, 0.5f));
+                sequence.Join(transform.DORotate(returnLocation.rotation.eulerAngles, 0.5f));
+                sequence.OnComplete(() => playerMovement.enabled = true);
                 break;
             case State.OnWall:
-                playerMovement.enabled = false;
                 _state = State.OnHand;
-                flashLight.DOMove(flashLightCloseUp.position, 0.5f);
-                flashLight.DORotate(flashLightCloseUp.rotation.eulerAngles, 0.5f);
-                transform.DOMove(playerFaceLocation.position, 0.5f);
-                transform.DORotate(player.rotation.eulerAngles, 0.5f);
+                sequence.OnStart(() => playerMovement.enabled = false);
+                sequence.Append(flashLight.DOMove(flashLightCloseUp.position, 0.5f));
+                sequence.Join( flashLight.DORotate(flashLightCloseUp.rotation.eulerAngles, 0.5f));
+                sequence.Join(transform.DOMove(playerFaceLocation.position, 0.5f));
+                sequence.Join(transform.DORotate(player.rotation.eulerAngles, 0.5f));
                 break;
         }
     }
