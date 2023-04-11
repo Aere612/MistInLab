@@ -25,7 +25,7 @@ public class S_Door : MonoBehaviour, IInteractable
         {
             if (playerHandSo.CurrentObject == null) return;
             if (playerHandSo.CurrentObject.TryGetComponent(out Vial vial) && 
-                vial.baseIngradiant == Ingradiant.Green)
+                vial.baseIngradiant == Ingradiant.Acid)
             {
                 isLocked = false;
                 lockTrash1.IsAvaibleToCollect = true;
