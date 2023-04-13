@@ -7,4 +7,10 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene(1, LoadSceneMode.Additive);
     }
+
+
+    private void EndTheGame()
+    {
+        
+    }
 }

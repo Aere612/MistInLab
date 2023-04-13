@@ -8,6 +8,7 @@ public class TimerButton : MonoBehaviour, IInteractable
     public void Interaction()
     {
         if (_machine.isCountdownStarted) return;
+        _machine.choosenCountdown = _countdown;
         _machine.currentCountdown = _countdown;
         _machine.isCountdownStarted = true;
     }

@@ -23,6 +23,8 @@ public class MixerController : MonoBehaviour
         if (!_mixer.isCountdownStarted ||currentVial.baseIngradiant == Ingradiant.Empty ||
             currentVial.sideIngradiant == Ingradiant.Empty) return;
 
+        _mixer.isCorrect = _mixer.choosenCountdown == _mixer.correctCountdown;
+        
         if (_mixer.currentCountdown > 0)
             _mixer.currentCountdown--;
         else
