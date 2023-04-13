@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Trash : MonoBehaviour,ICollactable
 {
-    public bool IsAvaibleToCollect { get; set; }
+    public bool IsAvailableToCollect { get; set; }
 }
