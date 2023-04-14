@@ -9,7 +9,7 @@ public class Close_Button : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         ScreenCam.SetActive(false);
         PlayerCam.SetActive(true);
-        Player.GetComponent<pm>().enabled = true;
+        Player.GetComponent<PlayerMovement>().enabled = true;
         
     }
 }

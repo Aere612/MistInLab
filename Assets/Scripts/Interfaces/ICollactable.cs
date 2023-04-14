@@ -2,6 +2,6 @@ using UnityEngine;
 
 public interface ICollactable
 {
-    public bool IsAvaibleToCollect { get; set; }
+    public bool IsAvailableToCollect { get; set; }
 }
 

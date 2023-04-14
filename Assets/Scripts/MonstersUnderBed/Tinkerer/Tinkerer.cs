@@ -12,7 +12,7 @@ public class Tinkerer : MonoBehaviour
 
     public void Attack()
     {
-        doorStatus.text = "Unlocking...";
+        doorStatus.text = "ACILIYOR...";
         doorStatus.color = Color.red;
         doorTime = 7;
         gameEventListener.enabled = true;
@@ -40,7 +40,7 @@ public class Tinkerer : MonoBehaviour
     public void FlashBanged()
     {
         gameEventListener.enabled = false;
-        doorStatus.text = "Locked";
-        doorStatus.color = Color.green;
+        doorStatus.text = "KILITLI";
+        doorStatus.color = Color.blue;
     }
 }

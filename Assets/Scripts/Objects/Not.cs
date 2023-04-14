@@ -18,7 +18,7 @@ public class Not : MonoBehaviour, IInteractable
     [SerializeField] private Transform flashLight;
     [SerializeField] private Transform flashLightCurrent;
     [SerializeField] private Transform flashLightCloseUp;
-    [SerializeField] private pm playerMovement;
+    [SerializeField] private PlayerMovement playerMovement;
     private State _state = State.OnWall;
 
     public void Interaction()

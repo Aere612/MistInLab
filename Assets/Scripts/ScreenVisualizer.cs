@@ -21,6 +21,6 @@ public class ScreenVisualizer : MonoBehaviour
             };
             return;
         }
-        integrity.text = "Collapse Imminent";
+        integrity.text = "COKMEK UZERE";
     }
 }
