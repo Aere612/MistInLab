@@ -17,8 +17,7 @@ public class Key : MonoBehaviour,IInteractable,ICollactable
     private void Awake()
     {
         pickUpTutorial.gameObject.SetActive(true);
-        IsAvailableToCollect = true;
     }
 
-    public bool IsAvailableToCollect { get; set; }
+    public bool IsAvailableToCollect { get; set; }= true;
 }

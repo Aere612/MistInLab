@@ -2,24 +2,24 @@ using UnityEngine;
 
 public class HandManager : MonoBehaviour
 {
-    [SerializeField] private PlayerHandSo _playerHandSo;
+    [SerializeField] private PlayerHandSo playerHandSo;
     [SerializeField] private Transform playerHandTransform;
     [SerializeField] private Transform playerCameraTransform;
 
     private void Start()
     {
-        _playerHandSo.CurrentObject = null;
-        _playerHandSo.playerHandTransform = playerHandTransform;
-        _playerHandSo.playerCameraTransform = playerCameraTransform;
+        playerHandSo.CurrentObject = null;
+        playerHandSo.playerHandTransform = playerHandTransform;
+        playerHandSo.playerCameraTransform = playerCameraTransform;
     }
 
     public void CastRay()
     {
-        if (!Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out var hit, 10)) return;
+        if (!Physics.Raycast(playerCameraTransform.position+playerCameraTransform.forward, playerCameraTransform.forward, out var hit, 2)) return;
         
-        if (hit.collider.TryGetComponent<ICollactable>(out var _clickedObject) && _playerHandSo.CurrentObject == null && _clickedObject.IsAvailableToCollect)
+        if (hit.collider.TryGetComponent<ICollactable>(out var clickedObject) && playerHandSo.CurrentObject == null && clickedObject.IsAvailableToCollect)
         {
-            _playerHandSo.PutObjectToHand(hit.collider.gameObject);
+            playerHandSo.PutObjectToHand(hit.collider.gameObject);
         }
 
         if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
@@ -30,6 +30,6 @@ public class HandManager : MonoBehaviour
     }
     public void DropTheObject()
     {
-        _playerHandSo.DropTheObject();
+        playerHandSo.DropTheObject();
     }
 }

@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using Unity.VisualScripting;
 
 public class Not : MonoBehaviour, IInteractable
 {
@@ -20,28 +17,27 @@ public class Not : MonoBehaviour, IInteractable
     [SerializeField] private Transform flashLightCloseUp;
     [SerializeField] private PlayerMovement playerMovement;
     private State _state = State.OnWall;
-
+    private Sequence _sequence;
     public void Interaction()
     {
-        var sequence = DOTween.Sequence();
-        switch (_state)
-        {
-            case State.OnHand:
-                _state = State.OnWall;
-                sequence.Append(flashLight.DOMove(flashLightCurrent.position, 0.5f));
-                sequence.Join(flashLight.DORotate(flashLightCurrent.rotation.eulerAngles, 0.5f));
-                sequence.Join(transform.DOMove(returnLocation.position, 0.5f));
-                sequence.Join(transform.DORotate(returnLocation.rotation.eulerAngles, 0.5f));
-                sequence.OnComplete(() => playerMovement.enabled = true);
-                break;
-            case State.OnWall:
-                _state = State.OnHand;
-                sequence.OnStart(() => playerMovement.enabled = false);
-                sequence.Append(flashLight.DOMove(flashLightCloseUp.position, 0.5f));
-                sequence.Join( flashLight.DORotate(flashLightCloseUp.rotation.eulerAngles, 0.5f));
-                sequence.Join(transform.DOMove(playerFaceLocation.position, 0.5f));
-                sequence.Join(transform.DORotate(player.rotation.eulerAngles, 0.5f));
-                break;
-        }
+        if (_state == State.OnHand) return;
+        _state = State.OnHand;
+        _sequence = DOTween.Sequence();
+        _sequence.OnStart(() => playerMovement.enabled = false);
+        _sequence.Append(flashLight.DOMove(flashLightCloseUp.position, 0.5f));
+        _sequence.Join( flashLight.DORotate(flashLightCloseUp.rotation.eulerAngles, 0.5f));
+        _sequence.Join(transform.DOMove(playerFaceLocation.position, 0.5f));
+        _sequence.Join(transform.DORotate(player.rotation.eulerAngles, 0.5f));
     }
-}
+    private void OnMouseDown()
+    {
+        if (_state == State.OnWall) return;
+        _state = State.OnWall;
+        _sequence = DOTween.Sequence();
+        _sequence.Append(flashLight.DOMove(flashLightCurrent.position, 0.5f));
+        _sequence.Join(flashLight.DORotate(flashLightCurrent.rotation.eulerAngles, 0.5f));
+        _sequence.Join(transform.DOMove(returnLocation.position, 0.5f));
+        _sequence.Join(transform.DORotate(returnLocation.rotation.eulerAngles, 0.5f));
+        _sequence.OnComplete(() => playerMovement.enabled = true);
+    }
+}        

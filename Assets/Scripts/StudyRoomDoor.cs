@@ -1,16 +1,15 @@
-using System;
 using UnityEngine;
 using DG.Tweening;
 
-public class S_Door : MonoBehaviour, IInteractable
+public class StudyRoomDoor : MonoBehaviour, IInteractable
 {
     [SerializeField] private bool doorClosed = true;
     [SerializeField] private bool isLocked = true;
     [SerializeField] private Transform pivot;
     [SerializeField] private Rigidbody lockRb1;
     [SerializeField] private Rigidbody lockRb2;
-    [SerializeField] private Trash lockTrash1;
-    [SerializeField] private Trash lockTrash2;
+    [SerializeField] private TrashDisabledStart lockTrash1;
+    [SerializeField] private TrashDisabledStart lockTrash2;
     [SerializeField] private PlayerHandSo playerHandSo;
 
     private void Awake()
