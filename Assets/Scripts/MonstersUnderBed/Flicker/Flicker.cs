@@ -7,6 +7,10 @@ public class Flicker : MonoBehaviour
     [SerializeField] private Light light2;
     [SerializeField] private Light light3;
     [SerializeField] private Light light4;
+    [SerializeField] private Light light5;
+    [SerializeField] private Light light6;
+    [SerializeField] private Light light7;
+    [SerializeField] private Light light8;
     [SerializeField] private Deadbolt deadbolt;
     [SerializeField] private GameEvent onGameLoseEvent;
 
@@ -16,7 +20,11 @@ public class Flicker : MonoBehaviour
         FlickerLights( light1);
         FlickerLights( light2);
         FlickerLights( light3);
-        FlickerLights( light4, true);
+        FlickerLights( light4);
+        FlickerLights( light5);
+        FlickerLights( light6);
+        FlickerLights( light7);
+        FlickerLights( light8, true);
     }
 
     private void SafetyCheck()
@@ -27,6 +35,10 @@ public class Flicker : MonoBehaviour
             light2.DOIntensity(0.5f, 2f);
             light3.DOIntensity(0.5f, 2f);
             light4.DOIntensity(0.5f, 2f);
+            light5.DOIntensity(0.5f, 2f);
+            light6.DOIntensity(0.5f, 2f);
+            light7.DOIntensity(0.5f, 2f);
+            light8.DOIntensity(0.5f, 2f);
             return;
         }
         onGameLoseEvent.Raise();

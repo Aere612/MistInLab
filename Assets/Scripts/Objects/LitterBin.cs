@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class LitterBin : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if(collision.collider.TryGetComponent<IDeletable>(out _))
+        if(collision.GetComponent<Collider>().TryGetComponent<IDeletable>(out _))
         {
-            Destroy(collision.collider.gameObject,0.5f);
+            Destroy(collision.GetComponent<Collider>().gameObject,0.5f);
         }
     }
 }
