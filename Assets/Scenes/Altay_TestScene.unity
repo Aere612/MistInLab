@@ -933,6 +933,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a7ed748d4f2b9b46bd9c8f994abf4fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blackScreen: {fileID: 0}
+  newspaperOne: {fileID: 0}
+  newspaperTwo: {fileID: 0}
+  newspapers: []
+  newspaperCounter: 0
 --- !u!4 &1267265029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4652537508288172589, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
@@ -1604,6 +1609,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3084963663685974673, guid: 8534efb6ada25764baded499633206e6, type: 3}
   m_PrefabInstance: {fileID: 324169884}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1902033500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4652537508288172584, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
+  m_PrefabInstance: {fileID: 2040114689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1902033503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902033500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!4 &1926959225 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2819488568541549209, guid: 129d19c557f91024c91bd0d1bdc84fa7, type: 3}
