@@ -6,11 +6,7 @@ public class Vial : BaseObject,ICollactable,IInteractable,IDeletable
 {
     [SerializeField] internal Ingradiant baseIngradiant;
     [SerializeField] internal Ingradiant sideIngradiant;
-
-    private void Awake()
-    {
-        IsAvailableToCollect = true;
-    }
+    public bool IsAvailableToCollect { get; set; } = true;
 
     public void Interaction()
     {
@@ -19,5 +15,4 @@ public class Vial : BaseObject,ICollactable,IInteractable,IDeletable
         _objectSlot = null;
     }
 
-    public bool IsAvailableToCollect { get; set; }
 }
