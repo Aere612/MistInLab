@@ -9,7 +9,7 @@ public class ScreenVisualizer : MonoBehaviour
     public void UpdateScreen()
     {
         var currentCountDown = countDown.TimeLeft;
-        if (currentCountDown > 100)
+        if (currentCountDown > 76)
         {
             var value = 0.0001234567899f * currentCountDown * currentCountDown;
             integrity.text = "%"+Math.Floor(value);
