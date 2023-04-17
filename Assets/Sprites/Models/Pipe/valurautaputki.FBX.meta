@@ -3,7 +3,17 @@ guid: dda7c8933240bcf43b93500be4c45127
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default
+    second: {fileID: 2100000, guid: a5c7a70c0fda96b458da2a0c4e28ecde, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: putkee
+    second: {fileID: 2800000, guid: 6a0ed36e162afee42874beadc25bbae7, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
