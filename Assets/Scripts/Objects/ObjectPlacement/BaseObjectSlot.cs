@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class BaseObjectSlot : MonoBehaviour, IInteractable
@@ -14,7 +15,7 @@ public class BaseObjectSlot : MonoBehaviour, IInteractable
     {
         _playerHandSo.CurrentObject.transform.parent = null;
         objectToPlace.transform.position = _slotTransform.position;
-        objectToPlace.transform.rotation = _slotTransform.rotation;
+        objectToPlace.transform.eulerAngles = -_slotTransform.eulerAngles;
         _playerHandSo.CurrentObject = null;
     }
 }

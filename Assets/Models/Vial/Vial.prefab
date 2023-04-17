@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7960475950561644323}
   - component: {fileID: 7960475950561644325}
   - component: {fileID: 7960475950561644320}
-  - component: {fileID: 6364945387727968102}
+  - component: {fileID: 3910211520826537532}
   m_Layer: 8
   m_Name: Vial
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7960475950561644326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.39, y: 0.38, z: 0.39}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -117,8 +117,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &6364945387727968102
-MeshCollider:
+--- !u!136 &3910211520826537532
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -127,7 +127,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 119555606971504069, guid: 21ae0371e88a3fa4f994220373e85c09, type: 3}
+  m_Radius: 0.024595954
+  m_Height: 0.37405646
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.00022589415, z: -0.022716016}

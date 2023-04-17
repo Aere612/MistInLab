@@ -16,7 +16,7 @@ public class PlayerHandSo : ScriptableObject
         CurrentObject = objectToPut;
         CurrentObject.transform.parent = playerCameraTransform;
         CurrentObject.transform.position = playerHandTransform.position;
-        CurrentObject.transform.rotation = playerCameraTransform.rotation;
+        CurrentObject.transform.eulerAngles = playerHandTransform.eulerAngles;
         CurrentObject.GetComponent<Rigidbody>().isKinematic = true;
     }
     public void DropTheObject()
