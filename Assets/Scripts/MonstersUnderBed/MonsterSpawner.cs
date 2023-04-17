@@ -11,7 +11,7 @@ public class MonsterSpawner : MonoBehaviour
 
     public void SpawnCheck()
     {
-        if (countDown.TimeLeft < 100) return;
+        if (countDown.TimeLeft < 76) return;
         currentWaitFactor -= 1;
         if (Random.Range(0, 100) < currentWaitFactor) return;
         currentWaitFactor = 200;
