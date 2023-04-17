@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b01371f9c51d3c45b12d477e4f58a25, type: 3}
-  m_Name: Centrifuge
+  m_Script: {fileID: 11500000, guid: 532b795e1b0c7ff4093255ee60a2a6af, type: 3}
+  m_Name: Shaker
   m_EditorClassIdentifier: 
   currentCountdown: 0
   isCountdownStarted: 0
-  currentCountdown: 0
-  isCountdownStarted: 0
+  choosenCountdown: 60
+  isCorrect: 0
+  correctCountdown: 45

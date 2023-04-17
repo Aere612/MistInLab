@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Mixer", menuName = "Machines/Mixer")]
-public class Mixer : BaseMachine
+[CreateAssetMenu(fileName = "Shaker", menuName = "Machines/Shaker")]
+public class Shaker : BaseMachine
 {
     [SerializeField] internal bool isCorrect;
     [SerializeField] internal int correctCountdown;

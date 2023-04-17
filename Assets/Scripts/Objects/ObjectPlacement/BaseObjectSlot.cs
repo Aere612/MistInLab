@@ -15,7 +15,7 @@ public class BaseObjectSlot : MonoBehaviour, IInteractable
     {
         _playerHandSo.CurrentObject.transform.parent = null;
         objectToPlace.transform.position = _slotTransform.position;
-        objectToPlace.transform.eulerAngles = -_slotTransform.eulerAngles;
+        objectToPlace.transform.eulerAngles = new Vector3(transform.eulerAngles.x+90,transform.eulerAngles.y,transform.eulerAngles.z);
         _playerHandSo.CurrentObject = null;
     }
 }
