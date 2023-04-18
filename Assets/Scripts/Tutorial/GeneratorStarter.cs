@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class GeneratorStarter : MonoBehaviour
+public class GeneratorStarter : MonoBehaviour,IInteractable
 {
     [SerializeField] private GameObject terminal1;
     [SerializeField] private GameObject barrier1;
@@ -17,8 +14,11 @@ public class GeneratorStarter : MonoBehaviour
     [SerializeField] private Light light7;
     [SerializeField] private Light light8;
     [SerializeField] private Counter counter;
+    [SerializeField] private AudioSource generatorStartSfx;
+    [SerializeField] private AudioSource backgroundSfx;
     
-    private void OnMouseDown()
+    
+    public void Interaction()
     {
         light1.enabled = true;
         light2.enabled = true;
