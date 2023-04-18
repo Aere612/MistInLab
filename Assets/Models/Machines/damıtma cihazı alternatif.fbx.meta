@@ -87,7 +87,27 @@ ModelImporter:
   - first:
       74: -120943309591524135
     second: silver|silver|Take 001|BaseLayer
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1ABLUE
+    second: {fileID: 2100000, guid: e0e73258441cab8479e51476b345bb26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BLACK PLSTC
+    second: {fileID: 2100000, guid: 0bd5d0a46da9ba44e8a775cff3f521f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default
+    second: {fileID: 2100000, guid: ca27d488c882d0e4592e93857f6c8ff4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SILVER
+    second: {fileID: 2100000, guid: 827fb7adbbbd33346b4914656ebd928b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

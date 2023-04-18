@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCountdown: 0
   isCountdownStarted: 0
-  currentCountdown: 0
-  isCountdownStarted: 0
+  choosenCountdown: 45
