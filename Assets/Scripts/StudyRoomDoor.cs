@@ -11,6 +11,7 @@ public class StudyRoomDoor : MonoBehaviour, IInteractable
     [SerializeField] private TrashDisabledStart lockTrash1;
     [SerializeField] private TrashDisabledStart lockTrash2;
     [SerializeField] private PlayerHandSo playerHandSo;
+    [SerializeField] private AudioSource acidSfx;
 
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class StudyRoomDoor : MonoBehaviour, IInteractable
                 vial.baseIngradiant == Ingradiant.Acid)
             {
                 isLocked = false;
+                acidSfx.Play();
                 lockTrash1.IsAvailableToCollect = true;
                 lockTrash2.IsAvailableToCollect = true;
                 lockRb1.isKinematic = false;

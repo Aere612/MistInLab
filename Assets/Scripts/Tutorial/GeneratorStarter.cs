@@ -16,10 +16,20 @@ public class GeneratorStarter : MonoBehaviour,IInteractable
     [SerializeField] private Counter counter;
     [SerializeField] private AudioSource generatorStartSfx;
     [SerializeField] private AudioSource backgroundSfx;
+    [SerializeField] private AudioSource lightSfx1;
+    [SerializeField] private AudioSource lightSfx2;
+    [SerializeField] private AudioSource lightSfx3;
+    [SerializeField] private AudioSource lightSfx4;
     
     
     public void Interaction()
     {
+        backgroundSfx.Play();
+        generatorStartSfx.Play();
+        lightSfx1.Play();
+        lightSfx2.Play();
+        lightSfx3.Play();
+        lightSfx4.Play();
         light1.enabled = true;
         light2.enabled = true;
         light3.enabled = true;
