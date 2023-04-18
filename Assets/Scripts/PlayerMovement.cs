@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private CharacterController _characterController;
     [SerializeField] private Camera playerCamera;
     [SerializeField] private float lookSpeed = 2.0f;
     [SerializeField] private float lookXLimit = 45.0f;
@@ -21,35 +22,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (canMove && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || 
-                        Input.GetKey(KeyCode.W) ||Input.GetKey(KeyCode.D)))
-        {
-            Move();
-            if (!sfxPlaying)
-            {
-                walkSfxSource.Play();
-                sfxPlaying = true;
-            }
-        }
-        else
-        {
-            if (sfxPlaying)
-            {
-                walkSfxSource.Stop();
-                sfxPlaying = false;
-            }
-        }
+        var forward = transform.TransformDirection(Vector3.forward);
+        var right = transform.TransformDirection(Vector3.right);
+        var curSpeedX = moveSpeed * Input.GetAxis("Vertical");
+        var curSpeedY = moveSpeed * Input.GetAxis("Horizontal");
+        var moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-        if (canLook) Look();
+        _characterController.Move(moveDirection * Time.deltaTime);
+        Look();
     }
 
-    private void Move()
-    {
-        var curSpeedX = Input.GetAxis("Horizontal");
-        var curSpeedY = Input.GetAxis("Vertical");
-        var moveDirection = new Vector3(curSpeedX, 0, curSpeedY);
-        rigidbody.AddRelativeForce ((moveDirection * moveSpeed));
-    }
     private void Look()
     {
         _rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;

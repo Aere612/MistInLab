@@ -44,6 +44,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""type"": ""Button"",
+                    ""id"": ""a41bc85c-cef9-4cf9-826a-3dd93bd66fef"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -68,6 +77,50 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Press"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b5ab98f2-83b2-4431-9719-0783f01a6068"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WASD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ff68e225-fe1e-46ac-b7d7-073f11e83cf5"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WASD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8eb2b953-0081-4d7b-adb2-a8794d896104"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WASD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a37dbad-6b88-4a7d-b466-5370309b2bb6"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WASD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -78,6 +131,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_DropObject = m_Player.FindAction("DropObject", throwIfNotFound: true);
         m_Player_Press = m_Player.FindAction("Press", throwIfNotFound: true);
+        m_Player_WASD = m_Player.FindAction("WASD", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -139,12 +193,14 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_DropObject;
     private readonly InputAction m_Player_Press;
+    private readonly InputAction m_Player_WASD;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
         public PlayerActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @DropObject => m_Wrapper.m_Player_DropObject;
         public InputAction @Press => m_Wrapper.m_Player_Press;
+        public InputAction @WASD => m_Wrapper.m_Player_WASD;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -160,6 +216,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Press.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPress;
                 @Press.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPress;
                 @Press.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPress;
+                @WASD.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWASD;
+                @WASD.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWASD;
+                @WASD.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWASD;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -170,6 +229,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Press.started += instance.OnPress;
                 @Press.performed += instance.OnPress;
                 @Press.canceled += instance.OnPress;
+                @WASD.started += instance.OnWASD;
+                @WASD.performed += instance.OnWASD;
+                @WASD.canceled += instance.OnWASD;
             }
         }
     }
@@ -178,5 +240,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     {
         void OnDropObject(InputAction.CallbackContext context);
         void OnPress(InputAction.CallbackContext context);
+        void OnWASD(InputAction.CallbackContext context);
     }
 }

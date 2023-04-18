@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 4652537508585607100}
   - component: {fileID: 4652537508585607103}
   - component: {fileID: 4652537508585607093}
-  - component: {fileID: 3030054363361860221}
+  - component: {fileID: 9200124449672877166}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -437,6 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0954b97c3592a4cba55083097a8835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _characterController: {fileID: 0}
   playerCamera: {fileID: 4652537508288172586}
   lookSpeed: 2
   lookXLimit: 70
@@ -445,20 +446,22 @@ MonoBehaviour:
   sfxPlaying: 0
   canMove: 1
   canLook: 1
-  rigidbody: {fileID: 3030054363361860221}
---- !u!54 &3030054363361860221
-Rigidbody:
+  rigidbody: {fileID: 0}
+--- !u!143 &9200124449672877166
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4652537508585607101}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Mass: 2
-  m_Drag: 1
-  m_AngularDrag: 0.01
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
