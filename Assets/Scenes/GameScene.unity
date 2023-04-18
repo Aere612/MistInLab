@@ -5360,22 +5360,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 59abea78ba71d2d43a5bf3eb217de467, type: 3}
-    - target: {fileID: 3030054363361860221, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
-      propertyPath: m_Drag
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3030054363361860221, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
-      propertyPath: m_Mass
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3030054363361860221, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
-      propertyPath: m_AngularDrag
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4556633909851351507, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -5390,12 +5374,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4652537508585607093, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
       propertyPath: moveSpeed
-      value: 100
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652537508585607093, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
+      propertyPath: rigidbody
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4652537508585607093, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
       propertyPath: walkSfxSource
       value: 
       objectReference: {fileID: 776210002}
+    - target: {fileID: 4652537508585607093, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
+      propertyPath: _characterController
+      value: 
+      objectReference: {fileID: 1201757458}
     - target: {fileID: 4652537508585607100, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5878,7 +5870,7 @@ MonoBehaviour:
   lockTrash1: {fileID: 9026566459699351900}
   lockTrash2: {fileID: 4536207706977730736}
   playerHandSo: {fileID: 11400000, guid: 57b5a22096346914a9217a7288382381, type: 2}
-  acidSfx: {fileID: 4536207706977730737}
+  acidSfx: {fileID: 0}
 --- !u!1 &840474931
 GameObject:
   m_ObjectHideFlags: 0
@@ -7485,10 +7477,10 @@ MonoBehaviour:
   light8: {fileID: 505996766}
   counter: {fileID: 676745512220178251}
   generatorStartSfx: {fileID: 338877676}
-  lightSfx1: {fileID: 85830347}
-  lightSfx2: {fileID: 9874208}
-  lightSfx3: {fileID: 1763314582}
-  lightSfx4: {fileID: 1412862801}
+  lightSfx1: {fileID: 0}
+  lightSfx2: {fileID: 0}
+  lightSfx3: {fileID: 0}
+  lightSfx4: {fileID: 0}
 --- !u!65 &1022038648
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8533,6 +8525,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191811404}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!143 &1201757458 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 9200124449672877166, guid: 8ae6f3c111e325a4cbb8e846d9553489, type: 3}
+  m_PrefabInstance: {fileID: 753494403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1227894958
 GameObject:
   m_ObjectHideFlags: 0
