@@ -10,10 +10,12 @@ public class FlashBang : MonoBehaviour, IInteractable
     [SerializeField] private GameEventListener onTimeClickEventListener;
     [SerializeField] private Light flashBangLight;
     [SerializeField] private Image lightAnimImage;
+    [SerializeField] private AudioSource flashbangSfx;
 
     public void Interaction()
     {
         if (currentCd != 0) return;
+        flashbangSfx.Play();
         var  flashBangSequenceImage = DOTween.Sequence();
         flashBangSequenceImage.Append(lightAnimImage.DOColor(new Color(1f,1f,1f,1f),0.05f));
         flashBangSequenceImage.Append(lightAnimImage.DOColor(new Color(1f,1f,1f,1f),0.5f));

@@ -74,7 +74,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 59abea78ba71d2d43a5bf3eb217de467, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -290,7 +290,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -421,10 +421,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.3593974
+  m_Radius: 0.1516993
   m_Height: 2.01
   m_Direction: 1
-  m_Center: {x: -0.14060259, y: 0, z: -0}
+  m_Center: {x: 0.00048470497, y: 0, z: -0.04356575}
 --- !u!114 &4652537508585607093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,16 +437,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0954b97c3592a4cba55083097a8835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterController: {fileID: 0}
+  characterController: {fileID: 9200124449672877166}
   playerCamera: {fileID: 4652537508288172586}
   lookSpeed: 2
   lookXLimit: 70
   moveSpeed: 5
-  walkSfxSource: {fileID: 0}
+  gravity: 5
+  walkSfxSource: {fileID: 3125669290969184416}
   sfxPlaying: 0
-  canMove: 1
-  canLook: 1
-  rigidbody: {fileID: 0}
 --- !u!143 &9200124449672877166
 CharacterController:
   m_ObjectHideFlags: 0

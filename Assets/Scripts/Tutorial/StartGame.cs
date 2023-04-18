@@ -14,6 +14,8 @@ public class StartGame : MonoBehaviour
     [SerializeField] private Light light6;
     [SerializeField] private Light light7;
     [SerializeField] private Light light8;
+    [SerializeField] private AudioSource backgroundSfx;
+    [SerializeField] private AudioSource backgroundTurnOffSfx;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +25,8 @@ public class StartGame : MonoBehaviour
 
     private void Play()
     {
+        backgroundSfx.Stop();
+        backgroundTurnOffSfx.Play();
         light1.enabled = false;
         light2.enabled = false;
         light3.enabled = false;

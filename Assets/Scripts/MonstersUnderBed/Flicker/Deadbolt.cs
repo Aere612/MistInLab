@@ -4,14 +4,14 @@ using UnityEngine;
 public class Deadbolt : MonoBehaviour, IInteractable
 {
     [SerializeField] private bool isLocked = false;
-    [SerializeField] private J_Door j_Door;
+    [SerializeField] private JanitorRoomDoor janitorRoomDoor;
     [SerializeField] private Transform pivot;
 
     public bool IsLocked => isLocked;
 
     public void Interaction()
     {
-        if (!j_Door.DoorClosed) return;
+        if (!janitorRoomDoor.DoorClosed) return;
         if (IsLocked) Unlock();
         else Lock();
     }

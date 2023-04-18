@@ -1,11 +1,12 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using DG.Tweening;
 
 public class FogEmitterSlider : MonoBehaviour, IInteractable
 {
     internal bool isCorrect;
-
+    private bool _animDelay;
     public enum SliderState
     {
         Left,
@@ -20,10 +21,13 @@ public class FogEmitterSlider : MonoBehaviour, IInteractable
 
     public void Interaction()
     {
+        if (_animDelay) return;
+        _animDelay = true;
+        StartCoroutine(OneSecDelay());
         if (leverState != SliderState.Right) leverState++;
         else leverState = SliderState.Left;
 
-        switch (leverState) //175
+        switch (leverState) 
         {
             case SliderState.Left:
                 slider.DOMove(slider.transform.position + new Vector3(0, 0, .700f), 1.00f);
@@ -47,6 +51,12 @@ public class FogEmitterSlider : MonoBehaviour, IInteractable
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
+        }
+
+        IEnumerator OneSecDelay()
+        {
+            yield return new WaitForSeconds(1f);
+            _animDelay=false;
         }
     }
 }

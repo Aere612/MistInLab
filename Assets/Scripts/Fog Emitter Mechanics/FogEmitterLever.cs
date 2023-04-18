@@ -1,9 +1,13 @@
+using System;
 using UnityEngine;
 using DG.Tweening;
+using System.Collections;
 
 public class FogEmitterLever : MonoBehaviour, IInteractable
 {
-    internal bool isCorrect;
+    internal bool isCorrect;   
+    private bool _animDelay;
+
     public enum LeverState
     {
         Up,
@@ -18,6 +22,9 @@ public class FogEmitterLever : MonoBehaviour, IInteractable
 
     public void Interaction()
     {
+        if (_animDelay) return;
+        _animDelay = true;
+        StartCoroutine(OneSecDelay());
         if (leverState != LeverState.Down) leverState++;
         else leverState = LeverState.Up;
 
@@ -43,6 +50,13 @@ public class FogEmitterLever : MonoBehaviour, IInteractable
                 isCorrect = false;
                 lever.DORotate(new Vector3(0, 0, 140), 0.25f);
                 break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+        IEnumerator OneSecDelay()
+        {
+            yield return new WaitForSeconds(1f);
+            _animDelay=false;
         }
     }
 }
