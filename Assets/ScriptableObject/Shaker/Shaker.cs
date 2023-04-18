@@ -13,8 +13,8 @@ public class Shaker : BaseMachine
              (baseIngradiant == Ingradiant.Orange && sideIngradiant == Ingradiant.Blue)) && isCorrect)
             result = Ingradiant.LightBlue;
         
-        else if (((baseIngradiant == Ingradiant.Red && sideIngradiant == Ingradiant.Green) ||
-                  (baseIngradiant == Ingradiant.Green && sideIngradiant == Ingradiant.Red)) && isCorrect)
+        else if (((baseIngradiant == Ingradiant.Red && sideIngradiant == Ingradiant.Purple) ||
+                  (baseIngradiant == Ingradiant.Purple && sideIngradiant == Ingradiant.Red)) && isCorrect)
             result = Ingradiant.BoldYellow;
         
         else
