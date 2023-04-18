@@ -1,14 +1,14 @@
 using System;
 using UnityEngine;
 
-public class MixerController : MonoBehaviour
+public class ShakerController : MonoBehaviour
 {
-    [SerializeField] private Mixer _mixer;
+    [SerializeField] private Shaker _shaker;
     [SerializeField] private VialSlot _slot;
 
     private void Awake()
     {
-        _mixer.isCountdownStarted = false;
+        _shaker.isCountdownStarted = false;
     }
 
     public void CheckCountdown()
@@ -16,21 +16,21 @@ public class MixerController : MonoBehaviour
         var currentVial = _slot.CurrentObject;
         if (currentVial == null)
         {
-            _mixer.isCountdownStarted = false;
+            _shaker.isCountdownStarted = false;
             return;
         }
 
-        if (!_mixer.isCountdownStarted ||currentVial.baseIngradiant == Ingradiant.Empty ||
+        if (!_shaker.isCountdownStarted ||currentVial.baseIngradiant == Ingradiant.Empty ||
             currentVial.sideIngradiant == Ingradiant.Empty) return;
 
-        _mixer.isCorrect = _mixer.choosenCountdown == _mixer.correctCountdown;
+        _shaker.isCorrect = _shaker.choosenCountdown == _shaker.correctCountdown;
         
-        if (_mixer.currentCountdown > 0)
-            _mixer.currentCountdown--;
+        if (_shaker.currentCountdown > 0)
+            _shaker.currentCountdown--;
         else
         {
             RunTheMixer();
-            _mixer.isCountdownStarted = false;
+            _shaker.isCountdownStarted = false;
         }
     }
 
@@ -39,7 +39,7 @@ public class MixerController : MonoBehaviour
         var currentVial = _slot.CurrentObject;
         
         currentVial.baseIngradiant =
-            _mixer.RunTheMachine(currentVial.baseIngradiant, currentVial.sideIngradiant);
+            _shaker.RunTheMachine(currentVial.baseIngradiant, currentVial.sideIngradiant);
         currentVial.sideIngradiant = Ingradiant.Empty;
     }
 }

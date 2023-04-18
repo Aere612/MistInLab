@@ -15,7 +15,7 @@ public class HandManager : MonoBehaviour
 
     public void CastRay()
     {
-        if (!Physics.Raycast(playerCameraTransform.position+playerCameraTransform.forward, playerCameraTransform.forward, out var hit, 2)) return;
+        if (!Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out var hit, 4)) return;
         
         if (hit.collider.TryGetComponent<ICollactable>(out var clickedObject) && playerHandSo.CurrentObject == null && clickedObject.IsAvailableToCollect)
         {

@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: 270f13f666dcfbb4caaec4859585440f
+ModelImporter:
+  serializedVersion: 22103
+  internalIDToNameTable:
+  - first:
+      74: 5690398809765889682
+    second: Camera01.target|Camera01.target|Take 001|BaseLayer
+  - first:
+      74: 8145721509275010278
+    second: Camera01.target|Camera01|Take 001|BaseLayer
+  - first:
+      74: -6470119252993091712
+    second: Camera01.target|Light01|Take 001|BaseLayer
+  - first:
+      74: 1487292480256366456
+    second: Camera01.target|Light02|Take 001|BaseLayer
+  - first:
+      74: -8797997078657187376
+    second: Camera01.target|Object02|Take 001|BaseLayer
+  - first:
+      74: 7162717346915887690
+    second: Camera01.target|Object03|Take 001|BaseLayer
+  - first:
+      74: -5257862310784613365
+    second: Camera01.target|silver|Take 001|BaseLayer
+  - first:
+      74: 7576341773681574630
+    second: Camera01|Camera01.target|Take 001|BaseLayer
+  - first:
+      74: -7396331213120177459
+    second: Camera01|Camera01|Take 001|BaseLayer
+  - first:
+      74: 3770159222946554937
+    second: Camera01|Light01|Take 001|BaseLayer
+  - first:
+      74: -3512630097580512789
+    second: Camera01|Light02|Take 001|BaseLayer
+  - first:
+      74: -1289815105496606653
+    second: Camera01|Object02|Take 001|BaseLayer
+  - first:
+      74: 1966370015477853720
+    second: Camera01|Object03|Take 001|BaseLayer
+  - first:
+      74: -2179459421918348467
+    second: Camera01|silver|Take 001|BaseLayer
+  - first:
+      74: 1593507979117312858
+    second: Light01|Camera01.target|Take 001|BaseLayer
+  - first:
+      74: -2020824539797399758
+    second: Light01|Camera01|Take 001|BaseLayer
+  - first:
+      74: -139468062338219452
+    second: Light01|Light01|Take 001|BaseLayer
+  - first:
+      74: 7702496123667768020
+    second: Light01|Light02|Take 001|BaseLayer
+  - first:
+      74: 9115381314294304218
+    second: Light01|Object02|Take 001|BaseLayer
+  - first:
+      74: -929473286032745941
+    second: Light01|Object03|Take 001|BaseLayer
+  - first:
+      74: -4261006612818541370
+    second: Light01|silver|Take 001|BaseLayer
+  - first:
+      74: -4878208845232036602
+    second: silver|Camera01.target|Take 001|BaseLayer
+  - first:
+      74: 5349279774325405742
+    second: silver|Camera01|Take 001|BaseLayer
+  - first:
+      74: -3499736396245861292
+    second: silver|Light01|Take 001|BaseLayer
+  - first:
+      74: 6566166791249832912
+    second: silver|Light02|Take 001|BaseLayer
+  - first:
+      74: 4919543631771377244
+    second: silver|Object02|Take 001|BaseLayer
+  - first:
+      74: 8306910755759632934
+    second: silver|Object03|Take 001|BaseLayer
+  - first:
+      74: -120943309591524135
+    second: silver|silver|Take 001|BaseLayer
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1ABLUE
+    second: {fileID: 2100000, guid: e0e73258441cab8479e51476b345bb26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BLACK PLSTC
+    second: {fileID: 2100000, guid: 0bd5d0a46da9ba44e8a775cff3f521f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default
+    second: {fileID: 2100000, guid: ca27d488c882d0e4592e93857f6c8ff4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SILVER
+    second: {fileID: 2100000, guid: 827fb7adbbbd33346b4914656ebd928b, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
