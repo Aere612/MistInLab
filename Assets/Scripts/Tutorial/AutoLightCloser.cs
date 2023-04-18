@@ -10,7 +10,6 @@ public class AutoLightCloser : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("AutoLightCloser");
         if (!collider.TryGetComponent<PlayerMovement>(out _)) return;
         light1.enabled = false;
         light2.enabled = false;
