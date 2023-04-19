@@ -7,6 +7,8 @@ public class FogEmitterSlider : MonoBehaviour, IInteractable
 {
     internal bool isCorrect;
     private bool _animDelay;
+    [SerializeField] private AudioSource audioSource;
+
     public enum SliderState
     {
         Left,
@@ -22,6 +24,8 @@ public class FogEmitterSlider : MonoBehaviour, IInteractable
     public void Interaction()
     {
         if (_animDelay) return;
+        audioSource.Play();
+
         _animDelay = true;
         StartCoroutine(OneSecDelay());
         if (leverState != SliderState.Right) leverState++;
@@ -31,7 +35,6 @@ public class FogEmitterSlider : MonoBehaviour, IInteractable
         {
             case SliderState.Left:
                 slider.DOMove(slider.transform.position + new Vector3(0, 0, .700f), 1.00f);
-                isCorrect = false;
                 break;
             case SliderState.LeftMiddle:
                 isCorrect = true;
@@ -42,11 +45,9 @@ public class FogEmitterSlider : MonoBehaviour, IInteractable
                 slider.DOMove(slider.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
                 break;
             case SliderState.RightMiddle:
-                isCorrect = false;
                 slider.DOMove(slider.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
                 break;
             case SliderState.Right:
-                isCorrect = false;
                 slider.DOMove(slider.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
                 break;
             default:

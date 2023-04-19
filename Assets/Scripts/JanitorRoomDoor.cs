@@ -4,7 +4,7 @@ using DG.Tweening;
 public class JanitorRoomDoor : MonoBehaviour, IInteractable
 {
     [SerializeField] private bool doorClosed = true;
-    [SerializeField] private Deadbolt deadbolt;
+    [SerializeField] private bool doorLocked;
     [SerializeField] private Transform pivot;
     [SerializeField] private AudioSource doorSoundSfx;
     [SerializeField] private AudioClip doorOpenClip;
@@ -12,9 +12,15 @@ public class JanitorRoomDoor : MonoBehaviour, IInteractable
 
     public bool DoorClosed => doorClosed;
 
+    public bool DoorLocked
+    {
+        get => doorLocked;
+        set => doorLocked = value;
+    }
+
     public void Interaction()
     {
-        if (deadbolt.IsLocked) return;
+        if (DoorLocked) return;
         if (DoorClosed)
         {
             doorSoundSfx.clip = doorOpenClip;

@@ -9,6 +9,7 @@ public class Tinkerer : MonoBehaviour
     [SerializeField] private GameEventListener gameEventListener;
     [SerializeField] private GameEvent onGameLoseEvent;
     [SerializeField] private CountDown countDown;
+    [SerializeField] private AudioSource audioSource;
 
     public void Attack()
     {
@@ -16,7 +17,7 @@ public class Tinkerer : MonoBehaviour
         doorStatus.color = Color.red;
         doorTime = 7;
         gameEventListener.enabled = true;
-        //play unlocking audio
+        audioSource.Play();
     }
 
     public void FakeChance()
@@ -25,7 +26,7 @@ public class Tinkerer : MonoBehaviour
         fakeUnlockChance -= 1;
         if (Random.Range(0, 100) < fakeUnlockChance) return;
         fakeUnlockChance = 200;
-        //play unlocking audio
+        audioSource.Play();
     }
     public void DoorTimeReducer()
     {

@@ -3,28 +3,31 @@ using UnityEngine;
 
 public class Deadbolt : MonoBehaviour, IInteractable
 {
-    [SerializeField] private bool isLocked = false;
     [SerializeField] private JanitorRoomDoor janitorRoomDoor;
     [SerializeField] private Transform pivot;
+    [SerializeField] private AudioSource audioSource;
 
-    public bool IsLocked => isLocked;
 
     public void Interaction()
     {
         if (!janitorRoomDoor.DoorClosed) return;
-        if (IsLocked) Unlock();
+        if (janitorRoomDoor.DoorLocked) Unlock();
         else Lock();
     }
 
     private void Lock()
     {
-        isLocked = true;
+        audioSource.Play();
+        janitorRoomDoor.DoorLocked = true;
+        janitorRoomDoor.DoorLocked = janitorRoomDoor.DoorLocked;
         pivot.DORotate(new Vector3(90, 0, 0f), 0.5f);
     }
 
     private void Unlock()
     {
-        isLocked = false;
+        audioSource.Play();
+        janitorRoomDoor.DoorLocked = false;
+        janitorRoomDoor.DoorLocked = janitorRoomDoor.DoorLocked;
         pivot.DORotate(new Vector3(0, 0, 0f), 0.5f);
     }
 }

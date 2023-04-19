@@ -6,6 +6,7 @@ public class InteractionTutorial : MonoBehaviour,IInteractable
     [SerializeField] private PlayerHandSo playerHandSo;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private DropTutorial dropTutorial;
+    [SerializeField] private AudioSource audioSource;
 
     private void Awake()
     {
@@ -23,12 +24,14 @@ public class InteractionTutorial : MonoBehaviour,IInteractable
     }
     private void Vanish()
     {
+        audioSource.Play();
         var sequence = DOTween.Sequence();
         sequence.Append(spriteRenderer.DOColor(new Color(1, 1, 1, 0), 1f));
         sequence.OnComplete(End);
     }
     public void Interaction()
     {
+        if (playerHandSo.CurrentObject == null) return;
         if (playerHandSo.CurrentObject.TryGetComponent<Key>(out _)) Vanish();
     }
 }

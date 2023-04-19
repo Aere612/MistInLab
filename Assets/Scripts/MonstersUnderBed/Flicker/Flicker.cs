@@ -11,7 +11,7 @@ public class Flicker : MonoBehaviour
     [SerializeField] private Light light6;
     [SerializeField] private Light light7;
     [SerializeField] private Light light8;
-    [SerializeField] private Deadbolt deadbolt;
+    [SerializeField] private JanitorRoomDoor janitorRoomDoor;
     [SerializeField] private GameEvent onGameLoseEvent;
 
 
@@ -29,7 +29,7 @@ public class Flicker : MonoBehaviour
 
     private void SafetyCheck()
     {
-        if (deadbolt.IsLocked)
+        if (janitorRoomDoor.DoorLocked)
         {
             light1.DOIntensity(0.5f, 2f);
             light2.DOIntensity(0.5f, 2f);
