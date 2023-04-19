@@ -9,6 +9,12 @@ ModelImporter:
   - first:
       74: -7918129362319027497
     second: Cube|CubeAction.001
+  - first:
+      74: 5334954315404344519
+    second: Cube|Cube|Cube|CubeAction
+  - first:
+      74: -6418460778849570128
+    second: Cube|Cube|Cube|CubeAction.001
   externalObjects:
   - first:
       type: UnityEngine:Material
