@@ -5,21 +5,46 @@ public class Shaker : BaseMachine
 {
     [SerializeField] internal bool isCorrect;
     [SerializeField] internal int correctCountdown;
-    public override Ingradiant RunTheMachine(Ingradiant baseIngradiant, Ingradiant sideIngradiant)
+
+    internal VialSlot input;
+
+    public override void CheckTheConditionsAndRun()
     {
-        Ingradiant result;
+        if (input.CurrentObject.baseIngradiant == Ingradiant.Empty ||
+            input.CurrentObject.sideIngradiant == Ingradiant.Empty) 
+            return;
+        isCorrect = choosenCountdown == correctCountdown;
+        RunTheMachine();    
+    }
 
-        if (((baseIngradiant == Ingradiant.Blue && sideIngradiant == Ingradiant.Orange) ||
-             (baseIngradiant == Ingradiant.Orange && sideIngradiant == Ingradiant.Blue)) && isCorrect)
-            result = Ingradiant.LightBlue;
-        
-        else if (((baseIngradiant == Ingradiant.Red && sideIngradiant == Ingradiant.Purple) ||
-                  (baseIngradiant == Ingradiant.Purple && sideIngradiant == Ingradiant.Red)) && isCorrect)
-            result = Ingradiant.BoldYellow;
-        
+    public override void MixTheIngradients()
+    {
+        if (((input.CurrentObject.baseIngradiant == Ingradiant.Blue &&
+              input.CurrentObject.sideIngradiant == Ingradiant.Orange) ||
+             (input.CurrentObject.baseIngradiant == Ingradiant.Orange &&
+              input.CurrentObject.sideIngradiant == Ingradiant.Blue)) && isCorrect)
+            input.CurrentObject.baseIngradiant = Ingradiant.LightBlue;
+
+        else if (((input.CurrentObject.baseIngradiant == Ingradiant.Red &&
+                   input.CurrentObject.sideIngradiant == Ingradiant.Purple) ||
+                  (input.CurrentObject.baseIngradiant == Ingradiant.Purple &&
+                   input.CurrentObject.sideIngradiant == Ingradiant.Red)) && isCorrect)
+            input.CurrentObject.baseIngradiant = Ingradiant.BoldYellow;
+
         else
-            result = (Ingradiant)Random.Range(1, 6);
+            input.CurrentObject.baseIngradiant = (Ingradiant)Random.Range(1, 6);
+        input.CurrentObject.sideIngradiant = Ingradiant.Empty;
+    }
 
-        return result;
+    public override void RunTheMachine()
+    {
+        isCountdownStarted = true;
+        OnMachineStarted.Raise();
+    }
+
+    public override void StopTheMachine()
+    {
+        isCountdownStarted = false;
+        OnMachineStopped.Raise();
     }
 }

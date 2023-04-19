@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FogEmitterController : MonoBehaviour
@@ -37,14 +35,15 @@ public class FogEmitterController : MonoBehaviour
         if (_vialSlot.CurrentObject == null) return;
         if (_vialSlot.CurrentObject.baseIngradiant != Ingradiant.Green) return;
         if (!_slider.isCorrect || !_lever.isCorrect) return;
+        
         if (_switchOne.switchState != FogEmitterSwitch.SwitchState.Down ||
             _switchTwo.switchState != FogEmitterSwitch.SwitchState.Up ||
             _switchThree.switchState != FogEmitterSwitch.SwitchState.Up ||
             _switchFour.switchState != FogEmitterSwitch.SwitchState.Down) return;
+        
         if (_cogSlotOne.CurrentObject == null || _cogSlotTwo.CurrentObject == null ||
             _cogSlotThree.CurrentObject == null) return;
-        
+
         Debug.Log("Fog Successful");
     }
-
 }

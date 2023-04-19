@@ -806,10 +806,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mixer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 775702857828453360, guid: 85123bc9efe48f44ca2b53e77cf4d661, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1695143681403542797, guid: 85123bc9efe48f44ca2b53e77cf4d661, type: 3}
       propertyPath: _machine
       value: 
       objectReference: {fileID: 11400000, guid: 9c3e12ccd0a692b4487e4ee2938d00ea, type: 2}
+    - target: {fileID: 1695143681403542797, guid: 85123bc9efe48f44ca2b53e77cf4d661, type: 3}
+      propertyPath: _countdown
+      value: 46
+      objectReference: {fileID: 0}
     - target: {fileID: 3579640128950817267, guid: 85123bc9efe48f44ca2b53e77cf4d661, type: 3}
       propertyPath: m_Name
       value: Kapak

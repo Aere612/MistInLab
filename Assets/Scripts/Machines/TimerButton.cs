@@ -10,6 +10,6 @@ public class TimerButton : MonoBehaviour, IInteractable
         if (_machine.isCountdownStarted) return;
         _machine.choosenCountdown = _countdown;
         _machine.currentCountdown = _countdown;
-        _machine.isCountdownStarted = true;
+        _machine.CheckTheConditionsAndRun();
     }
 }

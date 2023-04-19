@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class VialSlot : BaseObjectSlot
 {
     public override void Interaction()
