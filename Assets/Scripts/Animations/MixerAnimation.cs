@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using DG.Tweening.Core;
+using TMPro;
 using UnityEngine;
 
 public class MixerAnimation : MonoBehaviour
@@ -10,18 +11,28 @@ public class MixerAnimation : MonoBehaviour
     [SerializeField] private Mixer _mixer;
     [SerializeField] private GameObject kapak;
     [SerializeField] private GameObject innerObjects;
-    private Sequence _sequence;
+    [SerializeField] private TMP_Text countdownText;
 
-    internal void RunAnimation()
+    private Tweener _tween;
+    public void RunAnimation()
     {
-        _sequence = DOTween.Sequence();
-        _sequence.Append(kapak.transform.DOLocalMoveY(1, 1).SetEase(Ease.Linear));
-        _sequence.Append(innerObjects.transform.DORotate(new Vector3(0, 360, 0), 2,RotateMode.FastBeyond360).SetEase(Ease.Linear).SetLoops(-1,LoopType.Restart).SetRelative());
+        
+        kapak.transform.DOLocalMoveY(1, 1).SetEase(Ease.Linear).OnComplete(() =>
+        {
+        _tween = innerObjects.transform.DORotate(new Vector3(0, 360, 0), 2,RotateMode.FastBeyond360).SetEase(Ease.Linear).SetLoops(-1,LoopType.Restart).SetRelative();
+            
+        });
+    }
+    public void KillAnimation()
+    {
+        _tween.SetLoops(0);
+        _tween.Complete();
+        _tween.Kill();
+        kapak.transform.DOLocalMoveY(-1, 1).SetEase(Ease.Linear);
     }
 
-    internal void KillAnimation()
+    public void UpdateCountdownText()
     {
-        DOTween.Kill(innerObjects.transform);
-        kapak.transform.DOLocalMoveY(-1, 1).SetEase(Ease.Linear);
+        countdownText.text = "00:" + _mixer.currentCountdown.ToString("00");
     }
 }

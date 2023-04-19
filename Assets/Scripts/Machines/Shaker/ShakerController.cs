@@ -39,7 +39,7 @@ public class ShakerController : MonoBehaviour
         var currentVial = _slot.CurrentObject;
         
         currentVial.baseIngradiant =
-            _shaker.RunTheMachine(currentVial.baseIngradiant, currentVial.sideIngradiant);
+            _shaker.MixTheIngradients(currentVial.baseIngradiant, currentVial.sideIngradiant);
         currentVial.sideIngradiant = Ingradiant.Empty;
     }
 }

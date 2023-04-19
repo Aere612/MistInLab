@@ -40,7 +40,7 @@ public class DamitmaController : MonoBehaviour
         var currentVial = _input.CurrentObject;
         var currentOutput = _output.CurrentObject;
         currentOutput.baseIngradiant =
-            _damitma.RunTheMachine(currentVial.baseIngradiant, currentVial.sideIngradiant);
+            _damitma.MixTheIngradients(currentVial.baseIngradiant, currentVial.sideIngradiant);
         currentOutput.sideIngradiant = Ingradiant.Empty;
     }
 }

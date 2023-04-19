@@ -7,5 +7,12 @@ public abstract class BaseMachine : ScriptableObject
     [SerializeField] internal int currentCountdown;
     [SerializeField] internal bool isCountdownStarted;
     [SerializeField] internal int choosenCountdown;
-    public abstract Ingradiant RunTheMachine(Ingradiant baseIngradiant,Ingradiant sideIngradiant);
+    [SerializeField] internal GameEvent OnMachineStarted;
+    [SerializeField] internal GameEvent OnMachineStopped;
+
+    public abstract void CheckTheConditionsAndRun();
+    public abstract void MixTheIngradients();
+
+    public abstract void RunTheMachine();
+    public abstract void StopTheMachine();
 }

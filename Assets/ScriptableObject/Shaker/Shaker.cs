@@ -5,7 +5,7 @@ public class Shaker : BaseMachine
 {
     [SerializeField] internal bool isCorrect;
     [SerializeField] internal int correctCountdown;
-    public override Ingradiant RunTheMachine(Ingradiant baseIngradiant, Ingradiant sideIngradiant)
+    public Ingradiant MixTheIngradients(Ingradiant baseIngradiant, Ingradiant sideIngradiant)
     {
         Ingradiant result;
 
@@ -21,5 +21,25 @@ public class Shaker : BaseMachine
             result = (Ingradiant)Random.Range(1, 6);
 
         return result;
+    }
+
+    public override void CheckTheConditionsAndRun()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void MixTheIngradients()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void RunTheMachine()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void StopTheMachine()
+    {
+        throw new System.NotImplementedException();
     }
 }
