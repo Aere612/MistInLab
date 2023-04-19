@@ -11,6 +11,8 @@ public class MixerController : MonoBehaviour
     [SerializeField] private VialSlot _inputTwo;
     [SerializeField] private VialSlot _output;
 
+    [SerializeField] private MixerAnimation _mixerAnimation;
+
     private void Awake()
     {
         _mixer.isCountdownStarted = false;
@@ -32,7 +34,7 @@ public class MixerController : MonoBehaviour
             vialTwo.baseIngradiant == Ingradiant.Empty ||
             vialOutput.baseIngradiant != Ingradiant.Empty)
             return;
-
+        
         if (_mixer.currentCountdown > 0)
             _mixer.currentCountdown--;
         else
@@ -47,6 +49,8 @@ public class MixerController : MonoBehaviour
         var vialOne = _inputOne.CurrentObject; 
         var vialTwo = _inputTwo.CurrentObject;
         var vialOutput = _output.CurrentObject;
+        
+        _mixerAnimation.KillAnimation();
         
         vialOutput.baseIngradiant =
             _mixer.RunTheMachine(vialOne.baseIngradiant, vialTwo.baseIngradiant);
