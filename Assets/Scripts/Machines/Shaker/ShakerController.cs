@@ -4,42 +4,33 @@ using UnityEngine;
 public class ShakerController : MonoBehaviour
 {
     [SerializeField] private Shaker _shaker;
-    [SerializeField] private VialSlot _slot;
-
+    [SerializeField] private VialSlot _input;
+    [SerializeField] private GameEventListener timeClickListener;
     private void Awake()
     {
-        _shaker.isCountdownStarted = false;
+        InitializeShaker();
     }
 
     public void CheckCountdown()
     {
-        var currentVial = _slot.CurrentObject;
-        if (currentVial == null)
-        {
-            _shaker.isCountdownStarted = false;
-            return;
-        }
-
-        if (!_shaker.isCountdownStarted ||currentVial.baseIngradiant == Ingradiant.Empty ||
-            currentVial.sideIngradiant == Ingradiant.Empty) return;
-
-        _shaker.isCorrect = _shaker.choosenCountdown == _shaker.correctCountdown;
-        
         if (_shaker.currentCountdown > 0)
             _shaker.currentCountdown--;
         else
         {
-            RunTheMixer();
+            _shaker.MixTheIngradients();
             _shaker.isCountdownStarted = false;
+            timeClickListener.enabled = false;
+            _shaker.StopTheMachine();
         }
     }
-
-    private void RunTheMixer()
+    public void ActivateTimeClickListener()
     {
-        var currentVial = _slot.CurrentObject;
-        
-        currentVial.baseIngradiant =
-            _shaker.MixTheIngradients(currentVial.baseIngradiant, currentVial.sideIngradiant);
-        currentVial.sideIngradiant = Ingradiant.Empty;
+        timeClickListener.enabled = true;
+    }
+    private void InitializeShaker()
+    {
+        _shaker.isCountdownStarted = false;
+        _shaker.input = _input;
+        timeClickListener.enabled = false;
     }
 }
