@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Mixer", menuName = "Machines/Mixer")]
@@ -30,17 +28,18 @@ public class Mixer : BaseMachine
              && inputTwo.CurrentObject.baseIngradiant == Ingradiant.LightBlue))
         {
             output.CurrentObject.baseIngradiant = Ingradiant.Green;
-            inputOne.CurrentObject.baseIngradiant = Ingradiant.Empty;
-            inputTwo.CurrentObject.baseIngradiant = Ingradiant.Empty;
         }
         else
             output.CurrentObject.baseIngradiant = Ingradiant.Empty;
+
+        inputOne.CurrentObject.baseIngradiant = Ingradiant.Empty;
+        inputTwo.CurrentObject.baseIngradiant = Ingradiant.Empty;
     }
 
     public override void RunTheMachine()
     {
         isCountdownStarted = true;
-        OnMachineStarted.Raise();   
+        OnMachineStarted.Raise();
     }
 
     public override void StopTheMachine()

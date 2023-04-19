@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
-using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 

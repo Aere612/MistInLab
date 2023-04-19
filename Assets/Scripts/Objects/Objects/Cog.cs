@@ -1,6 +1,3 @@
-using System;
-using UnityEngine;
-
 public class Cog : BaseObject, ICollactable,IInteractable
 {
     private void Awake()

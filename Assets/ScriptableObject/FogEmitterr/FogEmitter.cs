@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "FogEmitter",menuName = "Machines/FogEmitter")]
 public class FogEmitter : BaseMachine

@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class CogSlot : BaseObjectSlot
 {
     public override void Interaction()
