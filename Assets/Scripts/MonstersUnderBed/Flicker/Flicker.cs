@@ -39,8 +39,10 @@ public class Flicker : MonoBehaviour
             light6.DOIntensity(0.5f, 2f);
             light7.DOIntensity(0.5f, 2f);
             light8.DOIntensity(0.5f, 2f);
+            Debug.Log("Flicker");
             return;
         }
+        Debug.Log("Lose");
         onGameLoseEvent.Raise();
     }
 

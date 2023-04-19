@@ -40,6 +40,7 @@ public class Tinkerer : MonoBehaviour
 
     public void FlashBanged()
     {
+        if(!gameEventListener.enabled) return;
         gameEventListener.enabled = false;
         doorStatus.text = "KILITLI";
         doorStatus.color = Color.blue;

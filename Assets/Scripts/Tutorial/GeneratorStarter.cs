@@ -34,5 +34,6 @@ public class GeneratorStarter : MonoBehaviour,IInteractable
         Destroy(barrier1);
         Destroy(barrier2);
         Destroy(terminal1);
+        Destroy(gameObject);
     }
 }
