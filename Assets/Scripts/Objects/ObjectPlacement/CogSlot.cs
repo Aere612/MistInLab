@@ -6,7 +6,7 @@ public class CogSlot : BaseObjectSlot
         if (!_playerHandSo.CurrentObject.TryGetComponent<Cog>(out var _cog) || _currentObject != null) return;
 
         _currentObject = _cog;
-        PlaceTheObject(_currentObject.gameObject);
+        PlaceTheObject(_currentObject.gameObject,false);
         _currentObject._objectSlot = this;
     }
 

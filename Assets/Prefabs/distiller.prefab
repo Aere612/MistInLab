@@ -323,7 +323,7 @@ Transform:
   - {fileID: 8712626804898584590}
   - {fileID: 7390415730271179254}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7823346807248372051
 MonoBehaviour:
@@ -384,6 +384,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1401818935383887626}
+        m_TargetAssemblyTypeName: DamitmaAnimation, Assembly-CSharp
+        m_MethodName: UpdateCountdownText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3365489537146073190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,12 +413,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1401818935383887626}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_TargetAssemblyTypeName: DamitmaAnimation, Assembly-CSharp
+        m_MethodName: RunAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -441,12 +453,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1401818935383887626}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_TargetAssemblyTypeName: DamitmaAnimation, Assembly-CSharp
+        m_MethodName: KillAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1015,6 +1027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2819488568541549191, guid: 129d19c557f91024c91bd0d1bdc84fa7, type: 3}
+    - {fileID: 2819488568541549208, guid: 129d19c557f91024c91bd0d1bdc84fa7, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 129d19c557f91024c91bd0d1bdc84fa7, type: 3}
 --- !u!4 &8176470169411574319 stripped
@@ -1027,9 +1040,28 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2819488568541549189, guid: 129d19c557f91024c91bd0d1bdc84fa7, type: 3}
   m_PrefabInstance: {fileID: 6221861038949353654}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8176470169411574324}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1f28be24da684b42b9a965f17ae81a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8176470169411574324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2819488568541549186, guid: 129d19c557f91024c91bd0d1bdc84fa7, type: 3}
+  m_PrefabInstance: {fileID: 6221861038949353654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &5081389246913041056
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176470169411574324}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 17.88964
+  m_Direction: 1
+  m_Center: {x: -0, y: 7.364242, z: 0}

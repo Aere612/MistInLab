@@ -10,11 +10,13 @@ public class BaseObjectSlot : MonoBehaviour, IInteractable
     {
     }
 
-    protected void PlaceTheObject(GameObject objectToPlace)
+    protected void PlaceTheObject(GameObject objectToPlace, bool placeReverse)
     {
         _playerHandSo.CurrentObject.transform.parent = null;
         objectToPlace.transform.position = _slotTransform.position;
-        objectToPlace.transform.eulerAngles = new Vector3(transform.eulerAngles.x+90,transform.eulerAngles.y,transform.eulerAngles.z);
+        objectToPlace.transform.eulerAngles = placeReverse
+            ? new Vector3(transform.eulerAngles.x - 90, transform.eulerAngles.y, transform.eulerAngles.z)
+            : new Vector3(transform.eulerAngles.x + 90, transform.eulerAngles.y, transform.eulerAngles.z);
         _playerHandSo.CurrentObject.transform.parent = transform;
         _playerHandSo.CurrentObject = null;
     }
