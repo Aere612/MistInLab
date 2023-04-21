@@ -5,6 +5,7 @@ public class DropTutorial : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private bool interactionTutorialComplete;
+    [SerializeField] private SkipTutorial skipTutorial;
 
     public void EnableSprite()
     {
@@ -32,6 +33,7 @@ public class DropTutorial : MonoBehaviour
 
     private void Vanish()
     {
+        skipTutorial.Vanish();
         var sequence = DOTween.Sequence();
         sequence.Append(spriteRenderer.DOColor(new Color(1, 1, 1, 0), 1f));
         sequence.OnComplete(End);

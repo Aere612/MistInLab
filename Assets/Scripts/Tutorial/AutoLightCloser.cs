@@ -13,6 +13,11 @@ public class AutoLightCloser : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         if (!collider.TryGetComponent<PlayerMovement>(out _)) return;
+        DoAnim();
+    }
+
+    public void DoAnim()
+    {
         light1.enabled = false;
         light2.enabled = false;
         audioSource1.Play();

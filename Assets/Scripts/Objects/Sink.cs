@@ -1,16 +1,17 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Sink : MonoBehaviour, IInteractable
 {
-    [SerializeField] private PlayerHandSo _playerHandSo;
+    [SerializeField] private PlayerHandSo playerHandSo;
+    [SerializeField] private AudioSource sinkSfx;
 
     public void Interaction()
     {
-        if (!_playerHandSo.CurrentObject.TryGetComponent<Vial>(out var _vial)) return;
-        if (_vial.BaseIngradiant == Ingradiant.Empty) return;
-        Debug.Log("Sink");
-        
-        _vial.BaseIngradiant = Ingradiant.Empty;
-        _vial.SideIngradiant = Ingradiant.Empty;
+        if (!playerHandSo.CurrentObject.TryGetComponent<Vial>(out var _vial)) return;
+        if (_vial.baseIngradiant == Ingradiant.Empty) return;
+        sinkSfx.Play();
+        _vial.baseIngradiant = Ingradiant.Empty;
+        _vial.sideIngradiant = Ingradiant.Empty;
     }
 }
