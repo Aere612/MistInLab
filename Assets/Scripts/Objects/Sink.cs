@@ -7,10 +7,10 @@ public class Sink : MonoBehaviour, IInteractable
     public void Interaction()
     {
         if (!_playerHandSo.CurrentObject.TryGetComponent<Vial>(out var _vial)) return;
-        if (_vial.baseIngradiant == Ingradiant.Empty) return;
+        if (_vial.BaseIngradiant == Ingradiant.Empty) return;
         Debug.Log("Sink");
         
-        _vial.baseIngradiant = Ingradiant.Empty;
-        _vial.sideIngradiant = Ingradiant.Empty;
+        _vial.BaseIngradiant = Ingradiant.Empty;
+        _vial.SideIngradiant = Ingradiant.Empty;
     }
 }

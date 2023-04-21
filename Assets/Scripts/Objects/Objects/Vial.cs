@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Vial : BaseObject,ICollactable,IInteractable,IDeletable
 {
-    [SerializeField] internal Ingradiant baseIngradiant;
-    [SerializeField] internal Ingradiant sideIngradiant;
+    [SerializeField] private Ingradients _baseIngradiant;
+    [SerializeField] private Ingradients _sideIngradiant;
     public bool IsAvailableToCollect { get; set; } = true;
 
     public void Interaction()

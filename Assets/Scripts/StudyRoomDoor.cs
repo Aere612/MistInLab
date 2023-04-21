@@ -27,7 +27,7 @@ public class StudyRoomDoor : MonoBehaviour, IInteractable
         {
             if (playerHandSo.CurrentObject == null) return;
             if (!playerHandSo.CurrentObject.TryGetComponent(out Vial vial) ||
-                vial.baseIngradiant != Ingradiant.Acid) return;
+                vial.BaseIngradiant != Ingradiant.Acid) return;
             isLocked = false;
             acidSfx.Play();
             lockTrash1.IsAvailableToCollect = true;

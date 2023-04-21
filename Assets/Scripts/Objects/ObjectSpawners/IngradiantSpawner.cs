@@ -10,7 +10,7 @@ public class IngradiantSpawner : MonoBehaviour, IInteractable
         if (_playerHandSo.CurrentObject == null) return;
         if (_playerHandSo.CurrentObject.TryGetComponent<Vial>(out var _vial))
         {
-            if (_vial.baseIngradiant != Ingradiant.Empty)
+            if (_vial.baseIngradiant. != Ingradiant.Empty)
             {
                 if(_vial.sideIngradiant != Ingradiant.Empty)
                     Debug.Log("Vial is Full");
@@ -20,7 +20,7 @@ public class IngradiantSpawner : MonoBehaviour, IInteractable
                 }
                 return;
             }
-            _vial.baseIngradiant = ingradiantType;
+            _vial.BaseIngradiant = ingradiantType;
             Debug.Log("Base Ingradient ejected");
         }
         else

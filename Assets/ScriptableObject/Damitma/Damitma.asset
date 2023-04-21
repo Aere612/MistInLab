@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCountdown: 0
   isCountdownStarted: 0
+  choosenCountdown: 5
+  OnMachineStarted: {fileID: 11400000, guid: a9f197c974e38c7499eba408bd677f67, type: 2}
+  OnMachineStopped: {fileID: 11400000, guid: 9269e42a1c5cafc40b9cf259564e640a, type: 2}
