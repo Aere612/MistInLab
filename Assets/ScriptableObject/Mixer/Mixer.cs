@@ -12,30 +12,30 @@ public class Mixer : BaseMachine
         if (inputOne == null || inputTwo == null || output == null)
             return;
 
-        if (inputOne.CurrentObject.baseIngradiant.Type == Ingradient.Empty ||
-            inputTwo.CurrentObject.baseIngradiant.Type == Ingradient.Empty ||
-            output.CurrentObject.baseIngradiant.Type != Ingradient.Empty)
+        if (inputOne.CurrentObject.baseIngradiant == _ingradientTypes.Empty ||
+            inputTwo.CurrentObject.baseIngradiant == _ingradientTypes.Empty ||
+            output.CurrentObject.baseIngradiant != _ingradientTypes.Empty)
             return;
         RunTheMachine();
     }
 
     public override void MixTheIngradients()
     {
-        if ((inputOne.CurrentObject.baseIngradiant.Type == Ingradient.LightBlue
-             && inputTwo.CurrentObject.baseIngradiant.Type == Ingradient.BoldYellow)
+        if ((inputOne.CurrentObject.baseIngradiant== _ingradientTypes.LightBlue
+             && inputTwo.CurrentObject.baseIngradiant == _ingradientTypes.BoldYellow)
             ||
-            (inputOne.CurrentObject.baseIngradiant.Type == Ingradient.BoldYellow
-             && inputTwo.CurrentObject.baseIngradiant.Type == Ingradient.LightBlue))
+            (inputOne.CurrentObject.baseIngradiant == _ingradientTypes.BoldYellow
+             && inputTwo.CurrentObject.baseIngradiant == _ingradientTypes.LightBlue))
         {
-            output.CurrentObject.baseIngradiant.Type = Ingradient.Green;
+            output.CurrentObject.baseIngradiant= _ingradientTypes.Green;
         }
         else
         {
-            output.CurrentObject.baseIngradiant.Type = Ingradient.Empty;
+            output.CurrentObject.baseIngradiant = _ingradientTypes.Empty;
         }
 
-        inputOne.CurrentObject.baseIngradiant.Type = Ingradient.Empty;
-        inputTwo.CurrentObject.baseIngradiant.Type = Ingradient.Empty;
+        inputOne.CurrentObject.baseIngradiant = _ingradientTypes.Empty;
+        inputTwo.CurrentObject.baseIngradiant = _ingradientTypes.Empty;
     }
 
     public override void RunTheMachine()

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b73365e7a7995746854fc58c25cd584, type: 3}
   m_Name: Damitma
   m_EditorClassIdentifier: 
+  _ingradientTypes: {fileID: 11400000, guid: 3781e8f9a781d2a488f3bf33a130a23a, type: 2}
   currentCountdown: 0
   isCountdownStarted: 0
   choosenCountdown: 5

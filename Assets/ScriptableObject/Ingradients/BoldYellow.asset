@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4727b395eb59c4ea40a42ad63c4031, type: 3}
   m_Name: BoldYellow
   m_EditorClassIdentifier: 
-  Ingradiant: 7
   Material: {fileID: 2100000, guid: a79655702b1bbbc44adaab7678165536, type: 2}

@@ -14,9 +14,6 @@ public class DamitmaController : MonoBehaviour
 
     public void CheckCountdown()
     {
-        var currentInput = _input.CurrentObject;
-        var currentOutput = _output.CurrentObject;
-        
 
         if (_damitma.currentCountdown > 0)
             _damitma.currentCountdown--;

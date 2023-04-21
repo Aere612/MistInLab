@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4727b395eb59c4ea40a42ad63c4031, type: 3}
   m_Name: Green
   m_EditorClassIdentifier: 
-  Ingradiant: 9
   Material: {fileID: 2100000, guid: cf466a98217500d4e83574a0103bdd00, type: 2}

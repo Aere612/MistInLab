@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class FogEmitterController : MonoBehaviour
 {
+    [SerializeField] private IngradientTypes _ingradientTypes;
+
     [SerializeField] private FogEmitter _fogEmitter;
     [SerializeField] private FogEmitterSlider _slider;
     [SerializeField] private FogEmitterLever _lever;
@@ -33,7 +35,7 @@ public class FogEmitterController : MonoBehaviour
     private void RunTheFogEmitter()
     {
         if (_vialSlot.CurrentObject == null) return;
-        if (_vialSlot.CurrentObject.baseIngradiant.Type != Ingradient.Green) return;
+        if (_vialSlot.CurrentObject.baseIngradiant != _ingradientTypes.Green) return;
         if (!_slider.isCorrect || !_lever.isCorrect) return;
         
         if (_switchOne.switchState != FogEmitterSwitch.SwitchState.Down ||

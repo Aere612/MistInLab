@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4727b395eb59c4ea40a42ad63c4031, type: 3}
   m_Name: Acid
   m_EditorClassIdentifier: 
-  Ingradiant: 8
   Material: {fileID: 2100000, guid: 16eb41dd68cf7244fa58bad41fd1851a, type: 2}

@@ -3,6 +3,8 @@ using DG.Tweening;
 
 public class StudyRoomDoor : MonoBehaviour, IInteractable
 {
+    [SerializeField] protected IngradientTypes _ingradientTypes;
+
     [SerializeField] private bool doorClosed = true;
     [SerializeField] private bool isLocked = true;
     [SerializeField] private Transform pivot;
@@ -27,7 +29,7 @@ public class StudyRoomDoor : MonoBehaviour, IInteractable
         {
             if (playerHandSo.CurrentObject == null) return;
             if (!playerHandSo.CurrentObject.TryGetComponent(out Vial vial) ||
-                vial.baseIngradiant.Type != Ingradient.Acid) return;
+                vial.baseIngradiant != _ingradientTypes.Acid) return;
             isLocked = false;
             acidSfx.Play();
             lockTrash1.IsAvailableToCollect = true;

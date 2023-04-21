@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4727b395eb59c4ea40a42ad63c4031, type: 3}
   m_Name: LightBlue
   m_EditorClassIdentifier: 
-  Ingradiant: 6
   Material: {fileID: 2100000, guid: 8d4d4ef8c748bdd45a82d90b3fe8da2f, type: 2}

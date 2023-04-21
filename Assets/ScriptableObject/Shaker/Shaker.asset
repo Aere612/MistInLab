@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532b795e1b0c7ff4093255ee60a2a6af, type: 3}
   m_Name: Shaker
   m_EditorClassIdentifier: 
+  _ingradientTypes: {fileID: 11400000, guid: 3781e8f9a781d2a488f3bf33a130a23a, type: 2}
   currentCountdown: 0
   isCountdownStarted: 0
   choosenCountdown: 5

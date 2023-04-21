@@ -5,7 +5,8 @@ public class IngradiantSpawner : MonoBehaviour, IInteractable, ICollactable
 {
     [SerializeField] private PlayerHandSo _playerHandSo;
     [SerializeField] private IngradientsSO _ingradient;
-    //[SerializeField] private AudioSource _pickUpSfx;
+    [SerializeField] private IngradientTypes _ingradientTypes;
+    [SerializeField] private AudioSource _pickUpSfx;
 
     private void Awake()
     {
@@ -14,13 +15,13 @@ public class IngradiantSpawner : MonoBehaviour, IInteractable, ICollactable
 
     public void Interaction()
     {
-      //  _pickUpSfx.Play();
+        _pickUpSfx.Play();
         if (_playerHandSo.CurrentObject == null) return;
         if (!_playerHandSo.CurrentObject.TryGetComponent<Vial>(out var _vial)) return;
         
-        if (_vial.baseIngradiant != null)
+        if (_vial.baseIngradiant != _ingradientTypes.Empty)
         {
-            if (_vial.sideIngradiant == null)
+            if (_vial.sideIngradiant == _ingradientTypes.Empty)
             {
                 _vial.sideIngradiant = _ingradient;
             }

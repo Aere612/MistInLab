@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4727b395eb59c4ea40a42ad63c4031, type: 3}
   m_Name: Purple
   m_EditorClassIdentifier: 
-  Ingradiant: 5
   Material: {fileID: 2100000, guid: c408ba795a282684194df06edebdd691, type: 2}

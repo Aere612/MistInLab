@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4727b395eb59c4ea40a42ad63c4031, type: 3}
   m_Name: Blue
   m_EditorClassIdentifier: 
-  Ingradiant: 1
   Material: {fileID: 2100000, guid: c511d307cfce14642b5b35035610c0e9, type: 2}
