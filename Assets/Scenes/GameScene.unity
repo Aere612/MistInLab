@@ -52109,8 +52109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectSlot: {fileID: 0}
-  baseIngradiant: 0
-  sideIngradiant: 0
+  baseIngradiant: {fileID: 0}
+  sideIngradiant: {fileID: 0}
   vialPickUpSfx: {fileID: 6315785617054707922}
 --- !u!1 &1124980251497335243
 GameObject:
@@ -55412,8 +55412,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectSlot: {fileID: 0}
-  baseIngradiant: 0
-  sideIngradiant: 0
+  baseIngradiant: {fileID: 0}
+  sideIngradiant: {fileID: 0}
   vialPickUpSfx: {fileID: 8327971330094805001}
 --- !u!1 &3145891708956641554
 GameObject:
@@ -57705,8 +57705,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectSlot: {fileID: 0}
-  baseIngradiant: 0
-  sideIngradiant: 0
+  baseIngradiant: {fileID: 0}
+  sideIngradiant: {fileID: 0}
   vialPickUpSfx: {fileID: 7196424604668178660}
 --- !u!23 &4315644809884043772
 MeshRenderer:
@@ -59268,7 +59268,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a79655702b1bbbc44adaab7678165536, type: 2}
+  - {fileID: 2100000, guid: 4d6b4b85b13f1d04a95fc01475fc8c90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -59520,7 +59520,7 @@ GameObject:
   - component: {fileID: 2116061936}
   - component: {fileID: 8084812386186438357}
   m_Layer: 0
-  m_Name: Chemical5
+  m_Name: Purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59543,7 +59543,7 @@ GameObject:
   - component: {fileID: 1812620046}
   - component: {fileID: 1812620040}
   m_Layer: 0
-  m_Name: Chemical1
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59565,7 +59565,7 @@ GameObject:
   - component: {fileID: 2071417402}
   - component: {fileID: 8084812385621109735}
   m_Layer: 0
-  m_Name: Chemical4
+  m_Name: Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59588,7 +59588,7 @@ GameObject:
   - component: {fileID: 1220373883}
   - component: {fileID: 1220373877}
   m_Layer: 0
-  m_Name: Chemical2
+  m_Name: Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59610,7 +59610,7 @@ GameObject:
   - component: {fileID: 1967679066}
   - component: {fileID: 8084812386806889101}
   m_Layer: 0
-  m_Name: Chemical3
+  m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60821,8 +60821,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectSlot: {fileID: 0}
-  baseIngradiant: 0
-  sideIngradiant: 0
+  baseIngradiant: {fileID: 0}
+  sideIngradiant: {fileID: 0}
   vialPickUpSfx: {fileID: 5094707029132553136}
 --- !u!1 &5094707029132553135
 GameObject:
@@ -61022,8 +61022,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectSlot: {fileID: 0}
-  baseIngradiant: 0
-  sideIngradiant: 0
+  baseIngradiant: {fileID: 0}
+  sideIngradiant: {fileID: 0}
   vialPickUpSfx: {fileID: 5158811439008124192}
 --- !u!33 &5158811439008124188
 MeshFilter:
@@ -66917,8 +66917,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectSlot: {fileID: 0}
-  baseIngradiant: 0
-  sideIngradiant: 0
+  baseIngradiant: {fileID: 0}
+  sideIngradiant: {fileID: 0}
   vialPickUpSfx: {fileID: 6977229897820635359}
 --- !u!1 &6977229897820635358
 GameObject:
@@ -68592,8 +68592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerHandSo: {fileID: 11400000, guid: 57b5a22096346914a9217a7288382381, type: 2}
-  ingradiantType: 2
-  pickUpSfx: {fileID: 1220373883}
+  _ingradient: {fileID: 11400000, guid: 70f94ec04d29e9448b67084991101fcb, type: 2}
+  _pickUpSfx: {fileID: 0}
 --- !u!114 &7281614563224132871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68607,8 +68607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerHandSo: {fileID: 11400000, guid: 57b5a22096346914a9217a7288382381, type: 2}
-  ingradiantType: 4
-  pickUpSfx: {fileID: 2071417402}
+  _ingradient: {fileID: 11400000, guid: 8bf4fa9773eaa5340a2bbbfd123aeeb0, type: 2}
+  _pickUpSfx: {fileID: 0}
 --- !u!114 &7281614563378922812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68622,8 +68622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerHandSo: {fileID: 11400000, guid: 57b5a22096346914a9217a7288382381, type: 2}
-  ingradiantType: 1
-  pickUpSfx: {fileID: 1812620046}
+  _ingradient: {fileID: 11400000, guid: bca891d7f867ce54c93378fc449cadbf, type: 2}
+  _pickUpSfx: {fileID: 0}
 --- !u!114 &7281614563798470709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68637,8 +68637,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerHandSo: {fileID: 11400000, guid: 57b5a22096346914a9217a7288382381, type: 2}
-  ingradiantType: 5
-  pickUpSfx: {fileID: 2116061936}
+  _ingradient: {fileID: 11400000, guid: a7952235dd4faa34696803a1509d8767, type: 2}
+  _pickUpSfx: {fileID: 0}
 --- !u!114 &7281614564420717677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68652,8 +68652,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerHandSo: {fileID: 11400000, guid: 57b5a22096346914a9217a7288382381, type: 2}
-  ingradiantType: 3
-  pickUpSfx: {fileID: 1967679066}
+  _ingradient: {fileID: 11400000, guid: de405bf0a13e78544913cc2f1459beeb, type: 2}
+  _pickUpSfx: {fileID: 0}
 --- !u!23 &7313906603059234997
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -11,8 +11,8 @@ public class Damitma : BaseMachine
         if (input == null || output == null)
             return;
 
-        if (input.CurrentObject.BaseIngradiant == Ingradiant.Empty ||
-            output.CurrentObject.BaseIngradiant != Ingradiant.Empty)
+        if (input.CurrentObject.baseIngradiant.Type == Ingradient.Empty ||
+            output.CurrentObject.baseIngradiant.Type != Ingradient.Empty)
             return;
 
         RunTheMachine();
@@ -20,19 +20,19 @@ public class Damitma : BaseMachine
 
     public override void MixTheIngradients()
     {
-        if ((input.CurrentObject.BaseIngradiant == Ingradiant.Purple &&
-             input.CurrentObject.SideIngradiant == Ingradiant.Yellow) ||
-            (input.CurrentObject.BaseIngradiant == Ingradiant.Yellow &&
-             input.CurrentObject.SideIngradiant == Ingradiant.Purple))
+        if ((input.CurrentObject.baseIngradiant.Type == Ingradient.Purple &&
+             input.CurrentObject.sideIngradiant.Type == Ingradient.Yellow) ||
+            (input.CurrentObject.baseIngradiant.Type == Ingradient.Yellow &&
+             input.CurrentObject.sideIngradiant.Type == Ingradient.Purple))
         {
-            input.CurrentObject.BaseIngradiant = Ingradiant.Acid;
+            input.CurrentObject.baseIngradiant.Type = Ingradient.Acid;
         }
         else
         {
-            input.CurrentObject.BaseIngradiant = (Ingradiant)Random.Range(1, 6);
+            input.CurrentObject.baseIngradiant.Type = (Ingradient)Random.Range(1, 6);
         }
 
-        input.CurrentObject.SideIngradiant = Ingradiant.Empty;
+        input.CurrentObject.sideIngradiant.Type = Ingradient.Empty;
     }
 
     public override void RunTheMachine()

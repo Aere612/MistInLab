@@ -12,28 +12,30 @@ public class Mixer : BaseMachine
         if (inputOne == null || inputTwo == null || output == null)
             return;
 
-        if (inputOne.CurrentObject.BaseIngradiant == Ingradiant.Empty ||
-            inputTwo.CurrentObject.BaseIngradiant == Ingradiant.Empty ||
-            output.CurrentObject.BaseIngradiant != Ingradiant.Empty)
+        if (inputOne.CurrentObject.baseIngradiant.Type == Ingradient.Empty ||
+            inputTwo.CurrentObject.baseIngradiant.Type == Ingradient.Empty ||
+            output.CurrentObject.baseIngradiant.Type != Ingradient.Empty)
             return;
         RunTheMachine();
     }
 
     public override void MixTheIngradients()
     {
-        if ((inputOne.CurrentObject.BaseIngradiant == Ingradiant.LightBlue
-             && inputTwo.CurrentObject.BaseIngradiant == Ingradiant.BoldYellow)
+        if ((inputOne.CurrentObject.baseIngradiant.Type == Ingradient.LightBlue
+             && inputTwo.CurrentObject.baseIngradiant.Type == Ingradient.BoldYellow)
             ||
-            (inputOne.CurrentObject.BaseIngradiant == Ingradiant.BoldYellow
-             && inputTwo.CurrentObject.BaseIngradiant == Ingradiant.LightBlue))
+            (inputOne.CurrentObject.baseIngradiant.Type == Ingradient.BoldYellow
+             && inputTwo.CurrentObject.baseIngradiant.Type == Ingradient.LightBlue))
         {
-            output.CurrentObject.BaseIngradiant = Ingradiant.Green;
+            output.CurrentObject.baseIngradiant.Type = Ingradient.Green;
         }
         else
-            output.CurrentObject.BaseIngradiant = Ingradiant.Empty;
+        {
+            output.CurrentObject.baseIngradiant.Type = Ingradient.Empty;
+        }
 
-        inputOne.CurrentObject.BaseIngradiant = Ingradiant.Empty;
-        inputTwo.CurrentObject.BaseIngradiant = Ingradiant.Empty;
+        inputOne.CurrentObject.baseIngradiant.Type = Ingradient.Empty;
+        inputTwo.CurrentObject.baseIngradiant.Type = Ingradient.Empty;
     }
 
     public override void RunTheMachine()

@@ -10,8 +10,8 @@ public class Shaker : BaseMachine
 
     public override void CheckTheConditionsAndRun()
     {
-        if (input.CurrentObject.BaseIngradiant == Ingradiant.Empty ||
-            input.CurrentObject.SideIngradiant == Ingradiant.Empty) 
+        if (input.CurrentObject.baseIngradiant.Type == Ingradient.Empty ||
+            input.CurrentObject.sideIngradiant.Type == Ingradient.Empty) 
             return;
         isCorrect = choosenCountdown == correctCountdown;
         RunTheMachine();    
@@ -19,21 +19,21 @@ public class Shaker : BaseMachine
 
     public override void MixTheIngradients()
     {
-        if (((input.CurrentObject.BaseIngradiant == Ingradiant.Blue &&
-              input.CurrentObject.SideIngradiant == Ingradiant.Orange) ||
-             (input.CurrentObject.BaseIngradiant == Ingradiant.Orange &&
-              input.CurrentObject.SideIngradiant == Ingradiant.Blue)) && isCorrect)
-            input.CurrentObject.BaseIngradiant = Ingradiant.LightBlue;
+        if (((input.CurrentObject.baseIngradiant.Type == Ingradient.Blue &&
+              input.CurrentObject.sideIngradiant.Type == Ingradient.Orange) ||
+             (input.CurrentObject.baseIngradiant.Type == Ingradient.Orange &&
+              input.CurrentObject.sideIngradiant.Type == Ingradient.Blue)) && isCorrect)
+            input.CurrentObject.baseIngradiant.Type = Ingradient.LightBlue;
 
-        else if (((input.CurrentObject.BaseIngradiant == Ingradiant.Red &&
-                   input.CurrentObject.SideIngradiant == Ingradiant.Purple) ||
-                  (input.CurrentObject.BaseIngradiant == Ingradiant.Purple &&
-                   input.CurrentObject.SideIngradiant == Ingradiant.Red)) && isCorrect)
-            input.CurrentObject.BaseIngradiant = Ingradiant.BoldYellow;
+        else if (((input.CurrentObject.baseIngradiant.Type == Ingradient.Red &&
+                   input.CurrentObject.sideIngradiant.Type == Ingradient.Purple) ||
+                  (input.CurrentObject.baseIngradiant.Type == Ingradient.Purple &&
+                   input.CurrentObject.sideIngradiant.Type == Ingradient.Red)) && isCorrect)
+            input.CurrentObject.baseIngradiant.Type = Ingradient.BoldYellow;
 
         else
-            input.CurrentObject.BaseIngradiant = (Ingradiant)Random.Range(1, 6);
-        input.CurrentObject.SideIngradiant = Ingradiant.Empty;
+            input.CurrentObject.baseIngradiant.Type = (Ingradient)Random.Range(1, 6);
+        input.CurrentObject.sideIngradiant.Type = Ingradient.Empty;
     }
 
     public override void RunTheMachine()

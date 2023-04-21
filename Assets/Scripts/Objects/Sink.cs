@@ -9,9 +9,9 @@ public class Sink : MonoBehaviour, IInteractable
     public void Interaction()
     {
         if (!playerHandSo.CurrentObject.TryGetComponent<Vial>(out var _vial)) return;
-        if (_vial.baseIngradiant == Ingradiant.Empty) return;
+        if (_vial.baseIngradiant.Type == Ingradient.Empty) return;
         sinkSfx.Play();
-        _vial.baseIngradiant = Ingradiant.Empty;
-        _vial.sideIngradiant = Ingradiant.Empty;
+        _vial.baseIngradiant.Type = Ingradient.Empty;
+        _vial.sideIngradiant.Type = Ingradient.Empty;
     }
 }

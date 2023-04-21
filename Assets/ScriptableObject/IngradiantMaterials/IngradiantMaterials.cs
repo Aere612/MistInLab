@@ -7,20 +7,20 @@ public class IngradiantMaterials : ScriptableObject
 {
     [SerializeField] private List<Material> _materials;
 
-    public Material GetMaterial(Ingradiant ingradiant)
+    public Material GetMaterial(Ingradient ıngradient)
     {
-        return ingradiant switch
+        return ıngradient switch
         {
-            Ingradiant.Empty => _materials[0],
-            Ingradiant.Blue => _materials[1],
-            Ingradiant.Yellow => _materials[2],
-            Ingradiant.Red => _materials[3],
-            Ingradiant.Orange => _materials[4],
-            Ingradiant.Purple => _materials[5],
-            Ingradiant.LightBlue => _materials[6],
-            Ingradiant.BoldYellow => _materials[7],
-            Ingradiant.Acid => _materials[8],
-            Ingradiant.Green => _materials[9],
+            Ingradient.Empty => _materials[0],
+            Ingradient.Blue => _materials[1],
+            Ingradient.Yellow => _materials[2],
+            Ingradient.Red => _materials[3],
+            Ingradient.Orange => _materials[4],
+            Ingradient.Purple => _materials[5],
+            Ingradient.LightBlue => _materials[6],
+            Ingradient.BoldYellow => _materials[7],
+            Ingradient.Acid => _materials[8],
+            Ingradient.Green => _materials[9],
             _ => null
         };
     }

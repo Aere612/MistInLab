@@ -1,4 +1,4 @@
-public enum Ingradiant
+public enum Ingradient
 {
     Empty,      //0
     Blue,       //1

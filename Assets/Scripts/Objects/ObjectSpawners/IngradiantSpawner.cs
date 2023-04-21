@@ -4,8 +4,8 @@ using UnityEngine;
 public class IngradiantSpawner : MonoBehaviour, IInteractable, ICollactable
 {
     [SerializeField] private PlayerHandSo _playerHandSo;
-    [SerializeField] private Ingradiant ingradiantType;
-    [SerializeField] private AudioSource pickUpSfx;
+    [SerializeField] private IngradientsSO _ingradient;
+    //[SerializeField] private AudioSource _pickUpSfx;
 
     private void Awake()
     {
@@ -14,29 +14,20 @@ public class IngradiantSpawner : MonoBehaviour, IInteractable, ICollactable
 
     public void Interaction()
     {
-        pickUpSfx.Play();
+      //  _pickUpSfx.Play();
         if (_playerHandSo.CurrentObject == null) return;
-        if (_playerHandSo.CurrentObject.TryGetComponent<Vial>(out var _vial))
+        if (!_playerHandSo.CurrentObject.TryGetComponent<Vial>(out var _vial)) return;
+        
+        if (_vial.baseIngradiant != null)
         {
-            if (_vial.baseIngradiant. != Ingradiant.Empty)
+            if (_vial.sideIngradiant == null)
             {
-                if (_vial.sideIngradiant != Ingradiant.Empty)
-                    Debug.Log("Vial is Full");
-                else
-                {
-                    _vial.sideIngradiant = ingradiantType;
-                }
-
-                return;
+                _vial.sideIngradiant = _ingradient;
             }
+            return;
+        }
 
-            _vial.baseIngradiant = ingradiantType;
-            Debug.Log("Base Ingradient ejected");
-        }
-        else
-        {
-            Debug.Log("Wrong object to put");
-        }
+        _vial.baseIngradiant = _ingradient;
     }
 
     public bool IsAvailableToCollect { get; set; }

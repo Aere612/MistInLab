@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Vial : BaseObject,IInteractable,IDeletable
 {
-    [SerializeField] internal Ingradiant baseIngradiant;
-    [SerializeField] internal Ingradiant sideIngradiant;
+    [SerializeField] internal IngradientsSO baseIngradiant;
+    [SerializeField] internal IngradientsSO sideIngradiant;
     [SerializeField] internal AudioSource vialPickUpSfx;
 
     public void Interaction()
