@@ -7,6 +7,7 @@ public class InteractionTutorial : MonoBehaviour,IInteractable
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private DropTutorial dropTutorial;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private bool once;
 
     private void Awake()
     {
@@ -24,6 +25,8 @@ public class InteractionTutorial : MonoBehaviour,IInteractable
     }
     private void Vanish()
     {
+        if (once) return;
+        once = true;
         audioSource.Play();
         var sequence = DOTween.Sequence();
         sequence.Append(spriteRenderer.DOColor(new Color(1, 1, 1, 0), 1f));

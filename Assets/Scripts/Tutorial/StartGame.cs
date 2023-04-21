@@ -22,7 +22,7 @@ public class StartGame : MonoBehaviour
     }
 
 
-    private void Play()
+    public void Play()
     {
         backgroundSfx.Stop();
         backgroundTurnOffSfx.Play();

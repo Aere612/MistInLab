@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCountdown: 0
   isCountdownStarted: 0
+  choosenCountdown: 30
+  OnMachineStarted: {fileID: 0}
+  OnMachineStopped: {fileID: 0}
