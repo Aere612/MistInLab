@@ -16,7 +16,8 @@ public class GeneratorStarter : MonoBehaviour,IInteractable
     [SerializeField] private Counter counter;
     [SerializeField] private AudioSource generatorStartSfx;
     [SerializeField] private AudioSource backgroundSfx;
-    
+    [SerializeField] private GameObject tutorial;
+
     
     public void Interaction()
     {
@@ -34,6 +35,7 @@ public class GeneratorStarter : MonoBehaviour,IInteractable
         Destroy(barrier1);
         Destroy(barrier2);
         Destroy(terminal1);
+        Destroy(tutorial);
         Destroy(gameObject);
     }
 }
