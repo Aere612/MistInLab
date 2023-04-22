@@ -14178,8 +14178,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 22.628588, y: 10.667911, z: 0.8380538}
-  m_Center: {x: -0.5024005, y: -0.8336453, z: 0.020044338}
+  m_Size: {x: 22.628588, y: 10.667911, z: 2.195803}
+  m_Center: {x: -0.5024005, y: -0.8336453, z: -0.65883094}
 --- !u!1 &501119796
 GameObject:
   m_ObjectHideFlags: 0
@@ -24335,7 +24335,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f2ac19eb525cef74b894a1dbc5458e2a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30307,6 +30307,10 @@ PrefabInstance:
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2127306673394682693, guid: 7066c4dc4a727814ca59f9c5316e95cb, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3066669846523888347, guid: 7066c4dc4a727814ca59f9c5316e95cb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 19.72
@@ -30402,6 +30406,10 @@ PrefabInstance:
     - target: {fileID: 4446920328647062464, guid: 7066c4dc4a727814ca59f9c5316e95cb, type: 3}
       propertyPath: m_Name
       value: distiller
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996162253899084621, guid: 7066c4dc4a727814ca59f9c5316e95cb, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8176470169411574319, guid: 7066c4dc4a727814ca59f9c5316e95cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -51661,6 +51669,14 @@ PrefabInstance:
       propertyPath: vialInsertSfx
       value: 
       objectReference: {fileID: 750041753}
+    - target: {fileID: 3184816216349195210, guid: 85123bc9efe48f44ca2b53e77cf4d661, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728039316096344615, guid: 85123bc9efe48f44ca2b53e77cf4d661, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3867879607768873057, guid: 85123bc9efe48f44ca2b53e77cf4d661, type: 3}
       propertyPath: m_LocalPosition.y
       value: 20.53
@@ -51672,6 +51688,10 @@ PrefabInstance:
     - target: {fileID: 4893633351091374684, guid: 85123bc9efe48f44ca2b53e77cf4d661, type: 3}
       propertyPath: m_LocalPosition.y
       value: 20.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518512829558000119, guid: 85123bc9efe48f44ca2b53e77cf4d661, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6658493858822165425, guid: 85123bc9efe48f44ca2b53e77cf4d661, type: 3}
       propertyPath: m_LocalPosition.y
