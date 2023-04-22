@@ -19,16 +19,16 @@ public class IngradiantSpawner : MonoBehaviour, IInteractable, ICollactable
         if (_playerHandSo.CurrentObject == null) return;
         if (!_playerHandSo.CurrentObject.TryGetComponent<Vial>(out var _vial)) return;
         
-        if (_vial.baseIngradiant != _ingradientTypes.Empty)
+        if (_vial.BaseIngradiant != _ingradientTypes.Empty)
         {
-            if (_vial.sideIngradiant == _ingradientTypes.Empty)
+            if (_vial.SideIngradiant == _ingradientTypes.Empty)
             {
-                _vial.sideIngradiant = _ingradient;
+                _vial.SideIngradiant = _ingradient;
             }
             return;
         }
 
-        _vial.baseIngradiant = _ingradient;
+        _vial.BaseIngradiant = _ingradient;
     }
 
     public bool IsAvailableToCollect { get; set; }

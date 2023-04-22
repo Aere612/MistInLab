@@ -12,30 +12,30 @@ public class Mixer : BaseMachine
         if (inputOne == null || inputTwo == null || output == null)
             return;
 
-        if (inputOne.CurrentObject.baseIngradiant == _ingradientTypes.Empty ||
-            inputTwo.CurrentObject.baseIngradiant == _ingradientTypes.Empty ||
-            output.CurrentObject.baseIngradiant != _ingradientTypes.Empty)
+        if (inputOne.CurrentObject.BaseIngradiant == _ingradientTypes.Empty ||
+            inputTwo.CurrentObject.BaseIngradiant == _ingradientTypes.Empty ||
+            output.CurrentObject.BaseIngradiant != _ingradientTypes.Empty)
             return;
         RunTheMachine();
     }
 
     public override void MixTheIngradients()
     {
-        if ((inputOne.CurrentObject.baseIngradiant== _ingradientTypes.LightBlue
-             && inputTwo.CurrentObject.baseIngradiant == _ingradientTypes.BoldYellow)
+        if ((inputOne.CurrentObject.BaseIngradiant== _ingradientTypes.LightBlue
+             && inputTwo.CurrentObject.BaseIngradiant == _ingradientTypes.BoldYellow)
             ||
-            (inputOne.CurrentObject.baseIngradiant == _ingradientTypes.BoldYellow
-             && inputTwo.CurrentObject.baseIngradiant == _ingradientTypes.LightBlue))
+            (inputOne.CurrentObject.BaseIngradiant == _ingradientTypes.BoldYellow
+             && inputTwo.CurrentObject.BaseIngradiant == _ingradientTypes.LightBlue))
         {
-            output.CurrentObject.baseIngradiant= _ingradientTypes.Green;
+            output.CurrentObject.BaseIngradiant= _ingradientTypes.Green;
         }
         else
         {
-            output.CurrentObject.baseIngradiant = _ingradientTypes.Empty;
+            output.CurrentObject.BaseIngradiant = _ingradientTypes.Empty;
         }
-
-        inputOne.CurrentObject.baseIngradiant = _ingradientTypes.Empty;
-        inputTwo.CurrentObject.baseIngradiant = _ingradientTypes.Empty;
+        
+        inputOne.CurrentObject.BaseIngradiant = _ingradientTypes.Empty;
+        inputTwo.CurrentObject.BaseIngradiant = _ingradientTypes.Empty;
     }
 
     public override void RunTheMachine()

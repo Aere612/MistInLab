@@ -35,7 +35,7 @@ public class FogEmitterController : MonoBehaviour
     private void RunTheFogEmitter()
     {
         if (_vialSlot.CurrentObject == null) return;
-        if (_vialSlot.CurrentObject.baseIngradiant != _ingradientTypes.Green) return;
+        if (_vialSlot.CurrentObject.BaseIngradiant != _ingradientTypes.Green) return;
         if (!_slider.isCorrect || !_lever.isCorrect) return;
         
         if (_switchOne.switchState != FogEmitterSwitch.SwitchState.Down ||
