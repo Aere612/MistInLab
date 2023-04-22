@@ -4,7 +4,7 @@ using DG.Tweening;
 public class PickUpTutorial : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private InteractionTutorial interactionTutorial;
+    [SerializeField] private InspectTutorial inspectTutorial;
     private void Awake()
     {
         var sequence = DOTween.Sequence();
@@ -22,7 +22,7 @@ public class PickUpTutorial : MonoBehaviour
     }
     private void End()
     {
-        interactionTutorial.gameObject.SetActive(true);
+        inspectTutorial.gameObject.SetActive(true);
         Destroy(gameObject);
     }
 }

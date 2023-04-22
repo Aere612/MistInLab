@@ -25,7 +25,7 @@ public class PlayerHandSo : ScriptableObject
         var rigidbody = CurrentObject.GetComponent<Rigidbody>();
         CurrentObject.transform.parent = null;
         rigidbody.isKinematic = false;
-        rigidbody.AddForce(CurrentObject.transform.forward * 200);
+        rigidbody.AddForce(playerCameraTransform.transform.forward * 200);
         CurrentObject = null;
     }
 }
