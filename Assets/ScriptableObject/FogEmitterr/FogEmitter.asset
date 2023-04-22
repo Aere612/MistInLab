@@ -16,5 +16,5 @@ MonoBehaviour:
   currentCountdown: 0
   isCountdownStarted: 0
   choosenCountdown: 0
-  OnMachineStarted: {fileID: 0}
-  OnMachineStopped: {fileID: 0}
+  OnMachineStarted: {fileID: 11400000, guid: 2bddf3a3ebb7dc742bbfcee8aec1d535, type: 2}
+  OnMachineStopped: {fileID: 11400000, guid: 2f9cf3ed7c0fee34f8d68f5ff95ea44c, type: 2}

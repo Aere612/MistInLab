@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class FogEmitterController : MonoBehaviour
@@ -18,6 +19,12 @@ public class FogEmitterController : MonoBehaviour
     [SerializeField] private CogSlot _cogSlotThree;
 
     [SerializeField] private VialSlot _vialSlot;
+    
+
+    private void Awake()
+    {
+        InitializeFogEmitter();
+    }
 
     public void CheckCountdown()
     {
@@ -27,25 +34,27 @@ public class FogEmitterController : MonoBehaviour
             _fogEmitter.currentCountdown--;
         else
         {
-            RunTheFogEmitter();
+            _fogEmitter.MixTheIngradients();
+            _fogEmitter.StopTheMachine();
             _fogEmitter.isCountdownStarted = false;
         }
     }
 
-    private void RunTheFogEmitter()
-    {
-        if (_vialSlot.CurrentObject == null) return;
-        if (_vialSlot.CurrentObject.BaseIngradiant != _ingradientTypes.Green) return;
-        if (!_slider.isCorrect || !_lever.isCorrect) return;
-        
-        if (_switchOne.switchState != FogEmitterSwitch.SwitchState.Down ||
-            _switchTwo.switchState != FogEmitterSwitch.SwitchState.Up ||
-            _switchThree.switchState != FogEmitterSwitch.SwitchState.Up ||
-            _switchFour.switchState != FogEmitterSwitch.SwitchState.Down) return;
-        
-        if (_cogSlotOne.CurrentObject == null || _cogSlotTwo.CurrentObject == null ||
-            _cogSlotThree.CurrentObject == null) return;
 
-        Debug.Log("Fog Successful");
+    private void InitializeFogEmitter()
+    {
+        _fogEmitter.isCountdownStarted = false;
+        
+        _fogEmitter._cogSlotOne = _cogSlotOne;
+        _fogEmitter._cogSlotTwo = _cogSlotTwo;
+        _fogEmitter._cogSlotThree = _cogSlotThree;
+        _fogEmitter._switchOne = _switchOne;
+        _fogEmitter._switchTwo = _switchTwo;
+        _fogEmitter._switchThree = _switchThree;
+        _fogEmitter._switchFour = _switchFour;
+        _fogEmitter._slider = _slider;
+        _fogEmitter._lever = _lever;
+        _fogEmitter._vialSlot = _vialSlot;
+        
     }
 }

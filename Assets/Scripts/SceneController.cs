@@ -9,7 +9,7 @@ public class SceneController : MonoBehaviour
     }
 
     [ContextMenu("EndGame")]
-    private void EndTheGame()
+    public void EndTheGame()
     {
         SceneManager.LoadScene("EndingScene", LoadSceneMode.Additive);
     }
