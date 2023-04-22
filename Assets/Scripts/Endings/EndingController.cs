@@ -43,6 +43,6 @@ public class EndingController : MonoBehaviour
 
     private void CreditsDisplayer()
     {
-        credits.transform.DOMoveY(1000, 20).SetEase(Ease.Linear).OnComplete(()=>SceneManager.LoadScene("MainMenu"));
+        credits.transform.DOMoveY(2000, 20).SetEase(Ease.Linear).OnComplete(()=>SceneManager.LoadScene("MainMenu"));
     }
 }
