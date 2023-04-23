@@ -66888,6 +66888,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1625351776}
     m_Modifications:
+    - target: {fileID: 1156239919086622734, guid: e7cb3a435d43b9f46bea9ac9a94eb9bf, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2166892706779548243, guid: e7cb3a435d43b9f46bea9ac9a94eb9bf, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.size
       value: 3
