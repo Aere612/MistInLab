@@ -33,6 +33,7 @@ public class Damitma : BaseMachine
         }
         
         input.CurrentObject.BaseIngradiant = _ingradientTypes.Empty;
+        input.CurrentObject.SideIngradiant = _ingradientTypes.Empty;
     }
 
     public override void RunTheMachine()
