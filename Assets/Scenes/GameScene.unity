@@ -15018,6 +15018,7 @@ MonoBehaviour:
   doorSoundSfx: {fileID: 138491122}
   doorOpenClip: {fileID: 8300000, guid: 8b7d177b00fb02d4596eb179212b1e24, type: 3}
   doorCloseClip: {fileID: 8300000, guid: 8b725b78bf835d84b941870976a943ab, type: 3}
+  doorNotAvailable: 0
 --- !u!1 &528055775
 GameObject:
   m_ObjectHideFlags: 0
@@ -32380,8 +32381,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233041480}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: -2.137, z: -1.576}
-  m_LocalScale: {x: 155.86743, y: 158.22694, z: 158.22694}
+  m_LocalPosition: {x: 0.2096, y: -2.137, z: -1.576}
+  m_LocalScale: {x: 70.56119, y: 158.22694, z: 158.22694}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1916216097342065842}
@@ -57179,8 +57180,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626114553572677949}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: -2.137, z: 0}
-  m_LocalScale: {x: 155.86743, y: 158.22694, z: 158.22694}
+  m_LocalPosition: {x: 0.2096, y: -2.137, z: 0}
+  m_LocalScale: {x: 70.56119, y: 158.22694, z: 158.22694}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1916216097342065842}
@@ -58724,6 +58725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4252486451230988784}
   - component: {fileID: 4252486451230988791}
+  - component: {fileID: 4252486451230988792}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -58743,6 +58745,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e95b1e8eecbd5140abf4d645fe1f8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4252486451230988792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252486451230988785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70492fb85264c634b9c713b7b653e3be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 200f8e1fb1b9cf34c89fd11aa57a02c3, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4252486451230988791}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: LoseTheGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &4252486451923491141
 Transform:
   m_ObjectHideFlags: 0
@@ -61432,7 +61462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4846363201265008355}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.365, y: -0.259, z: -3.681}
+  m_LocalPosition: {x: -4.608, y: -0.241, z: -3.681}
   m_LocalScale: {x: 0.29, y: 0.29, z: 0.29}
   m_ConstrainProportionsScale: 1
   m_Children:

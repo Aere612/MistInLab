@@ -8,9 +8,14 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Hud", LoadSceneMode.Additive);
     }
 
-    [ContextMenu("EndGame")]
+    [ContextMenu("WinGame")]
     public void EndTheGame()
     {
         SceneManager.LoadScene("EndingScene", LoadSceneMode.Additive);
+    }
+    [ContextMenu("LoseGame")]
+    public void LoseTheGame()
+    {
+        SceneManager.LoadScene("GameScene");
     }
 }

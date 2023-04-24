@@ -9,6 +9,7 @@ public class JanitorRoomDoor : MonoBehaviour, IInteractable
     [SerializeField] private AudioSource doorSoundSfx;
     [SerializeField] private AudioClip doorOpenClip;
     [SerializeField] private AudioClip doorCloseClip;
+    [SerializeField] private bool doorNotAvailable;
 
     public bool DoorClosed => doorClosed;
 
@@ -18,19 +19,35 @@ public class JanitorRoomDoor : MonoBehaviour, IInteractable
         set => doorLocked = value;
     }
 
+    public bool DoorNotAvailable => doorNotAvailable;
+
     public void Interaction()
     {
+        if (DoorNotAvailable) return;
         if (DoorLocked) return;
-        if (DoorClosed)
-        {
-            doorSoundSfx.clip = doorOpenClip;
-            doorSoundSfx.Play();
-            doorClosed = false;
-            pivot.DORotate(new Vector3(0, 90, 0f), 0.5f);
-            return;
-        }
-        doorSoundSfx.clip = doorCloseClip;
-        doorSoundSfx.Play();
-        pivot.DORotate(new Vector3(0, 0, 0f), 0.5f).OnComplete(()=>doorClosed = true);
+        doorNotAvailable = true;
+        Door();
+    }
+
+    private void Door()
+    {
+                if (DoorClosed)
+                {
+                    doorSoundSfx.clip = doorOpenClip;
+                    doorSoundSfx.Play();
+                    pivot.DORotate(new Vector3(0, 90, 0f), 0.5f).OnComplete(()=>
+                    {
+                        doorClosed = false;
+                        doorNotAvailable = false;
+                    });
+                    return;
+                }
+                doorSoundSfx.clip = doorCloseClip;
+                doorSoundSfx.Play();
+                pivot.DORotate(new Vector3(0, 0, 0f), 0.5f).OnComplete(()=>
+                {
+                    doorClosed = true;
+                    doorNotAvailable = false;
+                });
     }
 }
