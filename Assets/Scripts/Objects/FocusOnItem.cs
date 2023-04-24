@@ -25,6 +25,7 @@ public class FocusOnItem : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Mouse1))
         {
             playerHandSo.CurrentObject.transform.position = playerHandSo.playerHandTransform.position;
+            playerHandSo.CurrentObject.transform.rotation = playerHandSo.playerHandTransform.rotation;
             playerMovement.enabled = true;
             StopCoroutine(_examine);
         }

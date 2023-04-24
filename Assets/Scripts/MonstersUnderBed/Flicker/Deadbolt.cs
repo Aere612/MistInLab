@@ -13,11 +13,12 @@ public class Deadbolt : MonoBehaviour, IInteractable
         if (!janitorRoomDoor.DoorClosed) return;
         if (janitorRoomDoor.DoorLocked) Unlock();
         else Lock();
+        audioSource.Play();
     }
 
     private void Lock()
     {
-        audioSource.Play();
+        
         janitorRoomDoor.DoorLocked = true;
         janitorRoomDoor.DoorLocked = janitorRoomDoor.DoorLocked;
         pivot.DORotate(new Vector3(90, 0, 0f), 0.5f);
@@ -25,7 +26,6 @@ public class Deadbolt : MonoBehaviour, IInteractable
 
     private void Unlock()
     {
-        audioSource.Play();
         janitorRoomDoor.DoorLocked = false;
         janitorRoomDoor.DoorLocked = janitorRoomDoor.DoorLocked;
         pivot.DORotate(new Vector3(0, 0, 0f), 0.5f);

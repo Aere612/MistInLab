@@ -31,7 +31,6 @@ public class JanitorRoomDoor : MonoBehaviour, IInteractable
         }
         doorSoundSfx.clip = doorCloseClip;
         doorSoundSfx.Play();
-        doorClosed = true;
-        pivot.DORotate(new Vector3(0, 0, 0f), 0.5f);
+        pivot.DORotate(new Vector3(0, 0, 0f), 0.5f).OnComplete(()=>doorClosed = true);
     }
 }
