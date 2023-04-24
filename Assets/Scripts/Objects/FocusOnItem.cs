@@ -8,6 +8,7 @@ public class FocusOnItem : MonoBehaviour
     [SerializeField] private PlayerHandSo playerHandSo;
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private Vector3 playerFaceLocation;
+    [SerializeField] private Light focusLight;
     private Coroutine _examine;
 
     private void Update()
@@ -19,6 +20,7 @@ public class FocusOnItem : MonoBehaviour
                 playerHandSo.playerCameraTransform.position + playerHandSo.playerCameraTransform.forward/2;
             playerMovement.enabled = false;
             _examine = StartCoroutine(Examine());
+            focusLight.enabled = true;
             return;
         }
 
@@ -27,6 +29,7 @@ public class FocusOnItem : MonoBehaviour
             playerHandSo.CurrentObject.transform.position = playerHandSo.playerHandTransform.position;
             playerHandSo.CurrentObject.transform.rotation = playerHandSo.playerHandTransform.rotation;
             playerMovement.enabled = true;
+            focusLight.enabled = false;
             StopCoroutine(_examine);
         }
     }

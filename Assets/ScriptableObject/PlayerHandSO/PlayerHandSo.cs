@@ -22,6 +22,7 @@ public class PlayerHandSo : ScriptableObject
     public void DropTheObject()
     {
         if (CurrentObject == null) return;
+        if (Input.GetKey(KeyCode.Mouse1)) return;
         var rigidbody = CurrentObject.GetComponent<Rigidbody>();
         CurrentObject.transform.parent = null;
         rigidbody.isKinematic = false;
