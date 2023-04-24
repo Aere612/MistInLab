@@ -18,11 +18,6 @@ public class SkipTutorial : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private CharacterController characterController;
 
-    private void Awake()
-    {
-        StartCoroutine(AutoClose());
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F)) Skip();
@@ -46,10 +41,5 @@ public class SkipTutorial : MonoBehaviour
         var sequence = DOTween.Sequence();
         sequence.Append(skipTutorialText.DOColor(new Color(1, 1, 1, 0), 1f));
         sequence.OnComplete(()=>Destroy(gameObject));
-    }
-    private IEnumerator AutoClose()
-    {
-        yield return new WaitForSeconds(11f);
-        Vanish();
     }
 }
