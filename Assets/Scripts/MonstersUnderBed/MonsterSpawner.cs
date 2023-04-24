@@ -3,7 +3,7 @@ using Random = UnityEngine.Random;
 
 public class MonsterSpawner : MonoBehaviour
 {
-    [SerializeField] private int currentWaitFactor = 200;
+    [SerializeField] private int currentWaitFactor;
     [SerializeField] private Flicker flicker;
     [SerializeField] private Tinkerer tinkerer;
     [SerializeField] private CountDown countDown;
@@ -14,7 +14,7 @@ public class MonsterSpawner : MonoBehaviour
         if (countDown.TimeLeft < 76) return;
         currentWaitFactor -= 1;
         if (Random.Range(0, 100) < currentWaitFactor) return;
-        currentWaitFactor = 200;
+        currentWaitFactor = 175;
         switch (Random.Range(1, 3))
         {
             case 1:
