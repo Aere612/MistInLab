@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class FogEmitterSlider : MonoBehaviour, IInteractable
 {
@@ -18,9 +20,10 @@ public class FogEmitterSlider : MonoBehaviour, IInteractable
         Right
     }
 
-    [SerializeField] public SliderState leverState = 0;
-    [SerializeField] public Transform slider;
+    public SliderState leverState = 0;
+    public Transform sliderObject;
 
+    [SerializeField] private Slider sliderComponent;
     public void Interaction()
     {
         if (_animDelay) return;
@@ -31,24 +34,36 @@ public class FogEmitterSlider : MonoBehaviour, IInteractable
         if (leverState != SliderState.Right) leverState++;
         else leverState = SliderState.Left;
 
-        switch (leverState) 
+        switch (leverState)
         {
             case SliderState.Left:
-                slider.DOMove(slider.transform.position + new Vector3(0, 0, .700f), 1.00f);
+                sliderObject.DOMove(sliderObject.transform.position + new Vector3(0, 0, .700f), 1.00f);
+                sliderComponent.DOValue(0f, 1);
                 break;
             case SliderState.LeftMiddle:
                 isCorrect = true;
-                slider.DOMove(slider.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
+                sliderObject.DOMove(sliderObject.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
+                sliderComponent.DOValue(0.25f, .25f);
+
+
                 break;
             case SliderState.Middle:
                 isCorrect = false;
-                slider.DOMove(slider.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
+                sliderObject.DOMove(sliderObject.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
+                sliderComponent.DOValue(0.50f, .25f);
+
+
                 break;
             case SliderState.RightMiddle:
-                slider.DOMove(slider.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
+                sliderObject.DOMove(sliderObject.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
+                sliderComponent.DOValue(0.75f, .25f);
+
+
                 break;
             case SliderState.Right:
-                slider.DOMove(slider.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
+                sliderObject.DOMove(sliderObject.transform.position + new Vector3(0, 0, -0.175f), 0.25f);
+                sliderComponent.DOValue(1f, .25f);
+
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -57,7 +72,7 @@ public class FogEmitterSlider : MonoBehaviour, IInteractable
         IEnumerator OneSecDelay()
         {
             yield return new WaitForSeconds(1f);
-            _animDelay=false;
+            _animDelay = false;
         }
     }
 }
