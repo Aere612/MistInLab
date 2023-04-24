@@ -19,4 +19,4 @@ MonoBehaviour:
   OnMachineStarted: {fileID: 11400000, guid: 59d07dcb4cd3178408f1f35f613d7b48, type: 2}
   OnMachineStopped: {fileID: 11400000, guid: 465410cb3e8431a4da50bd85fc1b458b, type: 2}
   isCorrect: 1
-  correctCountdown: 5
+  correctCountdown: 45

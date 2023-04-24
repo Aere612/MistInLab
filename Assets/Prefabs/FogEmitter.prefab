@@ -1916,6 +1916,7 @@ GameObject:
   - component: {fileID: 347266201415811011}
   - component: {fileID: 4290324585912652545}
   - component: {fileID: 327942524507224671}
+  - component: {fileID: 120398514585001974}
   m_Layer: 0
   m_Name: FogEmitter
   m_TagString: Untagged
@@ -1967,6 +1968,7 @@ MonoBehaviour:
   _cogSlotTwo: {fileID: 745303482876729184}
   _cogSlotThree: {fileID: 7526515631963336336}
   _vialSlot: {fileID: 2732224208843015739}
+  timeClickListener: {fileID: 0}
 --- !u!114 &4290324585912652545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2011,6 +2013,34 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &120398514585001974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089628426474936348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70492fb85264c634b9c713b7b653e3be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 9fc49e9e610761b43a285bd9e70bace8, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 347266201415811011}
+        m_TargetAssemblyTypeName: FogEmitterController, Assembly-CSharp
+        m_MethodName: CheckCountdown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7089628426518242068
 GameObject:
   m_ObjectHideFlags: 0
