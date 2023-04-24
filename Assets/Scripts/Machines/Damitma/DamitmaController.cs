@@ -19,7 +19,7 @@ public class DamitmaController : MonoBehaviour
             _damitma.currentCountdown--;
         else
         {
-            _damitma.MixTheIngradients();
+            _damitma.MixTheIngredients();
             _damitma.StopTheMachine();
             timeClickListener.enabled = false;
         }

@@ -16,7 +16,7 @@ public class ShakerController : MonoBehaviour
             _shaker.currentCountdown--;
         else
         {
-            _shaker.MixTheIngradients();
+            _shaker.MixTheIngredients();
             _shaker.isCountdownStarted = false;
             timeClickListener.enabled = false;
             _shaker.StopTheMachine();

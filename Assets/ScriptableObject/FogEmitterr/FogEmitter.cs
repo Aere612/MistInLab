@@ -21,20 +21,21 @@ public class FogEmitter : BaseMachine
     {
         if (_vialSlot.CurrentObject == null) return;
         if (_vialSlot.CurrentObject.BaseIngradiant != _ingradientTypes.Green) return;
-        if (!_slider.isCorrect || !_lever.isCorrect) return;
+        if (_cogSlotOne.CurrentObject == null || _cogSlotTwo.CurrentObject == null ||
+            _cogSlotThree.CurrentObject == null) return;
 
         RunTheMachine();
     }
 
-    public override void MixTheIngradients()
+    public override void MixTheIngredients()
     {
         if (_switchOne.switchState != FogEmitterSwitch.SwitchState.Down ||
             _switchTwo.switchState != FogEmitterSwitch.SwitchState.Up ||
             _switchThree.switchState != FogEmitterSwitch.SwitchState.Up ||
-            _switchFour.switchState != FogEmitterSwitch.SwitchState.Down) return;
+            _switchFour.switchState != FogEmitterSwitch.SwitchState.Down||
+            !_slider.isCorrect || 
+            !_lever.isCorrect) return;
 
-        if (_cogSlotOne.CurrentObject == null || _cogSlotTwo.CurrentObject == null ||
-            _cogSlotThree.CurrentObject == null) return;
         OnMachineStopped.Raise();
     }
 

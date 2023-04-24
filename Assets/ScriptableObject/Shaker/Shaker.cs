@@ -17,7 +17,7 @@ public class Shaker : BaseMachine
         RunTheMachine();    
     }
 
-    public override void MixTheIngradients()
+    public override void MixTheIngredients()
     {
         if (((input.CurrentObject.BaseIngradiant == _ingradientTypes.Blue &&
               input.CurrentObject.SideIngradiant == _ingradientTypes.Orange) ||

@@ -11,7 +11,7 @@ public abstract class BaseMachine : ScriptableObject
     [SerializeField] internal GameEvent OnMachineStopped;
 
     public abstract void CheckTheConditionsAndRun();
-    public abstract void MixTheIngradients();
+    public abstract void MixTheIngredients();
 
     public abstract void RunTheMachine();
     public abstract void StopTheMachine();
