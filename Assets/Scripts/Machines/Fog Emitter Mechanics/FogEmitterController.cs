@@ -34,7 +34,7 @@ public class FogEmitterController : MonoBehaviour
             _fogEmitter.currentCountdown--;
         else
         {
-            _fogEmitter.MixTheIngradients();
+            _fogEmitter.MixTheIngredients();
             _fogEmitter.StopTheMachine();
             _fogEmitter.isCountdownStarted = false;
         }

@@ -19,7 +19,7 @@ public class MixerController : MonoBehaviour
             _mixer.currentCountdown--;
         else
         {
-            _mixer.MixTheIngradients();
+            _mixer.MixTheIngredients();
             _mixer.StopTheMachine();
             timeClickListener.enabled = false;
         }

@@ -19,7 +19,7 @@ public class Mixer : BaseMachine
         RunTheMachine();
     }
 
-    public override void MixTheIngradients()
+    public override void MixTheIngredients()
     {
         if ((inputOne.CurrentObject.BaseIngradiant== _ingradientTypes.LightBlue
              && inputTwo.CurrentObject.BaseIngradiant == _ingradientTypes.BoldYellow)

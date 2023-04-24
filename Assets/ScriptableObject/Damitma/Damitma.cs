@@ -18,7 +18,7 @@ public class Damitma : BaseMachine
         RunTheMachine();
     }
 
-    public override void MixTheIngradients()
+    public override void MixTheIngredients()
     {
         if ((input.CurrentObject.BaseIngradiant == _ingradientTypes.Purple &&
              input.CurrentObject.SideIngradiant == _ingradientTypes.Yellow) ||
