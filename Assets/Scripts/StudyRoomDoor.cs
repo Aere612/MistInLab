@@ -17,6 +17,7 @@ public class StudyRoomDoor : MonoBehaviour, IInteractable
     [SerializeField] private AudioSource doorSoundSfx;
     [SerializeField] private AudioClip doorOpenClip;
     [SerializeField] private AudioClip doorCloseClip;
+
     private void Awake()
     {
         lockTrash1.IsAvailableToCollect = false;
@@ -32,6 +33,9 @@ public class StudyRoomDoor : MonoBehaviour, IInteractable
                 vial.BaseIngradiant != _ingradientTypes.Acid) return;
             isLocked = false;
             acidSfx.Play();
+
+            vial.BaseIngradiant = _ingradientTypes.Empty;
+            
             lockTrash1.IsAvailableToCollect = true;
             lockTrash2.IsAvailableToCollect = true;
             lockRb1.isKinematic = false;
@@ -47,6 +51,7 @@ public class StudyRoomDoor : MonoBehaviour, IInteractable
             pivot.DORotate(new Vector3(0, -90, 0f), 0.5f);
             return;
         }
+
         doorSoundSfx.clip = doorCloseClip;
         doorSoundSfx.Play();
         doorClosed = true;
