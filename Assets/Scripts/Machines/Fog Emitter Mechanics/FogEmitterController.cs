@@ -19,7 +19,7 @@ public class FogEmitterController : MonoBehaviour
     [SerializeField] private CogSlot _cogSlotThree;
 
     [SerializeField] private VialSlot _vialSlot;
-    
+    [SerializeField] private GameEventListener timeClickListener;
 
     private void Awake()
     {
@@ -37,14 +37,19 @@ public class FogEmitterController : MonoBehaviour
             _fogEmitter.MixTheIngradients();
             _fogEmitter.StopTheMachine();
             _fogEmitter.isCountdownStarted = false;
+            timeClickListener.enabled = false;
         }
     }
 
+    public void ActivateTimeClickListener()
+    {
+        timeClickListener.enabled = true;
+    }
 
     private void InitializeFogEmitter()
     {
+        timeClickListener.enabled = false;
         _fogEmitter.isCountdownStarted = false;
-        
         _fogEmitter._cogSlotOne = _cogSlotOne;
         _fogEmitter._cogSlotTwo = _cogSlotTwo;
         _fogEmitter._cogSlotThree = _cogSlotThree;
@@ -55,6 +60,5 @@ public class FogEmitterController : MonoBehaviour
         _fogEmitter._slider = _slider;
         _fogEmitter._lever = _lever;
         _fogEmitter._vialSlot = _vialSlot;
-        
     }
 }
