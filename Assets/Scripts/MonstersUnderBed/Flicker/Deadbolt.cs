@@ -10,7 +10,7 @@ public class Deadbolt : MonoBehaviour, IInteractable
 
     public void Interaction()
     {
-        if (!janitorRoomDoor.DoorClosed) return;
+        if (!janitorRoomDoor.DoorClosed||janitorRoomDoor.DoorNotAvailable) return;
         if (janitorRoomDoor.DoorLocked) Unlock();
         else Lock();
         audioSource.Play();
