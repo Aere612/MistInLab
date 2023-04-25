@@ -19,16 +19,17 @@ public class Shaker : BaseMachine
 
     public override void MixTheIngredients()
     {
+        if (input.CurrentObject == null) return;
         if (((input.CurrentObject.BaseIngradiant == _ingradientTypes.Blue &&
               input.CurrentObject.SideIngradiant == _ingradientTypes.Orange) ||
              (input.CurrentObject.BaseIngradiant == _ingradientTypes.Orange &&
               input.CurrentObject.SideIngradiant == _ingradientTypes.Blue)) && isCorrect)
             input.CurrentObject.BaseIngradiant = _ingradientTypes.LightBlue;
 
-        else if (((input.CurrentObject.BaseIngradiant == _ingradientTypes.Red &&
-                   input.CurrentObject.SideIngradiant == _ingradientTypes.Purple) ||
-                  (input.CurrentObject.BaseIngradiant == _ingradientTypes.Purple &&
-                   input.CurrentObject.SideIngradiant == _ingradientTypes.Red)) && isCorrect)
+        else if (((input.CurrentObject.BaseIngradiant == _ingradientTypes.Yellow &&
+                   input.CurrentObject.SideIngradiant == _ingradientTypes.Red) ||
+                  (input.CurrentObject.BaseIngradiant == _ingradientTypes.Red &&
+                   input.CurrentObject.SideIngradiant == _ingradientTypes.Yellow)) && isCorrect)
             input.CurrentObject.BaseIngradiant = _ingradientTypes.BoldYellow;
 
         else

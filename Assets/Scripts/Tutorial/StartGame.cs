@@ -10,9 +10,6 @@ public class StartGame : MonoBehaviour
     [SerializeField] private Light light3;
     [SerializeField] private Light light4;
     [SerializeField] private Light light5;
-    [SerializeField] private Light light6;
-    [SerializeField] private Light light7;
-    [SerializeField] private Light light8;
     [SerializeField] private AudioSource backgroundSfx;
     [SerializeField] private AudioSource backgroundTurnOffSfx;
 
@@ -31,9 +28,6 @@ public class StartGame : MonoBehaviour
         light3.enabled = false;
         light4.enabled = false;
         light5.enabled = false;
-        light6.enabled = false;
-        light7.enabled = false;
-        light8.enabled = false;
         door1.DORotate(new Vector3(0,  90, 0), 1f);
         door2.DORotate(new Vector3(0, -90, 0), 1f);
         Destroy(gameObject);

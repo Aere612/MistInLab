@@ -28,6 +28,7 @@ public class HandManager : MonoBehaviour
         }
 
     }
+
     public void DropTheObject()
     {
         playerHandSo.DropTheObject();

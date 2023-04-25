@@ -20,6 +20,7 @@ public class Damitma : BaseMachine
 
     public override void MixTheIngredients()
     {
+        if (input.CurrentObject == null || output.CurrentObject == null) return;
         if ((input.CurrentObject.BaseIngradiant == _ingradientTypes.Purple &&
              input.CurrentObject.SideIngradiant == _ingradientTypes.Yellow) ||
             (input.CurrentObject.BaseIngradiant == _ingradientTypes.Yellow &&
@@ -31,7 +32,7 @@ public class Damitma : BaseMachine
         {
             output.CurrentObject.BaseIngradiant = _ingradientTypes.Black;
         }
-        
+
         input.CurrentObject.BaseIngradiant = _ingradientTypes.Empty;
         input.CurrentObject.SideIngradiant = _ingradientTypes.Empty;
     }

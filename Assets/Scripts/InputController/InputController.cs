@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 [Serializable]
 public class InputController : MonoBehaviour
 {
-    private PlayerControls _playerControls;
+    public PlayerControls _playerControls;
 
     [SerializeField] private GameEvent _onMouseClicked;
     [SerializeField] private GameEvent _onQPressed;
@@ -19,7 +19,13 @@ public class InputController : MonoBehaviour
         
         _playerControls.Enable();
     }
-    
+
+    public void CancelListening()
+    {
+        _playerControls.Player.Press.started -= InvokeMouseClickEvent;
+        _playerControls.Player.DropObject.started -= InvokeQPressedEvent;
+        _playerControls = null;
+    }
     
     public void InvokeMouseClickEvent(InputAction.CallbackContext context)
     {

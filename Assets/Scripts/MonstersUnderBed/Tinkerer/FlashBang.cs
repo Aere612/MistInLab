@@ -6,7 +6,7 @@ public class FlashBang : MonoBehaviour, IInteractable
 {
     [SerializeField] private Tinkerer tinkerer;
     [SerializeField] private int currentCd;
-    [SerializeField] private int maxCd = 180;
+    [SerializeField] private int maxCd = 120;
     [SerializeField] private GameEventListener onTimeClickEventListener;
     [SerializeField] private Light flashBangLight;
     [SerializeField] private Image lightAnimImage;

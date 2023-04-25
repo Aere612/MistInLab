@@ -32,6 +32,7 @@ public class Vial : BaseObject,IInteractable,IDeletable
         }
     }
 
+
     public void Interaction()
     {
         vialPickUpSfx.Play();

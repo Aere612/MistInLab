@@ -21,6 +21,7 @@ public class Mixer : BaseMachine
 
     public override void MixTheIngredients()
     {
+        if (inputOne.CurrentObject == null || inputTwo.CurrentObject == null || output.CurrentObject == null) return;
         if ((inputOne.CurrentObject.BaseIngradiant== _ingradientTypes.LightBlue
              && inputTwo.CurrentObject.BaseIngradiant == _ingradientTypes.BoldYellow)
             ||

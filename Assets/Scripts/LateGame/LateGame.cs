@@ -7,22 +7,19 @@ public class LateGame : MonoBehaviour
     [SerializeField] private CountDown countDown;
     [SerializeField] private Light[] roomLights;
     [SerializeField] private Light[] spotLights;
-    [SerializeField] private Transform[] spotLightsParentsTransforms;
+    [SerializeField] private Transform spotLightsParentsTransforms;
     public void LateGameStartCheck()
     {
         if(countDown.TimeLeft==128) StartCoroutine(LateGameStart());
     }
-    //128 lights out
-    //112 yellow lights
-    //83 lights out
+    //128 lights out 
+    //112 yellow lights 
+    //83 lights out 
     //79 red lights
     //5 lights out
     private IEnumerator LateGameStart()
     {
-        foreach (var spotLightsParentsTransform in spotLightsParentsTransforms)
-        {
-            spotLightsParentsTransform.transform.DORotate(new Vector3(0, 360, 0),1f).SetLoops(-1);
-        }
+        spotLightsParentsTransforms.DOLocalRotate(new Vector3(0, 180, 0),1f).SetLoops(-1);
         foreach (var roomLight in roomLights)
         {
             roomLight.enabled = false;

@@ -14,13 +14,10 @@ public class FogEmitter : BaseMachine
 
     internal FogEmitterSlider _slider;
     internal FogEmitterLever _lever;
-
     internal VialSlot _vialSlot;
-
     public override void CheckTheConditionsAndRun()
     {
         if (_vialSlot.CurrentObject == null) return;
-        if (_vialSlot.CurrentObject.BaseIngradiant != _ingradientTypes.Green) return;
         if (_cogSlotOne.CurrentObject == null || _cogSlotTwo.CurrentObject == null ||
             _cogSlotThree.CurrentObject == null) return;
 
@@ -29,6 +26,8 @@ public class FogEmitter : BaseMachine
 
     public override void MixTheIngredients()
     {
+        if (_vialSlot.CurrentObject == null) return;
+        if (_vialSlot.CurrentObject.BaseIngradiant != _ingradientTypes.Green) return;
         if (_switchOne.switchState != FogEmitterSwitch.SwitchState.Down ||
             _switchTwo.switchState != FogEmitterSwitch.SwitchState.Up ||
             _switchThree.switchState != FogEmitterSwitch.SwitchState.Up ||

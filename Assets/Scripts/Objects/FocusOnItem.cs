@@ -44,7 +44,7 @@ public class FocusOnItem : MonoBehaviour
         {
             rotationY += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotationX += -Input.GetAxis("Mouse X") * lookSpeed;
-            playerHandSo.CurrentObject.transform.localRotation = Quaternion.Euler(rotationY, rotationX, 0);
+            if(playerHandSo.CurrentObject!=null)playerHandSo.CurrentObject.transform.localRotation = Quaternion.Euler(rotationY, rotationX, 0);
             yield return new WaitForEndOfFrame();
         }
     }

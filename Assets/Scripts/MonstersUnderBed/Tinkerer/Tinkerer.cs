@@ -25,7 +25,7 @@ public class Tinkerer : MonoBehaviour
         if (!(countDown.TimeLeft > 100)) return;
         fakeUnlockChance -= 1;
         if (Random.Range(0, 100) < fakeUnlockChance) return;
-        fakeUnlockChance = 200;
+        fakeUnlockChance = 150;
         audioSource.Play();
     }
     public void DoorTimeReducer()

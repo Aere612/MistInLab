@@ -17,6 +17,8 @@ public class SkipTutorial : MonoBehaviour
     [SerializeField] private Transform door2;
     [SerializeField] private Transform player;
     [SerializeField] private CharacterController characterController;
+    [SerializeField] private Light light1;
+    [SerializeField] private Light light2;
 
     private void Update()
     {
@@ -34,6 +36,8 @@ public class SkipTutorial : MonoBehaviour
         lightCloser1.DoAnim();
         lightCloser2.DoAnim();
         lightCloser3.DoAnim();
+        light1.enabled=false;
+        light2.enabled=false;
         Destroy(tutorial);
     }
     public void Vanish()
