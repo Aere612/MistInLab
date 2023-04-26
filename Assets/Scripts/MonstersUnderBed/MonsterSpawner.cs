@@ -14,7 +14,7 @@ public class MonsterSpawner : MonoBehaviour
         if (countDown.TimeLeft < 150) return;
         currentWaitFactor -= 1;
         if (Random.Range(0, 100) < currentWaitFactor) return;
-        currentWaitFactor = 175;
+        currentWaitFactor = 200;
         switch (Random.Range(1, 3))
         {
             case 1:
