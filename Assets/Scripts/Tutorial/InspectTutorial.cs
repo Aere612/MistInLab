@@ -40,6 +40,6 @@ public class InspectTutorial : MonoBehaviour
     private void End()
     {
         interactionTutorial.gameObject.SetActive(true);
-        Destroy(gameObject);
+        Destroy(gameObject.transform.parent.gameObject);
     }
 }
