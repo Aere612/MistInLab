@@ -15,5 +15,5 @@ public class Cog : BaseObject,IInteractable,ICollactable
         IsAvailableToCollect = true;
     }
 
-    public bool IsAvailableToCollect { get; set; }
+    public bool IsAvailableToCollect { get; set; } = true;
 }

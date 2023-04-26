@@ -8805,7 +8805,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vial (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2713109245432857525, guid: d7d075da8c746d141b85ead8b18aef5a, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d075da8c746d141b85ead8b18aef5a, type: 3}
 --- !u!1 &284693893

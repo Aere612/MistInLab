@@ -31,5 +31,5 @@ public class IngradiantSpawner : MonoBehaviour, IInteractable, ICollactable
         _vial.BaseIngradiant = _ingradient;
     }
 
-    public bool IsAvailableToCollect { get; set; }
+    public bool IsAvailableToCollect { get; set; } = true;
 }

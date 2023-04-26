@@ -32,7 +32,7 @@ public class Mixer : BaseMachine
         }
         else
         {
-            output.CurrentObject.BaseIngradiant = _ingradientTypes.Empty;
+            output.CurrentObject.BaseIngradiant = _ingradientTypes.Black;
         }
         
         inputOne.CurrentObject.BaseIngradiant = _ingradientTypes.Empty;
@@ -42,12 +42,18 @@ public class Mixer : BaseMachine
     public override void RunTheMachine()
     {
         isCountdownStarted = true;
+        inputOne.CurrentObject.IsAvailableToCollect = false;
+        inputTwo.CurrentObject.IsAvailableToCollect = false;
+        output.CurrentObject.IsAvailableToCollect = false;
         OnMachineStarted.Raise();
     }
 
     public override void StopTheMachine()
     {
         isCountdownStarted = false;
+        inputOne.CurrentObject.IsAvailableToCollect = true;
+        inputTwo.CurrentObject.IsAvailableToCollect = true;
+        output.CurrentObject.IsAvailableToCollect = true;
         OnMachineStopped.Raise();
     }
 }

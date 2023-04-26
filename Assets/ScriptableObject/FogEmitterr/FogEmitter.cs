@@ -41,11 +41,20 @@ public class FogEmitter : BaseMachine
     public override void RunTheMachine()
     {
         isCountdownStarted = true;
+        _cogSlotOne.CurrentObject.IsAvailableToCollect = false;
+        _cogSlotTwo.CurrentObject.IsAvailableToCollect = false;
+        _cogSlotThree.CurrentObject.IsAvailableToCollect = false;
+        _vialSlot.CurrentObject.IsAvailableToCollect = false;
+
         OnMachineStarted.Raise();
     }
 
     public override void StopTheMachine()
     {
         isCountdownStarted = false;
+        _cogSlotOne.CurrentObject.IsAvailableToCollect = true;
+        _cogSlotTwo.CurrentObject.IsAvailableToCollect = true;
+        _cogSlotThree.CurrentObject.IsAvailableToCollect = true;
+        _vialSlot.CurrentObject.IsAvailableToCollect = true;
     }
 }

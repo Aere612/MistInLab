@@ -40,12 +40,16 @@ public class Damitma : BaseMachine
     public override void RunTheMachine()
     {
         isCountdownStarted = true;
+        input.CurrentObject.IsAvailableToCollect = false;
+        output.CurrentObject.IsAvailableToCollect = false;
         OnMachineStarted.Raise();
     }
 
     public override void StopTheMachine()
     {
         isCountdownStarted = false;
+        input.CurrentObject.IsAvailableToCollect = true;
+        output.CurrentObject.IsAvailableToCollect = true;
         OnMachineStopped.Raise();
     }
 }

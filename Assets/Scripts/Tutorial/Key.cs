@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public class Key : MonoBehaviour,IInteractable,ICollactable
+public class Key : MonoBehaviour, IInteractable, ICollactable
 {
     [SerializeField] private PickUpTutorial pickUpTutorial;
-    [SerializeField] private bool once=true;
+    [SerializeField] private bool once = true;
     [SerializeField] private AudioSource keyPickUpSound;
+
     public void Interaction()
     {
         keyPickUpSound.Play();
@@ -18,5 +19,5 @@ public class Key : MonoBehaviour,IInteractable,ICollactable
         pickUpTutorial.gameObject.SetActive(true);
     }
 
-    public bool IsAvailableToCollect { get; set; }= true;
+    public bool IsAvailableToCollect { get; set; } = true;
 }

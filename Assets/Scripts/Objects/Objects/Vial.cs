@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class Vial : BaseObject,IInteractable,IDeletable
+public class Vial : BaseObject,IInteractable,ICollactable
 {
     [SerializeField] private IngradientsSO baseIngradiant;
     [SerializeField] private IngradientsSO sideIngradiant;
@@ -10,6 +10,7 @@ public class Vial : BaseObject,IInteractable,IDeletable
     [SerializeField] private MeshRenderer sideIngradiantMesh;
     
     [SerializeField] internal AudioSource vialPickUpSfx;
+    public bool IsAvailableToCollect { get; set; } = true;
 
     
     public IngradientsSO BaseIngradiant

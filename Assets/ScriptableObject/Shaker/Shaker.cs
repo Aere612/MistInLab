@@ -41,12 +41,14 @@ public class Shaker : BaseMachine
     public override void RunTheMachine()
     {
         isCountdownStarted = true;
+        input.CurrentObject.IsAvailableToCollect = false;
         OnMachineStarted.Raise();
     }
 
     public override void StopTheMachine()
     {
         isCountdownStarted = false;
+        input.CurrentObject.IsAvailableToCollect = true;
         OnMachineStopped.Raise();
     }
 }
