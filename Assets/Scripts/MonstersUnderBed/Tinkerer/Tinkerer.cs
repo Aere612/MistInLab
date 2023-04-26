@@ -20,14 +20,14 @@ public class Tinkerer : MonoBehaviour
         audioSource.Play();
     }
 
-    public void FakeChance()
+    /*public void FakeChance()
     {
         if (!(countDown.TimeLeft > 100)) return;
         fakeUnlockChance -= 1;
         if (Random.Range(0, 100) < fakeUnlockChance) return;
         fakeUnlockChance = 150;
         audioSource.Play();
-    }
+    }*/
     public void DoorTimeReducer()
     {
         if (doorTime > 0)
@@ -44,5 +44,6 @@ public class Tinkerer : MonoBehaviour
         gameEventListener.enabled = false;
         doorStatus.text = "KILITLI";
         doorStatus.color = Color.blue;
+        audioSource.Stop();
     }
 }
