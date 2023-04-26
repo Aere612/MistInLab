@@ -7,6 +7,7 @@ public class Cog : BaseObject,IInteractable,ICollactable
     public void Interaction()
     {
         pickUpSfx.Play();
+        if (!IsAvailableToCollect) return;
         if(_objectSlot!=null) _objectSlot._currentObject = null;
     }
 

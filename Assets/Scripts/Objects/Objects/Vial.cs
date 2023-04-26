@@ -37,7 +37,8 @@ public class Vial : BaseObject,IInteractable,ICollactable
     public void Interaction()
     {
         vialPickUpSfx.Play();
-        if (_objectSlot)
+        if (!IsAvailableToCollect) return;
+        if (_objectSlot )
             _objectSlot._currentObject = null;
         _objectSlot = null;
     }
