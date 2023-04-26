@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -22,6 +23,14 @@ public class EndingController : MonoBehaviour
             isAvaibleToDisplay = true;
             NewspaperDisplayer();
         });
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            NewspaperDisplayer();   
+        }
     }
 
     public void NewspaperDisplayer()
