@@ -1679,6 +1679,10 @@ PrefabInstance:
       propertyPath: placeReverse
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2819488568541549208, guid: 129d19c557f91024c91bd0d1bdc84fa7, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2819488568541549209, guid: 129d19c557f91024c91bd0d1bdc84fa7, type: 3}
       propertyPath: m_RootOrder
       value: -1

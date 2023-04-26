@@ -234,7 +234,7 @@ Transform:
   - {fileID: 7059535683539724776}
   - {fileID: 9214614195800277974}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &9051232915188333225
 MeshFilter:
@@ -330,10 +330,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.024595954
-  m_Height: 0.37405646
+  m_Radius: 0.04747946
+  m_Height: 0.44180626
   m_Direction: 2
-  m_Center: {x: 0, y: 0.00022589415, z: -0.022716016}
+  m_Center: {x: 0, y: -0.00088541786, z: -0.019980913}
 --- !u!114 &2713109245432857525
 MonoBehaviour:
   m_ObjectHideFlags: 0

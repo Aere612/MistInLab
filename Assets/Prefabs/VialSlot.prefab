@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2819488568541549190}
   - component: {fileID: 2819488568541549191}
   - component: {fileID: 2819488568541549189}
-  - component: {fileID: 2819488568541549208}
   - component: {fileID: 1372914811321842683}
+  - component: {fileID: 8033838899550750736}
   m_Layer: 7
   m_Name: VialSlot
   m_TagString: Untagged
@@ -104,20 +104,6 @@ MonoBehaviour:
   _currentObject: {fileID: 0}
   placeReverse: 0
   vialInsertSfx: {fileID: 1372914811321842683}
---- !u!64 &2819488568541549208
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2819488568541549186}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!82 &1372914811321842683
 AudioSource:
   m_ObjectHideFlags: 0
@@ -214,6 +200,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &8033838899550750736
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2819488568541549186}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1904768, y: 4.8944983, z: 1.218488}
+  m_Center: {x: 0.0056023523, y: 0.560224, z: -0.008403473}
 --- !u!1 &4661713781397539108
 GameObject:
   m_ObjectHideFlags: 0

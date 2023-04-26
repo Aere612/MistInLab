@@ -12,6 +12,8 @@ public class GeneratorStarter : MonoBehaviour,IInteractable
     [SerializeField] private AudioSource generatorStartSfx;
     [SerializeField] private AudioSource backgroundSfx;
     [SerializeField] private GameObject tutorial;
+    [SerializeField] private Light flashlight;
+    
 
     
     public void Interaction()
@@ -22,6 +24,7 @@ public class GeneratorStarter : MonoBehaviour,IInteractable
         light2.enabled = true;
         light3.enabled = true;
         counter.enabled = true;
+        flashlight.enabled = true;
         Destroy(barrier1);
         Destroy(barrier2);
         Destroy(terminal1);
