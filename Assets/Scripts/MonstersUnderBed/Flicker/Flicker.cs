@@ -8,13 +8,14 @@ public class Flicker : MonoBehaviour
     [SerializeField] private Light light3;
     [SerializeField] private JanitorRoomDoor janitorRoomDoor;
     [SerializeField] private GameEvent onGameLoseEvent;
-
+    [SerializeField] private AudioSource flickerSound;
 
     public void Attack()
     {
         FlickerLights( light1);
         FlickerLights( light2);
         FlickerLights( light3,true);
+        flickerSound.Play();
     }
 
     private void SafetyCheck()
@@ -27,6 +28,7 @@ public class Flicker : MonoBehaviour
         light1.DOIntensity(2f, 2f);
         light2.DOIntensity(2f, 2f);
         light3.DOIntensity(2f, 2f);
+        flickerSound.Stop();
     }
 
     private void FlickerLights( Light targetLight, bool activator = false)
