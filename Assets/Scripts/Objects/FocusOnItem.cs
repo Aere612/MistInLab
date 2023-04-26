@@ -35,7 +35,7 @@ public class FocusOnItem : MonoBehaviour
     }
 
     [SerializeField] private float lookSpeed = 2.0f;
-    [SerializeField] private float rotationX;
+    [SerializeField] private float rotationZ;
     [SerializeField] private float rotationY;
 
     private IEnumerator Examine()
@@ -43,8 +43,8 @@ public class FocusOnItem : MonoBehaviour
         while (true)
         {
             rotationY += -Input.GetAxis("Mouse Y") * lookSpeed;
-            rotationX += -Input.GetAxis("Mouse X") * lookSpeed;
-            if(playerHandSo.CurrentObject!=null)playerHandSo.CurrentObject.transform.localRotation = Quaternion.Euler(rotationY, rotationX, 0);
+            rotationZ += -Input.GetAxis("Mouse X") * lookSpeed;
+            if(playerHandSo.CurrentObject!=null)playerHandSo.CurrentObject.transform.localRotation = Quaternion.Euler(-rotationY, 0, rotationZ);
             yield return new WaitForEndOfFrame();
         }
     }
