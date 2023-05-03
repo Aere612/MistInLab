@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class IngradiantSpawner : MonoBehaviour, IInteractable, ICollactable
+public class IngradiantSpawner : MonoBehaviour, IInteractable
 {
     [SerializeField] private PlayerHandSo _playerHandSo;
     [SerializeField] private IngradientsSO _ingradient;
