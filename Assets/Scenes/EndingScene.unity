@@ -585,10 +585,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Ali Eren Ayd\u0131n\nOyun Mekanikleri & Oyun Tasar\u0131m\u0131 & Level
-    Tasar\u0131m\u0131\n\n\n\n\n\nAltay Turan\nOyun Mekanikleri & Oyun Tasar\u0131m\u0131\n\n\n\n\n\nKayra
-    Kocaeli\nLevel Tasar\u0131m\u0131 & Materyal ve Assetler & M\xFCzikler\n\n\n\n\n\nYener
-    G\xFClen\xE7\nLevel Tasar\u0131m\u0131\n\n\n\n\n\nG\xFClay Y\u0131ld\u0131r\u0131m\n3D
-    Modelleme\n"
+    Tasar\u0131m\u0131\n\n\n\n\n\nAltay Turan\nPuzzle Mekanikleri & Oyun Tasar\u0131m\u0131
+    & Level Tasar\u0131m\u0131\n\n\n\n\nKayra Kocaeli\nLevel Tasar\u0131m\u0131 &
+    Materyal ve Assetler & M\xFCzikler\n\n\n\n\n\nYener G\xFClen\xE7\nLevel Tasar\u0131m\u0131
+    & Karakter Mekanikleri\n\n\n\n\n\nG\xFClay Y\u0131ld\u0131r\u0131m\n3D Modelleme\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
