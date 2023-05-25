@@ -13,21 +13,13 @@ public class Tinkerer : MonoBehaviour
 
     public void Attack()
     {
-        doorStatus.text = "ACILIYOR...";
+        doorStatus.text = "UNLOCKING...";
         doorStatus.color = Color.red;
         doorTime = 7;
         gameEventListener.enabled = true;
         audioSource.Play();
     }
 
-    /*public void FakeChance()
-    {
-        if (!(countDown.TimeLeft > 100)) return;
-        fakeUnlockChance -= 1;
-        if (Random.Range(0, 100) < fakeUnlockChance) return;
-        fakeUnlockChance = 150;
-        audioSource.Play();
-    }*/
     public void DoorTimeReducer()
     {
         if (doorTime > 0)
@@ -42,7 +34,7 @@ public class Tinkerer : MonoBehaviour
     {
         if(!gameEventListener.enabled) return;
         gameEventListener.enabled = false;
-        doorStatus.text = "KILITLI";
+        doorStatus.text = "LOCKED";
         doorStatus.color = Color.blue;
         audioSource.Stop();
     }
