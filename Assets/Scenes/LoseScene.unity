@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 89.96}
-  m_SizeDelta: {x: 433.6563, y: 149.6346}
+  m_AnchoredPosition: {x: 20.4094, y: 85.586586}
+  m_SizeDelta: {x: 675.652, y: 158.3815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &211099316
 MonoBehaviour:
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Sise Yenik D\xFC\u015Ft\xFCn"
+  m_text: "Sise Yenik D\xFC\u015Ft\xFCn\nKurallar\u0131 Tekrar Oku!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -895,8 +895,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 300.11, y: 36}
+  m_SizeDelta: {x: 600.2128, y: 384.4965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1187764745
 MonoBehaviour:
@@ -911,14 +911,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8ba164cdc13472d4f9192710f8a927e3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

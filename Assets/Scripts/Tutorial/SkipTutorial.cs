@@ -22,7 +22,7 @@ public class SkipTutorial : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) Skip();
+        if (Input.GetKeyDown(KeyCode.P)) Skip();
     }
 
     private void Skip()
