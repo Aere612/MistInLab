@@ -23,6 +23,7 @@ public class StudyRoomDoor : MonoBehaviour, IInteractable
         lockTrash1.IsAvailableToCollect = false;
         lockTrash2.IsAvailableToCollect = false;
     }
+   
 
     public void Interaction()
     {
@@ -43,6 +44,46 @@ public class StudyRoomDoor : MonoBehaviour, IInteractable
             return;
         }
 
+        if (doorClosed)
+        {
+            doorSoundSfx.clip = doorOpenClip;
+            doorSoundSfx.Play();
+            doorClosed = false;
+            pivot.DORotate(new Vector3(0, -90, 0f), 0.5f);
+            return;
+        }
+
+        doorSoundSfx.clip = doorCloseClip;
+        doorSoundSfx.Play();
+        doorClosed = true;
+        pivot.DORotate(new Vector3(0, 0, 0f), 0.5f);
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Vial"))
+        {
+            if (isLocked)
+            {
+                if (other.gameObject == null) return;
+                if (!other.gameObject.TryGetComponent(out Vial vial) ||
+                    vial.BaseIngradiant != _ingradientTypes.Acid) return;
+                isLocked = false;
+                acidSfx.Play();
+
+                vial.BaseIngradiant = _ingradientTypes.Empty;
+
+                lockTrash1.IsAvailableToCollect = true;
+                lockTrash2.IsAvailableToCollect = true;
+                lockRb1.isKinematic = false;
+                lockRb2.isKinematic = false;
+                return;
+            }
+        }
+       
+    }
+
+    public void DoorOpen()
+    {
         if (doorClosed)
         {
             doorSoundSfx.clip = doorOpenClip;

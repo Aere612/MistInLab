@@ -17,6 +17,10 @@ public class StartGame : MonoBehaviour
     {
         if (other.transform.TryGetComponent<PlayerMovement>(out _)) Play();
     }
+    public void Start()
+    {
+        Play();
+    }
 
 
     public void Play()

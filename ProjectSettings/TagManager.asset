@@ -7,6 +7,8 @@ TagManager:
   - Screen
   - J_Door
   - DeadBolt
+  - Vial
+  - Gear
   layers:
   - Default
   - TransparentFX

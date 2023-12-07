@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.ProBuilder.Shapes;
 
 public class JanitorRoomDoor : MonoBehaviour, IInteractable
 {
@@ -12,6 +13,8 @@ public class JanitorRoomDoor : MonoBehaviour, IInteractable
     [SerializeField] private bool doorNotAvailable;
 
     public bool DoorClosed => doorClosed;
+
+    public bool once=false;
 
     public bool DoorLocked
     {
@@ -28,6 +31,7 @@ public class JanitorRoomDoor : MonoBehaviour, IInteractable
         doorNotAvailable = true;
         Door();
     }
+   
 
     private void Door()
     {
@@ -49,5 +53,17 @@ public class JanitorRoomDoor : MonoBehaviour, IInteractable
                     doorClosed = true;
                     doorNotAvailable = false;
                 });
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") && once==false)
+        {
+            Door();
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        once= true;
     }
 }

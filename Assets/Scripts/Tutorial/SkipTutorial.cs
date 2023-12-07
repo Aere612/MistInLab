@@ -20,6 +20,10 @@ public class SkipTutorial : MonoBehaviour
     [SerializeField] private Light light1;
     [SerializeField] private Light light2;
 
+    private void Start()
+    {
+        Skip();
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P)) Skip();

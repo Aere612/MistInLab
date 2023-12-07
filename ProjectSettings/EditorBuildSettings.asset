@@ -21,4 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LoseScene.unity
     guid: 02d2e230958dfbb48a730fee7a73abb7
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5d09994efcfb23a4e8604eb05088078c, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: e5a17c71fdb91654897b70aa03d34953, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: dd7ed4fe63f54574eb5ed1c20194c8cf, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 55c15797d8458df4b85a126a0622af9e, type: 2}

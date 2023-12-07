@@ -13,6 +13,22 @@ public class VialSlot : BaseObjectSlot
         PlaceTheObject(_currentObject.gameObject,placeReverse);
         _currentObject._objectSlot = this;
     }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Vial"))
+        {
+            if (other.gameObject == null) return;
+            if (!other.gameObject.TryGetComponent<Vial>(out var _vial) || _currentObject != null) return;
+            vialInsertSfx.Play();
+            _currentObject = _vial;
+            PlaceTheObject(_currentObject.gameObject, placeReverse);
+            _currentObject._objectSlot = this;
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        _currentObject=null;
+    }
 
     public Vial CurrentObject
     {

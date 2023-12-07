@@ -17,4 +17,18 @@ public class Sink : MonoBehaviour, IInteractable
         _vial.BaseIngradiant = _ingradientTypes.Empty;
         _vial.SideIngradiant = _ingradientTypes.Empty;
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Vial"))
+        {
+            if (other.gameObject == null) return;
+            if (!other.gameObject.TryGetComponent<Vial>(out var _vial)) return;
+            if (_vial.BaseIngradiant == _ingradientTypes.Empty) return;
+
+            sinkSfx.Play();
+            _vial.BaseIngradiant = _ingradientTypes.Empty;
+            _vial.SideIngradiant = _ingradientTypes.Empty;
+        }
+    }
 }
