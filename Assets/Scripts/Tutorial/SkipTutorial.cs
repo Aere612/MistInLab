@@ -32,7 +32,7 @@ public class SkipTutorial : MonoBehaviour
     private void Skip()
     {
         characterController.enabled = false;
-        player.position = new Vector3(-5.37900019f, 1.7f, 0.54400003f);
+        //player.position = new Vector3(-5.37900019f, 1.7f, 0.54400003f);
         characterController.enabled = true;
         door1.Rotate(new Vector3(0,90,0));
         door2.Rotate(new Vector3(0,-90,0));
